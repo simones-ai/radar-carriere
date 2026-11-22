@@ -447,7 +447,7 @@ def pagina(fonte, paesi):
         if not (6 <= len(titolo) <= 160) or href.startswith(("mailto:", "javascript:", "#")):
             continue
         cats, rilevanza = classifica(titolo)
-        if rilevanza < 2:
+        if rilevanza < 1:
             continue
         url = urllib.parse.urljoin(fonte["url"], href)
         if url in visti:
@@ -457,8 +457,134 @@ def pagina(fonte, paesi):
     return out
 
 
+# ------------------------------------------------------------------ Recruitee
+def recruitee(fonte, paesi):
+    """Es. https://gpbullhound.recruitee.com"""
+    slug = fonte["slug"]
+    out = []
+    for o in scarica(f"https://{slug}.recruitee.com/api/offers/").get("offers", []):
+        luogo = o.get("location") or ", ".join(x for x in (o.get("city"), o.get("country")) if x)
+        if not luogo_ok(luogo, paesi):
+            continue
+        out.append(_annuncio(f"rc:{slug}:{o['id']}", o.get("title"), luogo,
+                             o.get("careers_url") or f"https://{slug}.recruitee.com/o/{o.get('slug', '')}",
+                             data_iso(o.get("published_at") or o.get("created_at")),
+                             pulisci_html((o.get("description") or "") + " " + (o.get("requirements") or "")),
+                             o.get("employment_type_code") or ""))
+    return out
+
+
+# ------------------------------------------------------------------ Personio
+def personio(fonte, paesi):
+    """Es. https://clearwater.jobs.personio.de"""
+    import xml.etree.ElementTree as ET
+    slug, dominio = fonte["slug"], fonte.get("dominio", "jobs.personio.de")
+    radice = ET.fromstring(scarica(f"https://{slug}.{dominio}/xml?language=en", testo=True).encode())
+    out = []
+    for p in radice.iter("position"):
+        testo = lambda t: (p.findtext(t) or "").strip()  # noqa: E731
+        uffici = [testo("office")] + [o.text or "" for o in p.iter("office")][1:]
+        luogo = " · ".join(dict.fromkeys(u for u in uffici if u))
+        if not luogo_ok(luogo, paesi):
+            continue
+        descr = "\n\n".join(pulisci_html(v.text or "") for v in p.iter("value"))
+        out.append(_annuncio(f"ps:{slug}:{testo('id')}", testo("name"), luogo,
+                             f"https://{slug}.{dominio}/job/{testo('id')}", data_iso(testo("createdAt")),
+                             descr, f"{testo('employmentType')} {testo('seniority')}"))
+    return out
+
+
+# ------------------------------------------------------------------ Pinpoint
+def pinpoint(fonte, paesi):
+    """Es. https://lichfields.pinpointhq.com"""
+    slug = fonte["slug"]
+    out = []
+    for o in scarica(f"https://{slug}.pinpointhq.com/postings.json").get("data", []):
+        loc = o.get("location") or {}
+        luogo = loc.get("name") or ", ".join(x for x in (loc.get("city"), loc.get("country")) if x)
+        if not luogo_ok(luogo, paesi):
+            continue
+        out.append(_annuncio(f"pp:{slug}:{o['id']}", o.get("title"), luogo, o.get("url"),
+                             data_iso(o.get("posted_at") or o.get("created_at")),
+                             pulisci_html(o.get("description") or ""), o.get("employment_type_text") or ""))
+    return out
+
+
+# ------------------------------------------------------------------ Eightfold
+def eightfold(fonte, paesi):
+    """Es. https://mlp.eightfold.ai/careers (Millennium)"""
+    host, dominio = fonte["host"], fonte["dominio"]
+    out, start = [], 0
+    while start < MAX_PER_FONTE:
+        d = scarica(f"https://{host}/api/apply/v2/jobs?domain={dominio}&start={start}&num=100&sort_by=timestamp")
+        posizioni = d.get("positions") or []
+        for o in posizioni:
+            luogo = " · ".join(o.get("locations") or [o.get("location") or ""])
+            if not luogo_ok(luogo, paesi):
+                continue
+            out.append(_annuncio(f"ef:{dominio}:{o['id']}", o.get("name"), luogo,
+                                 o.get("canonicalPositionUrl") or f"https://{host}/careers?pid={o['id']}",
+                                 data_iso(o.get("t_create")), pulisci_html(o.get("job_description") or ""),
+                                 o.get("department") or ""))
+        start += len(posizioni)
+        if not posizioni or start >= (d.get("count") or 0):
+            break
+    return out
+
+
+# ------------------------------------------------------------------ iCIMS
+_RX_ICIMS = re.compile(r'href="(https://[^"]+/jobs/(\d+)/[^"]*/job)[^"]*"[^>]*>(.*?)</a>(.{0,1500})', re.S | re.I)
+
+
+def icims(fonte, paesi):
+    """Es. https://careers-stifel.icims.com/jobs"""
+    host = fonte["host"]
+    out, visti = [], set()
+    for pagina_n in range(0, 40):
+        html_ = scarica(f"https://{host}/jobs/search?ss=1&in_iframe=1&pr={pagina_n}", testo=True)
+        nuovi = 0
+        for link, id_, titolo, coda in _RX_ICIMS.findall(html_):
+            if id_ in visti:
+                continue
+            visti.add(id_)
+            nuovi += 1
+            titolo = pulisci_html(titolo)
+            luogo = ""
+            m = re.search(r"(?:Location|Locations)[^<]*</span>\s*<span[^>]*>([^<]+)", coda, re.I) or \
+                re.search(r">\s*([A-Z]{2}-[^<]{2,60})<", coda)
+            if m:
+                luogo = pulisci_html(m.group(1))
+            if luogo and not luogo_ok(luogo, paesi) and re.search(r"[A-Z]{2}-", luogo) and \
+                    not luogo_ok(luogo.replace("UK-", "United Kingdom ").replace("GB-", "United Kingdom ")
+                                 .replace("FR-", "France ").replace("IT-", "Italy "), paesi):
+                continue
+            out.append(_annuncio(f"ic:{host.split('.')[0]}:{id_}", titolo, luogo, link.split("?")[0]))
+        if not nuovi:
+            break
+    return out
+
+
+# ------------------------------------------------------------------ feed RSS (Teamtailor, SuccessFactors, ...)
+def rss(fonte, paesi):
+    import xml.etree.ElementTree as ET
+    radice = ET.fromstring(scarica(fonte["url"], testo=True).encode())
+    out = []
+    for it in radice.iter("item"):
+        titolo = (it.findtext("title") or "").strip()
+        link = (it.findtext("link") or "").strip()
+        descr = pulisci_html(it.findtext("description") or "")
+        luogo = " ".join((e.text or "") for e in it if "location" in e.tag.lower() or "city" in e.tag.lower())
+        if luogo and not luogo_ok(luogo, paesi):
+            continue
+        out.append(_annuncio(f"rss:{link or titolo}", titolo, luogo, link, data_iso(it.findtext("pubDate") or ""),
+                             descr))
+    return out
+
+
 LETTORI = {"workday": workday, "greenhouse": greenhouse, "lever": lever, "smartrecruiters": smartrecruiters,
-           "ashby": ashby, "oracle": oracle, "avature": avature, "pagina": pagina}
+           "ashby": ashby, "oracle": oracle, "avature": avature, "pagina": pagina,
+           "recruitee": recruitee, "personio": personio, "pinpoint": pinpoint, "eightfold": eightfold,
+           "icims": icims, "rss": rss}
 
 
 def leggi(fonte, paesi, chiavi=None):
@@ -498,6 +624,19 @@ def da_url(url):
         return {"tipo": "ashby", "slug": parti[0]}
     if host.endswith("oraclecloud.com") and "sites" in parti:
         return {"tipo": "oracle", "host": host, "sito": parti[parti.index("sites") + 1]}
+    if host.endswith("recruitee.com"):
+        return {"tipo": "recruitee", "slug": host.split(".")[0]}
+    if ".jobs.personio." in host:
+        return {"tipo": "personio", "slug": host.split(".")[0], "dominio": host.split(".", 1)[1]}
+    if host.endswith("pinpointhq.com"):
+        return {"tipo": "pinpoint", "slug": host.split(".")[0]}
+    if host.endswith("eightfold.ai"):
+        dom = parse_qs_primo(u.query, "domain") or (host.split(".")[0] + ".com")
+        return {"tipo": "eightfold", "host": host if host != "app.eightfold.ai" else host, "dominio": dom}
+    if host.endswith("icims.com") and host not in ("www.icims.com", "icims.com"):
+        return {"tipo": "icims", "host": host}
+    if u.path.endswith((".rss", "/rss")) or "/services/rss/" in u.path:
+        return {"tipo": "rss", "url": url}
     if host.endswith("avature.net"):
         i = parti.index("careers") if "careers" in parti else len(parti)
         return {"tipo": "avature", "url": f"https://{host}/{'/'.join(parti[:i + 1])}/SearchJobs"}

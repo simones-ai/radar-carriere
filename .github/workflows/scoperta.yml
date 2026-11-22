@@ -9,6 +9,10 @@ on:
         description: "Solo le aziende il cui nome contiene questo testo (vuoto = tutte)"
         required: false
         default: ""
+      script:
+        description: "scopri = ricerca completa, verifica = prova candidati.json"
+        required: false
+        default: "scopri"
 
 permissions:
   contents: write
@@ -23,7 +27,9 @@ jobs:
         with:
           python-version: "3.12"
       - name: Cerca le pagine carriere
-        run: python radar/scoperta/scopri.py "${{ inputs.filtro }}" | grep -v '^RISULTATO' || true
+        run: |
+          if [ "${{ inputs.script }}" = "verifica" ]; then python radar/scoperta/verifica.py || true
+          else python radar/scoperta/scopri.py "${{ inputs.filtro }}" | grep -v '^RISULTATO' || true; fi
       - name: Salva i risultati nel branch "scoperta"
         run: |
           test -f radar/scoperta/risultati.json && cp radar/scoperta/risultati.json /tmp/risultati.json

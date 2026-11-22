@@ -266,5 +266,680 @@
       "Ernst"
     ],
     "attiva": false
+  },
+  {
+    "tipo": "smartrecruiters",
+    "slug": "TikehauCapital",
+    "nome": "Tikehau Capital",
+    "settore": "Private equity",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "franklintempleton.wd5.myworkdayjobs.com",
+    "tenant": "franklintempleton",
+    "sito": "Primary-External-1",
+    "nome": "Franklin Templeton",
+    "settore": "Asset management",
+    "attiva": true
+  },
+  {
+    "tipo": "smartrecruiters",
+    "slug": "ColliersInternationalEMEA",
+    "nome": "Colliers",
+    "settore": "Real estate",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "colliers.wd3.myworkdayjobs.com",
+    "tenant": "colliers",
+    "sito": "Colliers-External-Career-Site",
+    "nome": "Colliers (Colliers-External-Career-Site)",
+    "settore": "Real estate",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "rothschildandco.wd3.myworkdayjobs.com",
+    "tenant": "rothschildandco",
+    "sito": "RothschildAndCo_Lateral",
+    "nome": "Rothschild & Co",
+    "settore": "Banca d'investimento",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "hl.wd1.myworkdayjobs.com",
+    "tenant": "hl",
+    "sito": "Campus",
+    "nome": "Houlihan Lokey",
+    "settore": "Banca d'investimento",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "hl.wd1.myworkdayjobs.com",
+    "tenant": "hl",
+    "sito": "Corporate",
+    "nome": "Houlihan Lokey (Corporate)",
+    "settore": "Banca d'investimento",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "hl.wd1.myworkdayjobs.com",
+    "tenant": "hl",
+    "sito": "Lateral",
+    "nome": "Houlihan Lokey (Lateral)",
+    "settore": "Banca d'investimento",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "hl.wd1.myworkdayjobs.com",
+    "tenant": "hl",
+    "sito": "External",
+    "nome": "Houlihan Lokey (External)",
+    "settore": "Banca d'investimento",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "ing.wd3.myworkdayjobs.com",
+    "tenant": "ing",
+    "sito": "ICSGBLCOR",
+    "nome": "ING",
+    "settore": "Banca",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "ardian.wd103.myworkdayjobs.com",
+    "tenant": "ardian",
+    "sito": "ArdianCareers",
+    "nome": "Ardian",
+    "settore": "Private equity",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "tritonpartners.wd3.myworkdayjobs.com",
+    "tenant": "tritonpartners",
+    "sito": "External",
+    "nome": "Triton Partners",
+    "settore": "Private equity",
+    "attiva": true
+  },
+  {
+    "tipo": "oracle",
+    "host": "icbpjb.fa.ocs.oraclecloud.com",
+    "sito": "LazardProfessionalCareers",
+    "nome": "Lazard",
+    "settore": "Banca d'investimento",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "aureliusinvest.wd3.myworkdayjobs.com",
+    "tenant": "aureliusinvest",
+    "sito": "AURELIUS",
+    "nome": "Aurelius",
+    "settore": "Private equity",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "pimco.wd1.myworkdayjobs.com",
+    "tenant": "pimco",
+    "sito": "pimco-careers",
+    "nome": "PIMCO",
+    "settore": "Asset management",
+    "attiva": true
+  },
+  {
+    "tipo": "smartrecruiters",
+    "slug": "Capza",
+    "nome": "Capza",
+    "settore": "Private equity",
+    "attiva": true
+  },
+  {
+    "tipo": "oracle",
+    "host": "hdpc.fa.us2.oraclecloud.com",
+    "sito": "LateralHiring",
+    "nome": "Goldman Sachs",
+    "settore": "Banca d'investimento",
+    "attiva": true
+  },
+  {
+    "tipo": "greenhouse",
+    "slug": "lincolninternational",
+    "nome": "Lincoln International",
+    "settore": "Advisory e boutique",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "bbva.wd3.myworkdayjobs.com",
+    "tenant": "bbva",
+    "sito": "BBVA",
+    "nome": "BBVA",
+    "settore": "Banca",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "santander.wd3.myworkdayjobs.com",
+    "tenant": "santander",
+    "sito": "SantanderCareers",
+    "nome": "Santander",
+    "settore": "Banca d'investimento",
+    "attiva": true
+  },
+  {
+    "tipo": "greenhouse",
+    "slug": "capstoneinvestmentadvisors",
+    "nome": "Capstone",
+    "settore": "Trading e hedge fund",
+    "attiva": true
+  },
+  {
+    "tipo": "greenhouse",
+    "slug": "optiverus",
+    "nome": "Optiver",
+    "settore": "Trading e hedge fund",
+    "attiva": true
+  },
+  {
+    "tipo": "greenhouse",
+    "slug": "mavensecuritiesholdingltd",
+    "nome": "Maven Securities",
+    "settore": "Trading e hedge fund",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "baincapital.wd1.myworkdayjobs.com",
+    "tenant": "baincapital",
+    "sito": "External_Public",
+    "nome": "Bain Capital",
+    "settore": "Private equity",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "pjtpartners.wd1.myworkdayjobs.com",
+    "tenant": "pjtpartners",
+    "sito": "Careers",
+    "nome": "PJT Partners",
+    "settore": "Banca d'investimento",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "pjtpartners.wd1.myworkdayjobs.com",
+    "tenant": "pjtpartners",
+    "sito": "Studentevents",
+    "nome": "PJT Partners (Studentevents)",
+    "settore": "Banca d'investimento",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "pjtpartners.wd1.myworkdayjobs.com",
+    "tenant": "pjtpartners",
+    "sito": "Students",
+    "nome": "PJT Partners (Students)",
+    "settore": "Banca d'investimento",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "rbc.wd3.myworkdayjobs.com",
+    "tenant": "rbc",
+    "sito": "RBCGLOBAL1",
+    "nome": "RBC Capital Markets",
+    "settore": "Banca d'investimento",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "troweprice.wd5.myworkdayjobs.com",
+    "tenant": "troweprice",
+    "sito": "TRowePrice",
+    "nome": "T. Rowe Price",
+    "settore": "Asset management",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "troweprice.wd5.myworkdayjobs.com",
+    "tenant": "troweprice",
+    "sito": "TRowePriceInternational",
+    "nome": "T. Rowe Price (TRowePriceInternational)",
+    "settore": "Asset management",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "moelis.wd1.myworkdayjobs.com",
+    "tenant": "moelis",
+    "sito": "Experienced-Hires",
+    "nome": "Moelis & Company",
+    "settore": "Banca d'investimento",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "mufgub.wd3.myworkdayjobs.com",
+    "tenant": "mufgub",
+    "sito": "MUFG-Careers",
+    "nome": "MUFG",
+    "settore": "Banca d'investimento",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "mizuho.wd1.myworkdayjobs.com",
+    "tenant": "mizuho",
+    "sito": "mizuhoamericas",
+    "nome": "Mizuho",
+    "settore": "Banca d'investimento",
+    "attiva": true
+  },
+  {
+    "tipo": "oracle",
+    "host": "ekbq.fa.em2.oraclecloud.com",
+    "sito": "CX_2",
+    "nome": "Schroders",
+    "settore": "Asset management",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "raymondjames.wd1.myworkdayjobs.com",
+    "tenant": "raymondjames",
+    "sito": "RaymondJamesCareers",
+    "nome": "Raymond James",
+    "settore": "Banca d'investimento",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "wellington.wd5.myworkdayjobs.com",
+    "tenant": "wellington",
+    "sito": "External",
+    "nome": "Wellington Management",
+    "settore": "Asset management",
+    "attiva": true
+  },
+  {
+    "tipo": "greenhouse",
+    "slug": "winton",
+    "nome": "Winton Capital",
+    "settore": "Trading e hedge fund",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "aviva.wd1.myworkdayjobs.com",
+    "tenant": "aviva",
+    "sito": "Aviva_Investors_External",
+    "nome": "Aviva Investors",
+    "settore": "Asset management",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "aviva.wd1.myworkdayjobs.com",
+    "tenant": "aviva",
+    "sito": "External",
+    "nome": "Aviva Investors (External)",
+    "settore": "Asset management",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "capgroup.wd1.myworkdayjobs.com",
+    "tenant": "capgroup",
+    "sito": "capitalgroupcareers",
+    "nome": "Capital Group",
+    "settore": "Asset management",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "abrdn.wd3.myworkdayjobs.com",
+    "tenant": "abrdn",
+    "sito": "abrdn",
+    "nome": "abrdn",
+    "settore": "Asset management",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "knightfrank.wd103.myworkdayjobs.com",
+    "tenant": "knightfrank",
+    "sito": "KF",
+    "nome": "Knight Frank",
+    "settore": "Real estate",
+    "attiva": true
+  },
+  {
+    "tipo": "oracle",
+    "host": "eofe.fa.us2.oraclecloud.com",
+    "sito": "BNY-Careers",
+    "nome": "BNY Mellon",
+    "settore": "Banca d'investimento",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "rbs.wd3.myworkdayjobs.com",
+    "tenant": "rbs",
+    "sito": "RBS",
+    "nome": "NatWest Markets",
+    "settore": "Banca d'investimento",
+    "attiva": true
+  },
+  {
+    "tipo": "smartrecruiters",
+    "slug": "legalandgeneral",
+    "nome": "Legal & General",
+    "settore": "Asset management",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "barings.wd1.myworkdayjobs.com",
+    "tenant": "barings",
+    "sito": "Barings",
+    "nome": "Barings",
+    "settore": "Asset management",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "barings.wd1.myworkdayjobs.com",
+    "tenant": "barings",
+    "sito": "Early_Talent",
+    "nome": "Barings (Early_Talent)",
+    "settore": "Asset management",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "barings.wd1.myworkdayjobs.com",
+    "tenant": "barings",
+    "sito": "barings",
+    "nome": "Barings (barings)",
+    "settore": "Asset management",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "aig.wd1.myworkdayjobs.com",
+    "tenant": "aig",
+    "sito": "aig",
+    "nome": "AIG",
+    "settore": "Assicurazioni",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "aig.wd1.myworkdayjobs.com",
+    "tenant": "aig",
+    "sito": "early_careers",
+    "nome": "AIG (early_careers)",
+    "settore": "Assicurazioni",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "abglobal.wd1.myworkdayjobs.com",
+    "tenant": "abglobal",
+    "sito": "abcampuscareers",
+    "nome": "AllianceBernstein",
+    "settore": "Asset management",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "abglobal.wd1.myworkdayjobs.com",
+    "tenant": "abglobal",
+    "sito": "alliancebernsteincareers",
+    "nome": "AllianceBernstein (alliancebernsteincareers)",
+    "settore": "Asset management",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "bmo.wd3.myworkdayjobs.com",
+    "tenant": "bmo",
+    "sito": "External",
+    "nome": "BMO",
+    "settore": "Banca d'investimento",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "bpinternational.wd3.myworkdayjobs.com",
+    "tenant": "bpinternational",
+    "sito": "bpCareers",
+    "nome": "BP Trading",
+    "settore": "Trading e hedge fund",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "brookfield.wd5.myworkdayjobs.com",
+    "tenant": "brookfield",
+    "sito": "brookfield",
+    "nome": "Brookfield Asset Management",
+    "settore": "Asset management",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "cambridgeassociates.wd5.myworkdayjobs.com",
+    "tenant": "cambridgeassociates",
+    "sito": "Cambridge_Associates",
+    "nome": "Cambridge Associates",
+    "settore": "Asset management",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "canarywharf.wd103.myworkdayjobs.com",
+    "tenant": "canarywharf",
+    "sito": "CanaryWharf",
+    "nome": "Canary Wharf Group",
+    "settore": "Real estate",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "capitalone.wd12.myworkdayjobs.com",
+    "tenant": "capitalone",
+    "sito": "Capital_One",
+    "nome": "Capital One",
+    "settore": "Banca",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "cw.wd1.myworkdayjobs.com",
+    "tenant": "cw",
+    "sito": "External",
+    "nome": "Cushman & Wakefield",
+    "settore": "Real estate",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "glencorecorp.wd3.myworkdayjobs.com",
+    "tenant": "glencorecorp",
+    "sito": "External",
+    "nome": "Glencore",
+    "settore": "Trading e hedge fund",
+    "attiva": true
+  },
+  {
+    "tipo": "greenhouse",
+    "slug": "glencoreuk",
+    "nome": "Glencore (glencoreuk)",
+    "settore": "Trading e hedge fund",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "grosvenor.wd3.myworkdayjobs.com",
+    "tenant": "grosvenor",
+    "sito": "External_careers_site_Grosvenor",
+    "nome": "Grosvenor Group",
+    "settore": "Real estate",
+    "attiva": true
+  },
+  {
+    "tipo": "greenhouse",
+    "slug": "gsacapital",
+    "nome": "GSA Capital",
+    "settore": "Trading e hedge fund",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "jll.wd1.myworkdayjobs.com",
+    "tenant": "jll",
+    "sito": "jllcareers",
+    "nome": "JLL",
+    "settore": "Real estate",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "jupiteram.wd3.myworkdayjobs.com",
+    "tenant": "jupiteram",
+    "sito": "jupiter_careers",
+    "nome": "Jupiter Asset Management",
+    "settore": "Asset management",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "landsecurities.wd3.myworkdayjobs.com",
+    "tenant": "landsecurities",
+    "sito": "Landseccareers",
+    "nome": "Landsec",
+    "settore": "Real estate",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "lbg.wd3.myworkdayjobs.com",
+    "tenant": "lbg",
+    "sito": "LBG_Careers",
+    "nome": "Lloyds Banking Group",
+    "settore": "Banca",
+    "attiva": true
+  },
+  {
+    "tipo": "greenhouse",
+    "slug": "mako",
+    "nome": "Mako Trading",
+    "settore": "Trading e hedge fund",
+    "attiva": true
+  },
+  {
+    "tipo": "greenhouse",
+    "slug": "mangroup",
+    "nome": "Man Group",
+    "settore": "Trading e hedge fund",
+    "attiva": true
+  },
+  {
+    "tipo": "greenhouse",
+    "slug": "marshallwace",
+    "nome": "Marshall Wace",
+    "settore": "Trading e hedge fund",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "pru.wd5.myworkdayjobs.com",
+    "tenant": "pru",
+    "sito": "Careers",
+    "nome": "PGIM",
+    "settore": "Asset management",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "pipersandler.wd501.myworkdayjobs.com",
+    "tenant": "pipersandler",
+    "sito": "Piper_Sandler_Careers",
+    "nome": "Piper Sandler",
+    "settore": "Banca d'investimento",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "investpsp.wd3.myworkdayjobs.com",
+    "tenant": "investpsp",
+    "sito": "psp_careers",
+    "nome": "PSP Investments",
+    "settore": "Asset management",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "shell.wd3.myworkdayjobs.com",
+    "tenant": "shell",
+    "sito": "ShellCareers",
+    "nome": "Shell",
+    "settore": "Corporate",
+    "attiva": true
+  },
+  {
+    "tipo": "smartrecruiters",
+    "slug": "TurnerTownsend",
+    "nome": "Turner & Townsend",
+    "settore": "Consulenza",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "vanguard.wd5.myworkdayjobs.com",
+    "tenant": "vanguard",
+    "sito": "vanguard_external",
+    "nome": "Vanguard",
+    "settore": "Asset management",
+    "attiva": true
+  },
+  {
+    "tipo": "greenhouse",
+    "slug": "williamblair",
+    "nome": "William Blair",
+    "settore": "Banca d'investimento",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "td.wd3.myworkdayjobs.com",
+    "tenant": "td",
+    "sito": "TD_Bank_Careers",
+    "nome": "TD Securities",
+    "settore": "Banca d'investimento",
+    "attiva": true
+  },
+  {
+    "tipo": "workday",
+    "host": "sculptor.wd12.myworkdayjobs.com",
+    "tenant": "sculptor",
+    "sito": "Sculptor_External_Career_Site",
+    "nome": "Sculptor Capital",
+    "settore": "Trading e hedge fund",
+    "attiva": true
   }
 ]
