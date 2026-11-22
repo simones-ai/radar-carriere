@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radar Carriere</title>
+<style>
+:root{
+  --bg:#07090c; --pan:#0d1117; --pan2:#121821; --riga:#161d27; --bordo:#232c38;
+  --testo:#d7dde5; --tenue:#7d8896; --ambra:#ffb000; --ambra2:#ffcf5c;
+  --verde:#3ddc84; --rosso:#ff5f56; --ciano:#4fc3f7; --viola:#c792ea; --rosa:#ff7eb6; --blu:#82aaff;
+  --mono: "JetBrains Mono","Cascadia Mono","Consolas","SFMono-Regular",Menlo,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--testo);font:13px/1.45 var(--mono)}
+body{display:flex;flex-direction:column;overflow:hidden}
+a{color:var(--ciano)}
+button,input,select,textarea{font:inherit;color:inherit}
+::selection{background:var(--ambra);color:#000}
+::-webkit-scrollbar{width:10px;height:10px}::-webkit-scrollbar-thumb{background:#253041}::-webkit-scrollbar-track{background:transparent}
+
+/* barra superiore */
+.top{display:flex;align-items:center;gap:18px;padding:8px 14px;background:#000;border-bottom:1px solid var(--ambra);flex-wrap:wrap}
+.logo{color:var(--ambra);font-weight:700;letter-spacing:.12em}
+.logo b{background:var(--ambra);color:#000;padding:0 6px;margin-right:6px}
+.cursore{animation:lamp 1s steps(1) infinite}@keyframes lamp{50%{opacity:0}}
+.kpi{display:flex;gap:16px;flex-wrap:wrap}
+.kpi span{color:var(--tenue)} .kpi strong{color:var(--ambra2);font-weight:600}
+.kpi .nuove strong{color:var(--verde)}
+.dx{margin-left:auto;display:flex;gap:14px;align-items:center;color:var(--tenue)}
+#statoScan.on{color:var(--verde)}
+#orologio{color:var(--testo)}
+
+/* schede */
+.schede{display:flex;gap:0;background:var(--pan);border-bottom:1px solid var(--bordo);overflow-x:auto}
+.schede button{background:none;border:0;border-right:1px solid var(--bordo);padding:7px 16px;cursor:pointer;color:var(--tenue);white-space:nowrap}
+.schede button kbd{color:var(--ambra);margin-right:6px;font-size:11px}
+.schede button.att{background:var(--ambra);color:#000}.schede button.att kbd{color:#000}
+
+/* riga di comando */
+.cmd{display:flex;align-items:center;gap:8px;padding:6px 14px;background:var(--pan);border-bottom:1px solid var(--bordo)}
+.cmd label{color:var(--ambra)}
+.cmd input{flex:1;background:transparent;border:0;outline:0;color:var(--ambra2);caret-color:var(--ambra)}
+.cmd .aiuto{color:var(--tenue);font-size:11px;white-space:nowrap}
+
+main{flex:1;min-height:0;display:flex}
+.vista{display:none;flex:1;min-height:0}.vista.att{display:flex}
+
+/* filtri */
+.filtri{width:230px;flex:none;border-right:1px solid var(--bordo);overflow-y:auto;padding:10px 12px;background:var(--pan)}
+.filtri h4{margin:14px 0 6px;color:var(--ambra);font-weight:600;font-size:11px;letter-spacing:.1em}
+.filtri h4:first-child{margin-top:0}
+.chip{display:flex;justify-content:space-between;width:100%;text-align:left;background:none;border:1px solid transparent;padding:3px 6px;cursor:pointer;color:var(--testo);border-radius:2px}
+.chip:hover{border-color:var(--bordo)}
+.chip.att{background:var(--pan2);border-color:var(--ambra);color:var(--ambra2)}
+.chip i{font-style:normal;color:var(--tenue)}
+.spunta{display:flex;gap:8px;align-items:center;padding:3px 2px;cursor:pointer;color:var(--testo)}
+.spunta input{accent-color:var(--ambra)}
+
+/* tabella */
+.lista{flex:1;min-width:0;display:flex;flex-direction:column}
+.intest{display:flex;justify-content:space-between;padding:6px 12px;color:var(--tenue);border-bottom:1px solid var(--bordo);font-size:12px;gap:10px;flex-wrap:wrap}
+.intest button{background:none;border:1px solid var(--bordo);color:var(--tenue);cursor:pointer;padding:1px 8px}
+.intest button:hover{color:var(--ambra);border-color:var(--ambra)}
+.scorri{flex:1;overflow:auto}
+table{width:100%;border-collapse:collapse;table-layout:fixed}
+th{position:sticky;top:0;background:var(--pan2);color:var(--ambra);text-align:left;font-weight:600;font-size:11px;letter-spacing:.08em;padding:6px 8px;border-bottom:1px solid var(--bordo);cursor:pointer;white-space:nowrap;z-index:1}
+td{padding:5px 8px;border-bottom:1px solid #121821;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:0}
+tr.r{cursor:pointer}
+tr.r:hover td{background:var(--riga)}
+tr.r.sel td{background:#1f2a1a;box-shadow:inset 0 0 0 0 var(--ambra)}
+tr.r.sel td:first-child{box-shadow:inset 3px 0 0 var(--ambra)}
+tr.r.letta td{color:#aab3bf}
+tr.r.chiusa td{opacity:.45;text-decoration:line-through}
+.pt{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--verde);box-shadow:0 0 6px var(--verde)}
+.c-data{width:82px;color:var(--tenue)} .c-az{width:20%;color:var(--ambra2)} .c-tit{width:auto} .c-tipo{width:118px} .c-luogo{width:18%;color:var(--tenue)} .c-st{width:110px} .c-pt{width:24px}
+#v-posizioni.con-dett .c-luogo,#v-posizioni.con-dett .c-st{display:none}
+#v-posizioni.con-dett .c-az{width:26%}
+#fonti{table-layout:auto}
+#fonti td{max-width:none;white-space:normal;overflow:visible}
+#fonti td:last-child{white-space:nowrap}
+#fonti td:nth-child(8){min-width:280px}
+#fonti .btn{padding:2px 7px;font-size:12px}
+.tag{display:inline-block;padding:0 5px;margin-right:3px;border:1px solid;font-size:11px;line-height:16px;border-radius:2px}
+.t-summer{color:var(--ambra);border-color:var(--ambra)} .t-offcycle{color:var(--rosa);border-color:var(--rosa)}
+.t-stage{color:var(--ciano);border-color:var(--ciano)} .t-graduate{color:var(--viola);border-color:var(--viola)}
+.t-junior{color:var(--verde);border-color:var(--verde)} .t-insight{color:var(--blu);border-color:var(--blu)}
+.t-possibile{color:var(--tenue);border-color:#3a4554}
+.st-salvata{color:var(--ambra)} .st-candidato{color:var(--verde)} .st-scartata{color:var(--rosso)}
+.vuoto{padding:40px;text-align:center;color:var(--tenue)}
+
+/* dettaglio */
+.dett{width:44%;max-width:640px;flex:none;border-left:1px solid var(--bordo);background:var(--pan);display:none;flex-direction:column;min-height:0}
+.dett.aperto{display:flex}
+.dett .testa{padding:12px 14px;border-bottom:1px solid var(--bordo)}
+.dett h2{margin:0 0 4px;font-size:15px;color:#fff;font-weight:600;white-space:normal}
+.dett .az{color:var(--ambra2)}
+.dett .meta{color:var(--tenue);margin-top:6px;font-size:12px}
+.azioni{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.btn{background:var(--pan2);border:1px solid var(--bordo);padding:4px 10px;cursor:pointer;color:var(--testo);text-decoration:none;display:inline-flex;gap:6px;align-items:center}
+.btn:hover{border-color:var(--ambra);color:var(--ambra2)}
+.btn.pri{background:var(--ambra);color:#000;border-color:var(--ambra);font-weight:700}
+.btn.pri:hover{background:var(--ambra2);color:#000}
+.btn.on{border-color:var(--verde);color:var(--verde)}
+.btn kbd{opacity:.6;font-size:10px}
+.dett textarea{width:100%;margin-top:10px;background:#0a0e13;border:1px solid var(--bordo);padding:6px;min-height:46px;resize:vertical;outline:0}
+.dett textarea:focus{border-color:var(--ambra)}
+.dett .corpo{flex:1;overflow:auto;padding:12px 14px;white-space:pre-wrap;color:#c3cad3;font-size:12.5px}
+.chiudi{float:right;background:none;border:0;color:var(--tenue);cursor:pointer;font-size:16px}
+
+/* pannelli generici */
+.pagina{flex:1;overflow:auto;padding:16px}
+.box{border:1px solid var(--bordo);background:var(--pan);margin-bottom:16px;max-width:1100px}
+.box > h3{margin:0;padding:7px 12px;background:var(--pan2);color:var(--ambra);font-size:12px;letter-spacing:.1em;border-bottom:1px solid var(--bordo)}
+.box .in{padding:12px}
+.campo{display:flex;flex-direction:column;gap:4px;margin-bottom:10px}
+.campo span{color:var(--tenue);font-size:12px}
+.campo input,.campo select{background:#0a0e13;border:1px solid var(--bordo);padding:6px 8px;outline:0}
+.campo input:focus,.campo select:focus{border-color:var(--ambra)}
+.griglia{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.nota{color:var(--tenue);font-size:12px}
+.ok{color:var(--verde)} .err{color:var(--rosso)}
+.registro{white-space:pre-wrap;color:#b9c2cc;font-size:12px}
+.paesi{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:2px 10px}
+body.statico .solo-locale, body:not(.statico) .solo-sito{display:none!important}
+#toast{position:fixed;right:14px;bottom:14px;background:var(--ambra);color:#000;padding:8px 14px;font-weight:600;display:none;z-index:9;max-width:80vw}
+
+@media (max-width: 900px){
+  .filtri{display:none}
+  .filtri.mobile{display:block;position:fixed;inset:120px 0 0 0;width:auto;z-index:5}
+  .dett.aperto{position:fixed;inset:0;width:auto;max-width:none;z-index:6}
+  .c-luogo,.c-data,.c-st{display:none}
+  .c-az{width:30%} .c-tipo{width:96px}
+  .cmd .aiuto{display:none}
+  #btnFiltri{display:inline-block!important}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="logo"><b>RC</b>RADAR CARRIERE<span class="cursore">_</span></div>
+  <div class="kpi">
+    <div class="nuove"><span>NUOVE </span><strong id="kNuove">0</strong></div>
+    <div><span>APERTE </span><strong id="kTot">0</strong></div>
+    <div><span>SALVATE </span><strong id="kSalv">0</strong></div>
+    <div><span>CANDIDATURE </span><strong id="kCand">0</strong></div>
+  </div>
+  <div class="dx"><span id="statoScan">—</span><span id="orologio"></span></div>
+</header>
+
+<nav class="schede" id="schede">
+  <button data-v="posizioni" class="att"><kbd>F1</kbd>POSIZIONI</button>
+  <button data-v="fonti"><kbd>F2</kbd>AZIENDE MONITORATE</button>
+  <button data-v="impostazioni" class="solo-locale"><kbd>F3</kbd>IMPOSTAZIONI</button>
+  <button data-v="dati" class="solo-sito"><kbd>F3</kbd>I MIEI DATI</button>
+  <button data-v="registro"><kbd>F4</kbd>REGISTRO</button>
+</nav>
+
+<div class="cmd">
+  <label for="cmd">RADAR&gt;</label>
+  <input id="cmd" autocomplete="off" spellcheck="false" placeholder="cerca (es. deloitte milano audit) oppure un comando: /summer /graduate /junior /nuove /scan /aiuto">
+  <button id="btnFiltri" class="btn" style="display:none">FILTRI</button>
+  <span class="aiuto">/ cerca · j k muovi · ⏎ apri · s salva · c candidato · x scarta</span>
+</div>
+
+<main>
+  <!-- POSIZIONI -->
+  <section class="vista att" id="v-posizioni">
+    <aside class="filtri" id="filtri"></aside>
+    <div class="lista">
+      <div class="intest">
+        <span id="riassunto"></span>
+        <span><button id="btnLette">segna tutte come lette</button> <button id="btnScan" class="solo-locale">scansiona ora</button></span>
+      </div>
+      <div class="scorri" id="scorri">
+        <table>
+          <thead><tr>
+            <th class="c-pt"></th><th class="c-data" data-o="data">DATA</th><th class="c-az" data-o="azienda">AZIENDA</th>
+            <th class="c-tit" data-o="titolo">POSIZIONE</th><th class="c-tipo">TIPO</th><th class="c-luogo" data-o="luogo">LUOGO</th><th class="c-st">STATO</th>
+          </tr></thead>
+          <tbody id="righe"></tbody>
+        </table>
+        <div class="vuoto" id="vuoto" hidden></div>
+      </div>
+    </div>
+    <aside class="dett" id="dett"></aside>
+  </section>
+
+  <!-- FONTI -->
+  <section class="vista" id="v-fonti">
+    <div class="pagina">
+      <div class="box solo-sito"><h3>+ AGGIUNGI UN'AZIENDA</h3><div class="in">
+        <p class="nota" style="margin-top:0">Sul repository GitHub del radar apri <b>radar/aziende.json</b>, premi la matita ✎ e, prima dell'ultima
+        <code>]</code>, aggiungi una riga come questa (con la virgola dopo la voce precedente):</p>
+        <pre class="nota" style="white-space:pre-wrap">{"nome": "Mediobanca", "settore": "Banca d'investimento", "url": "https://indirizzo-della-pagina-carriere"}</pre>
+        <p class="nota">Poi premi <b>Commit changes</b>: dal giro successivo l'azienda compare qui, col pallino verde se il radar riesce a leggerla.
+        Riconosce da solo Workday, Greenhouse, Lever, SmartRecruiters, Ashby, Oracle e Avature. Per le altre pagine legge i link che sembrano annunci.</p>
+      </div></div>
+      <div class="box solo-locale"><h3>+ AGGIUNGI UN'AZIENDA</h3><div class="in">
+        <p class="nota" style="margin-top:0">Incolla l'indirizzo della pagina "Lavora con noi" o "Careers" dell'azienda, quella con l'elenco delle posizioni aperte.
+        Il radar riconosce da solo Workday, Greenhouse, Lever, SmartRecruiters, Ashby, Oracle e Avature. Per le altre pagine
+        prova a leggere i link che sembrano annunci per stage, graduate o junior.</p>
+        <div class="griglia">
+          <label class="campo"><span>Nome azienda</span><input id="nNome" placeholder="es. Mediobanca"></label>
+          <label class="campo" style="grid-column:span 2"><span>Indirizzo della pagina carriere</span><input id="nUrl" placeholder="https://…"></label>
+          <label class="campo"><span>Settore</span><select id="nSett"></select></label>
+        </div>
+        <button class="btn pri" id="btnAggiungi">AGGIUNGI E PROVA</button> <span id="esitoAgg" class="nota"></span>
+      </div></div>
+      <div class="box"><h3>AZIENDE MONITORATE</h3>
+        <div class="scorri"><table id="fonti"><thead><tr><th></th><th>AZIENDA</th><th>SETTORE</th><th>SISTEMA</th><th>ANNUNCI</th><th>PER TE</th><th>ULTIMO CONTROLLO</th><th>ESITO</th><th></th></tr></thead><tbody></tbody></table></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPOSTAZIONI -->
+  <section class="vista" id="v-impostazioni">
+    <div class="pagina">
+      <div class="box"><h3>DOVE CERCHI</h3><div class="in"><div class="paesi" id="paesi"></div>
+        <p class="nota">Gli annunci fuori da questi paesi vengono ignorati. Dopo aver cambiato i paesi premi "scansiona ora".</p></div></div>
+      <div class="box"><h3>FREQUENZA</h3><div class="in griglia">
+        <label class="campo"><span>Controlla ogni (minuti, minimo 15)</span><input id="iInt" type="number" min="15"></label>
+      </div></div>
+      <div class="box"><h3>ADZUNA — AGGREGATORE (EY, KPMG, GOLDMAN, MCKINSEY, BANCHE ITALIANE…)</h3><div class="in">
+        <p class="nota" style="margin-top:0">Molte aziende non hanno un sito leggibile direttamente. Adzuna raccoglie i loro annunci: registrati gratis su
+        <a href="https://developer.adzuna.com/signup" target="_blank" rel="noopener">developer.adzuna.com</a>, copia App ID e App Key qui, poi attiva la fonte "Adzuna" in AZIENDE MONITORATE.</p>
+        <div class="griglia">
+          <label class="campo"><span>App ID</span><input id="adId"></label>
+          <label class="campo"><span>App Key</span><input id="adKey" type="password"></label>
+        </div></div></div>
+      <button class="btn pri" id="btnSalvaImp">SALVA IMPOSTAZIONI</button> <span id="esitoImp" class="nota"></span>
+    </div>
+  </section>
+
+  <!-- I MIEI DATI (solo sito) -->
+  <section class="vista" id="v-dati">
+    <div class="pagina">
+      <div class="box"><h3>COME FUNZIONA QUESTO SITO</h3><div class="in nota" id="infoSito"></div></div>
+      <div class="box"><h3>SALVATE, CANDIDATURE E NOTE</h3><div class="in">
+        <p class="nota" style="margin-top:0">Restano solo in questo browser: nessun altro le vede. Per passarle dal PC al telefono
+        (o farne una copia di sicurezza) esportale qui e importale sull'altro dispositivo.</p>
+        <button class="btn pri" id="btnEsporta">ESPORTA I MIEI DATI</button>
+        <label class="btn" style="cursor:pointer">IMPORTA… <input type="file" id="fileImporta" accept=".json,application/json" hidden></label>
+        <span id="esitoDati" class="nota"></span>
+      </div></div>
+    </div>
+  </section>
+
+  <!-- REGISTRO -->
+  <section class="vista" id="v-registro"><div class="pagina"><div class="box"><h3>REGISTRO SCANSIONI</h3><div class="in registro" id="registro"></div></div></div></section>
+</main>
+<div id="toast"></div>
+
+<script>
+"use strict";
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const ETI = {summer:"SUMMER", offcycle:"OFF-CYCLE", stage:"STAGE", graduate:"GRADUATE", junior:"JUNIOR", insight:"INSIGHT", possibile:"DA VERIFICARE"};
+const STATI = {"":"", salvata:"★ salvata", candidato:"✓ candidato", scartata:"✗ scartata"};
+const SETTORI = ["Big Four","Consulenza","Banca d'investimento","Banca","Asset management","Private equity","Trading e hedge fund","Finanza e dati","Assicurazioni","Boutique","Industria","Tech","Altro"];
+
+let offerte = [], selezionata = null, ultimeNuove = null, paesiNomi = {};
+const F = { testo:"", cat:"", settore:"", paese:"", vista:"tutte", verifica:false, chiuse:false, protette:false, ordine:"data", dir:-1 };
+const RX_PROTETTE = /categori[ae] protett|L\.?\s*68\/99|art\.?\s*1\/18/i;
+try { Object.assign(F, JSON.parse(localStorage.getItem("radarFiltri") || "{}"), {testo:""}); } catch(e) {}
+const salvaFiltri = () => { try { localStorage.setItem("radarFiltri", JSON.stringify(F)); } catch(e) {} };
+
+/* ------------------------------------------------ modalità sito (GitHub Pages): niente server, dati personali nel browser */
+const STATICO = !!window.RADAR_STATICO;
+let primaVisita = false;
+if (STATICO) document.body.classList.add("statico");
+const MIO = (() => { let m = {}; try { m = JSON.parse(localStorage.getItem("radarMio") || "{}"); } catch(e) {}
+  m.offerte = m.offerte || {};
+  if (!m.inizio) { m.inizio = new Date().toISOString().slice(0, 19); primaVisita = true; }  // da adesso in poi le nuove posizioni sono "NUOVE"
+  return m; })();
+const salvaMio = () => { try { localStorage.setItem("radarMio", JSON.stringify(MIO)); } catch(e) { toast("⚠ Il browser non permette di salvare i dati"); } };
+if (STATICO) { salvaMio(); $("#cmd").placeholder = "cerca (es. deloitte milano audit) oppure un comando: /summer /graduate /junior /nuove /salvate /aiuto"; }
+const statico = { dati: null, descr: null, stato: null, quando: 0 };
+
+async function json(url) { const r = await fetch(url + "?t=" + Date.now()); if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }
+function unisciMio(o) {
+  const m = MIO.offerte[o.id] || {};
+  return Object.assign(o, { stato: m.stato || "", note: m.note || "", letta: m.letta ? 1 : 0,
+                            nuova: o.prima_vista > MIO.inizio ? 1 : 0 });
+}
+function conteggiLocali() {
+  const a = offerte.filter(o => o.attiva && o.rilevanza >= 2);
+  return { tot: a.length, nuove: a.filter(o => o.nuova && !o.letta).length,
+           salvate: offerte.filter(o => o.stato === "salvata").length, candidature: offerte.filter(o => o.stato === "candidato").length };
+}
+async function apiStatica(percorso, corpo) {
+  const id = percorso.startsWith("/api/offerta/") ? decodeURIComponent(percorso.slice(13)) : null;
+  if (corpo === undefined) {
+    if (percorso === "/api/offerte") { statico.dati = await json("dati.json"); return statico.dati.map(o => unisciMio(Object.assign({}, o))); }
+    if (id) {
+      if (!statico.descr) statico.descr = await json("descrizioni.json");
+      const o = offerte.find(x => x.id === id); if (!o) throw new Error("non trovata");
+      return Object.assign({}, o, { descrizione: statico.descr[id] || "" });
+    }
+    if (percorso === "/api/stato") {
+      if (!statico.stato || Date.now() - statico.quando > 5 * 60 * 1000) { statico.stato = await json("stato.json"); statico.quando = Date.now(); }
+      return { in_corso: false, statico: true, aggiornato: statico.stato.aggiornato, conteggi: conteggiLocali(), registro: statico.stato.registro || [] };
+    }
+    if (percorso === "/api/fonti") { if (!statico.stato) statico.stato = await json("stato.json"); return statico.stato.fonti; }
+    if (percorso === "/api/impostazioni") { if (!statico.stato) statico.stato = await json("stato.json"); return { paesi: statico.stato.paesi }; }
+  } else {
+    if (id) { const m = MIO.offerte[id] = Object.assign(MIO.offerte[id] || {}, corpo);
+              if (!m.stato && !m.note && !m.letta) delete MIO.offerte[id]; salvaMio(); return { ok: true }; }
+    if (percorso === "/api/lette") { offerte.forEach(o => { (MIO.offerte[o.id] = MIO.offerte[o.id] || {}).letta = 1; }); salvaMio(); return { ok: true }; }
+  }
+  throw new Error("non disponibile sul sito");
+}
+
+async function api(percorso, corpo) {
+  if (STATICO) return apiStatica(percorso, corpo);
+  const r = await fetch(percorso, corpo === undefined ? {} : {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify(corpo)});
+  const d = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error(d.errore || ("HTTP " + r.status));
+  return d;
+}
+function toast(t){ const el=$("#toast"); el.textContent=t; el.style.display="block"; clearTimeout(toast.t); toast.t=setTimeout(()=>el.style.display="none",3500); }
+
+/* ------------------------------------------------ filtri */
+function passa(o, escludi) {
+  if (!F.chiuse && !o.attiva) return false;
+  if (!F.protette && RX_PROTETTE.test(o.titolo)) return false;
+  if (!F.verifica && o.rilevanza < 2 && F.cat !== "possibile") return false;
+  if (escludi !== "cat" && F.cat && !o.categorie.includes(F.cat)) return false;
+  if (escludi !== "settore" && F.settore && o.settore !== F.settore) return false;
+  if (escludi !== "paese" && F.paese && o.paese !== F.paese) return false;
+  if (escludi !== "vista") {
+    if (F.vista === "tutte" && o.stato === "scartata") return false;
+    if (F.vista === "nuove" && !(o.nuova && !o.letta)) return false;
+    if (["salvata","candidato","scartata"].includes(F.vista) && o.stato !== F.vista) return false;
+  }
+  if (F.testo) {
+    const h = (o.azienda+" "+o.titolo+" "+o.luogo+" "+o.settore+" "+o.categorie.map(c=>ETI[c]).join(" ")).toLowerCase();
+    if (!F.testo.toLowerCase().split(/\s+/).filter(Boolean).every(p => h.includes(p))) return false;
+  }
+  return true;
+}
+const dataDi = o => o.pubblicata || (o.prima_vista||"").slice(0,10);
+
+function contaPer(campo, valori, escludi) {
+  const c = {}; offerte.filter(o => passa(o, escludi)).forEach(o => {
+    const vs = campo === "categorie" ? o.categorie : [o[campo]];
+    vs.forEach(v => { if (v) c[v] = (c[v]||0) + 1; });
+  }); return c;
+}
+
+function disegnaFiltri() {
+  const chip = (gruppo, val, eti, n) => `<button class="chip ${F[gruppo]===val?"att":""}" data-g="${gruppo}" data-v="${esc(val)}"><span>${esc(eti)}</span><i>${n??""}</i></button>`;
+  const cc = contaPer("categorie", null, "cat"), cs = contaPer("settore", null, "settore"), cp = contaPer("paese", null, "paese");
+  const nuove = offerte.filter(o => o.nuova && !o.letta && o.attiva).length;
+  const conta = s => offerte.filter(o => o.stato === s).length;
+  let h = `<h4>VISTA</h4>` + chip("vista","tutte","Tutte") + chip("vista","nuove","● Nuove",nuove) + chip("vista","salvata","★ Salvate",conta("salvata"))
+        + chip("vista","candidato","✓ Candidature",conta("candidato")) + chip("vista","scartata","✗ Scartate",conta("scartata"));
+  h += `<h4>TIPO</h4>` + chip("cat","","Tutti i tipi");
+  ["summer","offcycle","stage","graduate","junior","insight","possibile"].forEach(k => { if (cc[k] || F.cat===k) h += chip("cat",k,ETI[k],cc[k]||0); });
+  h += `<h4>SETTORE</h4>` + chip("settore","","Tutti");
+  Object.keys(cs).sort().forEach(k => h += chip("settore",k,k,cs[k]));
+  h += `<h4>PAESE</h4>` + chip("paese","","Tutti");
+  Object.keys(cp).sort().forEach(k => h += chip("paese",k,paesiNomi[k]||k,cp[k]));
+  h += `<h4>OPZIONI</h4>
+    <label class="spunta"><input type="checkbox" id="fVer" ${F.verifica?"checked":""}> mostra "da verificare"</label>
+    <label class="spunta"><input type="checkbox" id="fChi" ${F.chiuse?"checked":""}> mostra annunci chiusi</label>
+    <label class="spunta"><input type="checkbox" id="fPro" ${F.protette?"checked":""}> mostra posizioni per categorie protette (L. 68/99)</label>
+    <p class="nota">"Da verificare": titoli come Analyst o Consultant senza indicazioni sul livello. Possono essere ruoli d'ingresso.</p>`;
+  $("#filtri").innerHTML = h;
+  $("#fVer").onchange = e => { F.verifica = e.target.checked; aggiorna(); };
+  $("#fChi").onchange = e => { F.chiuse = e.target.checked; aggiorna(); };
+  $("#fPro").onchange = e => { F.protette = e.target.checked; aggiorna(); };
+}
+$("#filtri").addEventListener("click", e => {
+  const b = e.target.closest(".chip"); if (!b) return;
+  const g = b.dataset.g, v = b.dataset.v;
+  F[g] = (F[g] === v && g !== "vista") ? "" : v;
+  aggiorna();
+});
+
+/* ------------------------------------------------ tabella */
+function visibili() {
+  const l = offerte.filter(o => passa(o));
+  const k = F.ordine, d = F.dir;
+  l.sort((a,b) => {
+    const va = k==="data" ? dataDi(a)+a.prima_vista : (a[k]||"").toLowerCase();
+    const vb = k==="data" ? dataDi(b)+b.prima_vista : (b[k]||"").toLowerCase();
+    return va < vb ? -d : va > vb ? d : 0;
+  });
+  return l;
+}
+function fmtData(s){ if(!s) return ""; const [y,m,g]=s.slice(0,10).split("-"); return `${g}/${m}/${y.slice(2)}`; }
+
+function disegnaTabella() {
+  const l = visibili();
+  $("#righe").innerHTML = l.slice(0, 1500).map(o => `
+    <tr class="r ${o.letta?"letta":""} ${o.attiva?"":"chiusa"} ${selezionata===o.id?"sel":""}" data-id="${esc(o.id)}">
+      <td class="c-pt">${o.nuova && !o.letta ? '<span class="pt" title="nuova"></span>' : ""}</td>
+      <td class="c-data">${fmtData(dataDi(o))}</td>
+      <td class="c-az" title="${esc(o.azienda)}">${esc(o.azienda)}</td>
+      <td class="c-tit" title="${esc(o.titolo)}">${esc(o.titolo)}</td>
+      <td class="c-tipo" title="${esc(o.categorie.map(c => ETI[c]).join(", "))}">${o.categorie.slice(0,1).map(c => `<span class="tag t-${c}">${ETI[c]}</span>`).join("")}</td>
+      <td class="c-luogo" title="${esc(o.luogo)}">${esc(o.luogo)}</td>
+      <td class="c-st st-${o.stato}">${STATI[o.stato]||""}</td>
+    </tr>`).join("");
+  const vuoto = $("#vuoto");
+  vuoto.hidden = l.length > 0;
+  if (!l.length) vuoto.textContent = offerte.length ? "Nessuna posizione con questi filtri." : "Nessuna posizione ancora: la prima scansione è in corso (può richiedere qualche minuto)…";
+  const nuove = l.filter(o => o.nuova && !o.letta).length;
+  $("#riassunto").textContent = `${l.length} posizioni${nuove ? ` · ${nuove} nuove` : ""}${F.cat ? " · "+ETI[F.cat] : ""}${F.testo ? ` · "${F.testo}"` : ""}`;
+  document.querySelectorAll("th[data-o]").forEach(th => {
+    th.textContent = th.textContent.replace(/ [▲▼]$/, "") + (th.dataset.o === F.ordine ? (F.dir < 0 ? " ▼" : " ▲") : "");
+  });
+}
+document.querySelectorAll("th[data-o]").forEach(th => th.onclick = () => {
+  F.dir = F.ordine === th.dataset.o ? -F.dir : (th.dataset.o === "data" ? -1 : 1);
+  F.ordine = th.dataset.o; aggiorna();
+});
+$("#righe").addEventListener("click", e => { const tr = e.target.closest("tr.r"); if (tr) apri(tr.dataset.id); });
+
+function aggiorna(){ salvaFiltri(); disegnaFiltri(); disegnaTabella();
+  if (STATICO) { const k = conteggiLocali(); $("#kNuove").textContent = k.nuove; $("#kTot").textContent = k.tot; $("#kSalv").textContent = k.salvate; $("#kCand").textContent = k.candidature;
+                 document.title = (k.nuove ? `(${k.nuove}) ` : "") + "Radar Carriere"; } }
+
+/* ------------------------------------------------ dettaglio */
+async function apri(id) {
+  selezionata = id;
+  const o = offerte.find(x => x.id === id);
+  if (o && !o.letta) { o.letta = 1; api("/api/offerta/"+encodeURIComponent(id), {letta:1}); }
+  disegnaTabella();
+  document.querySelector(`tr.r[data-id="${CSS.escape(id)}"]`)?.scrollIntoView({block:"nearest"});
+  const d = $("#dett"); d.classList.add("aperto"); $("#v-posizioni").classList.add("con-dett");
+  d.innerHTML = `<div class="testa"><button class="chiudi" id="chiudiDett">✕</button><h2>${esc(o?.titolo)}</h2><div class="az">${esc(o?.azienda)}</div><div class="meta">caricamento…</div></div>`;
+  $("#chiudiDett").onclick = chiudi;
+  let p; try { p = await api("/api/offerta/"+encodeURIComponent(id)); } catch(e) { return; }
+  if (selezionata !== id) return;
+  d.innerHTML = `
+    <div class="testa">
+      <button class="chiudi" id="chiudiDett" title="Esc">✕</button>
+      <h2>${esc(p.titolo)}</h2>
+      <div class="az">${esc(p.azienda)} <span class="nota">· ${esc(p.settore)}</span></div>
+      <div style="margin-top:6px">${p.categorie.map(c => `<span class="tag t-${c}">${ETI[c]}</span>`).join("")}</div>
+      <div class="meta">📍 ${esc(p.luogo || "luogo non indicato")}<br>
+        ${p.pubblicata ? "Pubblicata il "+fmtData(p.pubblicata)+" · " : ""}vista dal radar il ${fmtData(p.prima_vista)} alle ${p.prima_vista.slice(11,16)}
+        ${p.attiva ? "" : ' · <span class="err">non più online</span>'}</div>
+      <div class="azioni">
+        <a class="btn pri" href="${esc(p.url)}" target="_blank" rel="noopener" id="vaiCand">CANDIDATI ↗ <kbd>⏎</kbd></a>
+        <button class="btn ${p.stato==="salvata"?"on":""}" data-s="salvata">★ SALVA <kbd>S</kbd></button>
+        <button class="btn ${p.stato==="candidato"?"on":""}" data-s="candidato">✓ MI SONO CANDIDATO <kbd>C</kbd></button>
+        <button class="btn ${p.stato==="scartata"?"on":""}" data-s="scartata">✗ SCARTA <kbd>X</kbd></button>
+      </div>
+      <textarea id="note" placeholder="Note personali (scadenza, referente, esito del colloquio…)">${esc(p.note)}</textarea>
+    </div>
+    <div class="corpo">${esc(p.descrizione || "Descrizione non disponibile: aprila con CANDIDATI ↗")}</div>`;
+  $("#chiudiDett").onclick = chiudi;
+  d.querySelectorAll("[data-s]").forEach(b => b.onclick = () => impostaStato(id, b.dataset.s));
+  $("#note").onchange = e => { api("/api/offerta/"+encodeURIComponent(id), {note:e.target.value}); toast("Note salvate"); };
+}
+function chiudi(){ selezionata = null; $("#dett").classList.remove("aperto"); $("#v-posizioni").classList.remove("con-dett"); disegnaTabella(); }
+async function impostaStato(id, s) {
+  const o = offerte.find(x => x.id === id); if (!o) return;
+  const nuovo = o.stato === s ? "" : s;
+  o.stato = nuovo; await api("/api/offerta/"+encodeURIComponent(id), {stato:nuovo});
+  toast(nuovo ? STATI[nuovo] : "stato rimosso");
+  aggiorna(); if (selezionata === id) apri(id);
+}
+
+/* ------------------------------------------------ comandi */
+const AIUTO = `Comandi: /summer /offcycle /stage /graduate /junior /insight /verifica (filtra per tipo)
+/tutte /nuove /salvate /candidature /scartate (cambia vista) · /it /uk /paese (paese) · /reset (azzera filtri)
+/scan (controlla subito tutte le aziende) · /lette (segna tutto come letto) · /fonti /impostazioni /registro`;
+$("#cmd").addEventListener("keydown", e => {
+  if (e.key === "Escape") { e.target.value = ""; F.testo = ""; aggiorna(); e.target.blur(); return; }
+  if (e.key !== "Enter") return;
+  const v = e.target.value.trim();
+  if (!v.startsWith("/")) return;
+  e.target.value = ""; F.testo = "";
+  const c = v.slice(1).toLowerCase();
+  const tipi = {summer:"summer", offcycle:"offcycle", "off-cycle":"offcycle", stage:"stage", tirocini:"stage", intern:"stage", graduate:"graduate", junior:"junior", insight:"insight", verifica:"possibile"};
+  const viste = {tutte:"tutte", nuove:"nuove", salvate:"salvata", candidature:"candidato", scartate:"scartata"};
+  if (tipi[c]) F.cat = F.cat === tipi[c] ? "" : tipi[c];
+  else if (viste[c]) F.vista = viste[c];
+  else if (c === "it") F.paese = "IT"; else if (c === "uk" || c === "gb") F.paese = "GB"; else if (c === "paese") F.paese = "";
+  else if (c === "reset") Object.assign(F, {cat:"", settore:"", paese:"", vista:"tutte"});
+  else if (c === "scan") return scan();
+  else if (c === "lette") return tutteLette();
+  else if (["fonti","aziende","impostazioni","registro","posizioni","dati"].includes(c)) return mostra(c === "aziende" ? "fonti" : (STATICO && c === "impostazioni") ? "dati" : c);
+  else { toast("Comando sconosciuto: scrivi /aiuto"); if (c === "aiuto" || c === "help") alert(AIUTO); return; }
+  aggiorna();
+});
+$("#cmd").addEventListener("input", e => { if (!e.target.value.startsWith("/")) { F.testo = e.target.value.trim(); disegnaTabella(); disegnaFiltri(); } });
+
+document.addEventListener("keydown", e => {
+  if (/^F[1-4]$/.test(e.key)) { e.preventDefault(); mostra(["posizioni","fonti",STATICO ? "dati" : "impostazioni","registro"][+e.key[1]-1]); return; }
+  if (e.target.matches("input,textarea,select")) return;
+  if (!$("#v-posizioni").classList.contains("att")) return;
+  const ids = visibili().map(o => o.id), i = ids.indexOf(selezionata);
+  if (e.key === "/") { e.preventDefault(); $("#cmd").focus(); }
+  else if (e.key === "j" || e.key === "ArrowDown") { e.preventDefault(); if (ids.length) apri(ids[Math.min(ids.length-1, i+1)]); }
+  else if (e.key === "k" || e.key === "ArrowUp") { e.preventDefault(); if (ids.length) apri(ids[Math.max(0, i-1)]); }
+  else if (e.key === "Escape") chiudi();
+  else if (!selezionata) return;
+  else if (e.key === "Enter") { const o = offerte.find(x => x.id === selezionata); if (o) window.open(o.url, "_blank", "noopener"); }
+  else if (e.key === "s") impostaStato(selezionata, "salvata");
+  else if (e.key === "c") impostaStato(selezionata, "candidato");
+  else if (e.key === "x") impostaStato(selezionata, "scartata");
+});
+
+/* ------------------------------------------------ schede */
+function mostra(v) {
+  document.querySelectorAll(".vista").forEach(s => s.classList.toggle("att", s.id === "v-"+v));
+  document.querySelectorAll("#schede button").forEach(b => b.classList.toggle("att", b.dataset.v === v));
+  if (v === "fonti") caricaFonti();
+  if (v === "impostazioni") caricaImp();
+  if (v === "dati") infoSito();
+}
+$("#schede").onclick = e => { const b = e.target.closest("button"); if (b) mostra(b.dataset.v); };
+$("#btnFiltri").onclick = () => $("#filtri").classList.toggle("mobile");
+
+/* ------------------------------------------------ fonti */
+async function caricaFonti() {
+  const l = await api("/api/fonti");
+  $("#fonti tbody").innerHTML = l.map(a => {
+    const s = a.stato;
+    const pallino = !a.attiva ? '<span class="nota">○</span>' : !s ? '<span class="nota">…</span>' : s.ok ? '<span class="ok">●</span>' : '<span class="err">●</span>';
+    return `<tr><td>${pallino}</td><td style="color:var(--ambra2)">${esc(a.nome)}</td><td>${esc(a.settore)}</td><td class="nota">${esc(a.tipo)}</td>
+      <td>${s ? s.annunci : ""}</td><td>${s ? s.rilevanti : ""}</td><td class="nota">${s ? fmtData(s.controllo)+" "+s.controllo.slice(11,16) : ""}</td>
+      <td class="${s && !s.ok ? "err" : "nota"}" style="max-width:320px">${esc(s ? s.messaggio : "")}</td>
+      <td class="solo-locale" style="white-space:nowrap"><button class="btn" data-a="scan" data-n="${esc(a.nome)}">scansiona</button>
+        <button class="btn" data-a="toggle" data-n="${esc(a.nome)}" data-on="${a.attiva?1:0}">${a.attiva ? "disattiva" : "attiva"}</button>
+        <button class="btn" data-a="del" data-n="${esc(a.nome)}">elimina</button></td></tr>`;
+  }).join("");
+}
+$("#fonti").addEventListener("click", async e => {
+  const b = e.target.closest("button[data-a]"); if (!b) return;
+  const n = b.dataset.n;
+  if (b.dataset.a === "scan") { const r = await api("/api/scansiona", {solo:n}); toast(r.avviata ? "Controllo "+n+"…" : "C'è già una scansione in corso"); }
+  if (b.dataset.a === "toggle") { await api("/api/fonti/modifica", {nome:n, attiva: b.dataset.on !== "1"}); caricaFonti(); }
+  if (b.dataset.a === "del" && confirm("Eliminare "+n+" dalle aziende monitorate?")) { await api("/api/fonti/modifica", {nome:n, elimina:true}); caricaFonti(); }
+});
+$("#nSett").innerHTML = SETTORI.map(s => `<option>${s}</option>`).join("");
+$("#btnAggiungi").onclick = async () => {
+  const esito = $("#esitoAgg"); esito.className = "nota"; esito.textContent = "provo a leggere la pagina…";
+  try {
+    const r = await api("/api/fonti/aggiungi", {nome:$("#nNome").value, url:$("#nUrl").value, settore:$("#nSett").value});
+    esito.className = "ok"; esito.textContent = `✓ Aggiunta (${r.fonte.tipo}): ${r.esito}`;
+    $("#nNome").value = $("#nUrl").value = ""; caricaFonti();
+  } catch (e) { esito.className = "err"; esito.textContent = "✗ " + e.message; }
+};
+
+/* ------------------------------------------------ impostazioni */
+async function caricaImp() {
+  const d = await api("/api/impostazioni"); const i = d.impostazioni; paesiNomi = d.paesi;
+  $("#paesi").innerHTML = Object.entries(d.paesi).map(([k,n]) => `<label class="spunta"><input type="checkbox" value="${k}" ${i.paesi.includes(k)?"checked":""}> ${esc(n)}</label>`).join("");
+  $("#iInt").value = i.intervallo_minuti;
+  $("#adId").value = i.adzuna.app_id; $("#adKey").value = i.adzuna.app_key;
+}
+$("#btnSalvaImp").onclick = async () => {
+  try {
+    await api("/api/impostazioni", {
+      paesi: [...document.querySelectorAll("#paesi input:checked")].map(x => x.value),
+      intervallo_minuti: +$("#iInt").value || 60,
+      adzuna: {app_id:$("#adId").value.trim(), app_key:$("#adKey").value.trim()} });
+    $("#esitoImp").className = "ok"; $("#esitoImp").textContent = "✓ salvate";
+  } catch (e) { $("#esitoImp").className = "err"; $("#esitoImp").textContent = "✗ " + e.message; }
+};
+
+/* ------------------------------------------------ i miei dati (sito) */
+function infoSito() {
+  const st = statico.stato || {};
+  const paesi = Object.values(st.paesi || {}).join(", ") || "—";
+  $("#infoSito").innerHTML = `Il radar controlla le aziende <b>ogni ora</b> (dalle 7 alle 23 circa) e aggiorna questa pagina da solo.
+    Ultimo aggiornamento: <b>${st.aggiornato ? new Date(st.aggiornato).toLocaleString("it-IT") : "—"}</b>.<br>
+    Paesi: <b>${esc(paesi)}</b> (si cambiano con la variabile RADAR_PAESI su GitHub, vedi README).<br>
+    Sono segnate come <span class="ok">● NUOVE</span> le posizioni comparse dopo la tua prima visita da questo browser
+    (${fmtData(MIO.inizio)}) che non hai ancora aperto.`;
+}
+$("#btnEsporta").onclick = () => {
+  const blob = new Blob([JSON.stringify(MIO, null, 1)], {type: "application/json"});
+  const a = document.createElement("a"); a.href = URL.createObjectURL(blob);
+  a.download = `radar-carriere-miei-dati-${new Date().toISOString().slice(0,10)}.json`; a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+};
+$("#fileImporta").onchange = async e => {
+  const f = e.target.files[0]; if (!f) return;
+  try {
+    const d = JSON.parse(await f.text()); if (!d || typeof d.offerte !== "object") throw new Error("file non valido");
+    let n = 0;
+    for (const [id, m] of Object.entries(d.offerte)) {
+      const qui = MIO.offerte[id] || {};
+      MIO.offerte[id] = { stato: m.stato || qui.stato || "", note: [qui.note, m.note].filter(Boolean).filter((x,i,a) => a.indexOf(x) === i).join("\n"),
+                          letta: qui.letta || m.letta || 0 }; n++;
+    }
+    if (d.inizio && d.inizio < MIO.inizio) MIO.inizio = d.inizio;
+    salvaMio(); await caricaOfferte();
+    $("#esitoDati").className = "ok"; $("#esitoDati").textContent = `✓ importate ${n} posizioni`;
+  } catch (err) { $("#esitoDati").className = "err"; $("#esitoDati").textContent = "✗ " + err.message; }
+  e.target.value = "";
+};
+
+/* ------------------------------------------------ azioni globali */
+async function scan(){ const r = await api("/api/scansiona", {}); toast(r.avviata ? "Scansione avviata: guarda il REGISTRO (F4)" : "C'è già una scansione in corso"); }
+async function tutteLette(){ await api("/api/lette", {}); offerte.forEach(o => { o.letta = 1; o.nuova = 0; }); aggiorna(); }
+$("#btnScan").onclick = scan; $("#btnLette").onclick = tutteLette;
+
+function bip(){ try { const a = new AudioContext(), o = a.createOscillator(), g = a.createGain(); o.frequency.value = 880; g.gain.value = .06; o.connect(g); g.connect(a.destination); o.start(); o.stop(a.currentTime + .15); } catch(e) {} }
+
+async function caricaOfferte(){ offerte = await api("/api/offerte"); aggiorna(); }
+
+async function ciclo() {
+  try {
+    const s = await api("/api/stato");
+    const k = s.conteggi;
+    $("#kNuove").textContent = k.nuove; $("#kTot").textContent = k.tot; $("#kSalv").textContent = k.salvate; $("#kCand").textContent = k.candidature;
+    const st = $("#statoScan");
+    if (s.statico) { st.className = ""; st.textContent = s.aggiornato ? `aggiornato ${new Date(s.aggiornato).toLocaleString("it-IT", {day:"2-digit", month:"2-digit", hour:"2-digit", minute:"2-digit"})}` : ""; }
+    else if (s.in_corso) { st.className = "on"; st.textContent = `● SCANSIONE ${s.avanzamento.fatte}/${s.avanzamento.totale} ${s.avanzamento.corrente}`; }
+    else { st.className = ""; const t = s.prossima_tra_s; st.textContent = t != null ? `prossimo controllo tra ${Math.floor(t/60)}:${String(t%60).padStart(2,"0")}` : "in attesa"; }
+    $("#registro").textContent = s.registro.join("\n");
+    if (ultimeNuove !== null && k.nuove > ultimeNuove) {
+      const diff = k.nuove - ultimeNuove; bip(); toast(`🎯 ${diff} nuove posizioni!`);
+    }
+    const cambiato = STATICO ? (ciclo.agg !== undefined && ciclo.agg !== s.aggiornato)
+                             : (ultimeNuove !== k.nuove || ciclo.tot !== k.tot || (ciclo.inCorso && !s.in_corso));
+    ciclo.agg = s.aggiornato;
+    ultimeNuove = k.nuove; ciclo.tot = k.tot; ciclo.inCorso = s.in_corso;
+    document.title = (k.nuove ? `(${k.nuove}) ` : "") + "Radar Carriere";
+    if (cambiato || s.in_corso) await caricaOfferte();
+  } catch (e) { $("#statoScan").textContent = STATICO ? "⚠ dati non raggiungibili: riprovo" : "⚠ radar non raggiungibile: è aperta la finestra nera?"; }
+}
+setInterval(() => { $("#orologio").textContent = new Date().toLocaleTimeString("it-IT"); }, 1000);
+
+(async () => {
+  try { paesiNomi = (await api("/api/impostazioni")).paesi; } catch(e) {}
+  await caricaOfferte().catch(() => {});
+  if (STATICO && primaVisita) setTimeout(() => toast("Da ora in poi le posizioni appena uscite saranno segnate come ● NUOVE"), 800);
+  ciclo(); setInterval(ciclo, STATICO ? 60000 : 10000);
+})();
+</script>
+</body>
+</html>
