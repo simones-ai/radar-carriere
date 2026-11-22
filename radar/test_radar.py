@@ -133,6 +133,8 @@ def test_crea_sito(tmp_path, monkeypatch):
     dati = json.loads((tmp_path / "sito" / "dati.json").read_text())
     assert [o["titolo"] for o in dati] == ["Graduate Program 2027"]
     assert "stato" not in dati[0] and "note" not in dati[0]  # i dati personali non finiscono sul sito
-    assert json.loads((tmp_path / "sito" / "descrizioni.json").read_text()) == {"p:1": "Testo completo"}
-    assert "window.RADAR_STATICO = true" in (tmp_path / "sito" / "index.html").read_text()
+    assert "descrizione" not in dati[0] and not (tmp_path / "sito" / "descrizioni.json").exists()
+    assert "Testo completo" not in "".join(f.read_text() for f in (tmp_path / "sito").iterdir() if f.is_file())
+    pagina = (tmp_path / "sito" / "index.html").read_text()
+    assert "window.RADAR_STATICO = true" in pagina and 'content="noindex' in pagina
     assert json.loads((tmp_path / "sito" / "stato.json").read_text())["fonti"][0]["stato"]["ok"] == 1

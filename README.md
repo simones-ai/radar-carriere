@@ -21,8 +21,14 @@ gli annunci e ripubblica il sito. Il tuo PC può restare spento.
 Sul sito:
 - le posizioni comparse dopo la tua prima visita e non ancora aperte sono segnate **● NUOVE**;
 - per ogni posizione puoi **salvarla**, segnarla **"mi sono candidato"**, **scartarla** e scrivere **note**;
-- salvate, candidature e note restano **solo nel tuo browser**: sul sito pubblico ci sono solo gli
-  annunci, che sono già pubblici. Per passarle dal PC al telefono usa **F3 → Esporta / Importa**.
+- salvate, candidature e note restano **solo nel tuo browser**. Per passarle dal PC al telefono usa
+  **F3 → Esporta / Importa**.
+
+**Cosa c'è (e cosa non c'è) sul sito pubblico**: solo titolo, azienda, luogo, data, tipo di posizione e
+il link all'annuncio originale. I testi completi degli annunci non vengono ripubblicati, perché sono delle
+aziende e possono contenere nomi e contatti dei recruiter. Il radar li legge solo durante la scansione,
+per capire se una posizione "Junior" è aperta a stagisti. Il sito chiede ai motori di ricerca di non
+indicizzarlo (`noindex`), quindi lo trova solo chi ha il link.
 
 | Tasto o comando | Cosa fa |
 |---|---|

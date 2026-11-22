@@ -275,7 +275,7 @@ const MIO = (() => { let m = {}; try { m = JSON.parse(localStorage.getItem("rada
   return m; })();
 const salvaMio = () => { try { localStorage.setItem("radarMio", JSON.stringify(MIO)); } catch(e) { toast("⚠ Il browser non permette di salvare i dati"); } };
 if (STATICO) { salvaMio(); $("#cmd").placeholder = "cerca (es. deloitte milano audit) oppure un comando: /summer /graduate /junior /nuove /salvate /aiuto"; }
-const statico = { dati: null, descr: null, stato: null, quando: 0 };
+const statico = { dati: null, stato: null, quando: 0 };
 
 async function json(url) { const r = await fetch(url + "?t=" + Date.now()); if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }
 function unisciMio(o) {
@@ -293,9 +293,8 @@ async function apiStatica(percorso, corpo) {
   if (corpo === undefined) {
     if (percorso === "/api/offerte") { statico.dati = await json("dati.json"); return statico.dati.map(o => unisciMio(Object.assign({}, o))); }
     if (id) {
-      if (!statico.descr) statico.descr = await json("descrizioni.json");
       const o = offerte.find(x => x.id === id); if (!o) throw new Error("non trovata");
-      return Object.assign({}, o, { descrizione: statico.descr[id] || "" });
+      return Object.assign({}, o, { descrizione: "" });  // sul sito pubblico non si ripubblicano i testi degli annunci
     }
     if (percorso === "/api/stato") {
       if (!statico.stato || Date.now() - statico.quando > 5 * 60 * 1000) { statico.stato = await json("stato.json"); statico.quando = Date.now(); }
@@ -451,7 +450,9 @@ async function apri(id) {
       </div>
       <textarea id="note" placeholder="Note personali (scadenza, referente, esito del colloquio…)">${esc(p.note)}</textarea>
     </div>
-    <div class="corpo">${esc(p.descrizione || "Descrizione non disponibile: aprila con CANDIDATI ↗")}</div>`;
+    <div class="corpo">${p.descrizione ? esc(p.descrizione) : STATICO
+      ? `<span class="nota">Il testo completo dell'annuncio è sul sito di ${esc(p.azienda)}: aprilo con <b>CANDIDATI ↗</b> (o premi Invio).</span>`
+      : "Descrizione non disponibile: aprila con CANDIDATI ↗"}</div>`;
   $("#chiudiDett").onclick = chiudi;
   d.querySelectorAll("[data-s]").forEach(b => b.onclick = () => impostaStato(id, b.dataset.s));
   $("#note").onchange = e => { api("/api/offerta/"+encodeURIComponent(id), {note:e.target.value}); toast("Note salvate"); };

@@ -70,7 +70,12 @@ def main(argv):
 
 
 def crea_sito(radar, cartella):
-    """Genera il sito statico (per GitHub Pages): pagina, dati delle posizioni, descrizioni, stato delle fonti."""
+    """Genera il sito statico (per GitHub Pages): pagina, dati delle posizioni e stato delle fonti.
+
+    Le descrizioni complete degli annunci NON vengono pubblicate (sono testi delle aziende e possono
+    contenere dati personali dei recruiter): servono solo durante la scansione per classificare
+    le posizioni. Sul sito resta il link all'annuncio originale.
+    """
     import datetime as dt
     import json
 
@@ -79,10 +84,13 @@ def crea_sito(radar, cartella):
     os.makedirs(cartella, exist_ok=True)
     qui = os.path.dirname(os.path.abspath(__file__))
     with open(os.path.join(qui, "web", "index.html"), encoding="utf-8") as f:
-        pagina = f.read().replace("<head>", "<head>\n<script>window.RADAR_STATICO = true;</script>", 1)
+        pagina = f.read().replace(
+            "<head>", '<head>\n<meta name="robots" content="noindex, nofollow, noarchive">\n'
+                      "<script>window.RADAR_STATICO = true;</script>", 1)
 
     offerte = radar.archivio.esporta()
-    descrizioni = {o["id"]: o.pop("descrizione") or "" for o in offerte}
+    for o in offerte:
+        o.pop("descrizione", None)
     stati = radar.archivio.stati_fonti()
     imp = radar.impostazioni()
     stato = {
@@ -93,7 +101,7 @@ def crea_sito(radar, cartella):
                        stato=stati.get(a["nome"])) for a in radar.aziende()],
         "registro": radar.registro[-200:],
     }
-    file = {"index.html": pagina, "dati.json": offerte, "descrizioni.json": descrizioni, "stato.json": stato}
+    file = {"index.html": pagina, "dati.json": offerte, "stato.json": stato}
     for nome, contenuto in file.items():
         with open(os.path.join(cartella, nome), "w", encoding="utf-8") as f:
             if isinstance(contenuto, str):
