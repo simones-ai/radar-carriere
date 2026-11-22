@@ -1,0 +1,37 @@
+# Strumento di manutenzione: cerca dove pubblicano le offerte le aziende di radar/scoperta/elenco.json.
+# Si avvia a mano (Actions → Scoperta aziende → Run workflow). Salva i risultati nel branch "scoperta".
+name: Scoperta aziende
+
+on:
+  workflow_dispatch:
+    inputs:
+      filtro:
+        description: "Solo le aziende il cui nome contiene questo testo (vuoto = tutte)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  scopri:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Cerca le pagine carriere
+        run: python radar/scoperta/scopri.py "${{ inputs.filtro }}" | grep -v '^RISULTATO' || true
+      - name: Salva i risultati nel branch "scoperta"
+        run: |
+          cp radar/scoperta/risultati.json /tmp/risultati.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan scoperta
+          git rm -rq --cached .
+          cp /tmp/risultati.json risultati.json
+          git add risultati.json
+          git commit -qm "Risultati scoperta aziende"
+          git push -f origin scoperta

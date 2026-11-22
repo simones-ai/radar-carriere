@@ -1,0 +1,2719 @@
+[
+ {
+  "nome": "Cinven",
+  "settore": "Private equity",
+  "domini": [
+   "cinven.com"
+  ]
+ },
+ {
+  "nome": "Dreamer Luxury Real Estate",
+  "settore": "Real estate",
+  "domini": [
+   "dreamerluxuryrealestate.com"
+  ]
+ },
+ {
+  "nome": "BNP Paribas",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "group.bnpparibas",
+   "careers.bnpparibas",
+   "bnpparibas.it"
+  ]
+ },
+ {
+  "nome": "Macquarie",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "macquarie.com"
+  ]
+ },
+ {
+  "nome": "BCC Iccrea",
+  "settore": "Banca",
+  "domini": [
+   "iccrea.it",
+   "gruppobcciccrea.it"
+  ]
+ },
+ {
+  "nome": "Arkap",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "arkap.it"
+  ]
+ },
+ {
+  "nome": "Venturi Corporate Finance",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "venturicf.com",
+   "venturicorporatefinance.com"
+  ]
+ },
+ {
+  "nome": "Tikehau Capital",
+  "settore": "Private equity",
+  "domini": [
+   "tikehaucapital.com"
+  ]
+ },
+ {
+  "nome": "Generali",
+  "settore": "Assicurazioni",
+  "domini": [
+   "generali.com",
+   "generali.it"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "generali.wd3.myworkdayjobs.com",
+    "tenant": "generali",
+    "sito": "Generali_Group"
+   },
+   {
+    "tipo": "workday",
+    "host": "generali.wd3.myworkdayjobs.com",
+    "tenant": "generali",
+    "sito": "GeneraliGroup"
+   },
+   {
+    "tipo": "workday",
+    "host": "generali.wd3.myworkdayjobs.com",
+    "tenant": "generali",
+    "sito": "generali"
+   }
+  ]
+ },
+ {
+  "nome": "Franklin Templeton",
+  "settore": "Asset management",
+  "domini": [
+   "franklintempleton.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "franklintempleton.wd5.myworkdayjobs.com",
+    "tenant": "franklintempleton",
+    "sito": "Primary-External-1"
+   },
+   {
+    "tipo": "workday",
+    "host": "franklintempleton.wd5.myworkdayjobs.com",
+    "tenant": "franklintempleton",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Cassa Depositi e Prestiti",
+  "settore": "Istituzioni",
+  "domini": [
+   "cdp.it"
+  ]
+ },
+ {
+  "nome": "Colliers",
+  "settore": "Real estate",
+  "domini": [
+   "colliers.com"
+  ]
+ },
+ {
+  "nome": "Pirola Corporate Finance",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "pirolacf.it",
+   "pirolacorporatefinance.it"
+  ]
+ },
+ {
+  "nome": "Intesa Sanpaolo",
+  "settore": "Banca",
+  "domini": [
+   "intesasanpaolo.com",
+   "group.intesasanpaolo.com"
+  ]
+ },
+ {
+  "nome": "Partners Group",
+  "settore": "Private equity",
+  "domini": [
+   "partnersgroup.com"
+  ]
+ },
+ {
+  "nome": "Banca Ifis",
+  "settore": "Banca",
+  "domini": [
+   "bancaifis.it"
+  ]
+ },
+ {
+  "nome": "UBS",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "ubs.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "ubs.wd3.myworkdayjobs.com",
+    "tenant": "ubs",
+    "sito": "UBS_Experienced_Professionals"
+   },
+   {
+    "tipo": "workday",
+    "host": "ubs.wd3.myworkdayjobs.com",
+    "tenant": "ubs",
+    "sito": "UBS_Graduates_and_Interns"
+   },
+   {
+    "tipo": "workday",
+    "host": "ubs.wd3.myworkdayjobs.com",
+    "tenant": "ubs",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Rothschild & Co",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "rothschildandco.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "rothschildandco.wd3.myworkdayjobs.com",
+    "tenant": "rothschildandco",
+    "sito": "Rothschild_Co"
+   },
+   {
+    "tipo": "workday",
+    "host": "rothschildandco.wd3.myworkdayjobs.com",
+    "tenant": "rothschildandco",
+    "sito": "External"
+   },
+   {
+    "tipo": "workday",
+    "host": "rothschildandco.wd3.myworkdayjobs.com",
+    "tenant": "rothschildandco",
+    "sito": "RothschildCo"
+   },
+   {
+    "tipo": "workday",
+    "host": "rothschildandco.wd3.myworkdayjobs.com",
+    "tenant": "rothschildandco",
+    "sito": "Careers"
+   }
+  ]
+ },
+ {
+  "nome": "Eastdil Secured",
+  "settore": "Real estate",
+  "domini": [
+   "eastdilsecured.com"
+  ]
+ },
+ {
+  "nome": "Houlihan Lokey",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "hl.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "hl.wd1.myworkdayjobs.com",
+    "tenant": "hl",
+    "sito": "Campus"
+   },
+   {
+    "tipo": "workday",
+    "host": "hl.wd1.myworkdayjobs.com",
+    "tenant": "hl",
+    "sito": "Lateral"
+   },
+   {
+    "tipo": "workday",
+    "host": "hl.wd1.myworkdayjobs.com",
+    "tenant": "hl",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Mediobanca",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "mediobanca.com"
+  ]
+ },
+ {
+  "nome": "Eurazeo",
+  "settore": "Private equity",
+  "domini": [
+   "eurazeo.com"
+  ]
+ },
+ {
+  "nome": "ING",
+  "settore": "Banca",
+  "domini": [
+   "ing.com",
+   "ing.it"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "ing.wd3.myworkdayjobs.com",
+    "tenant": "ing",
+    "sito": "ICSGBLCOR"
+   },
+   {
+    "tipo": "workday",
+    "host": "ing.wd3.myworkdayjobs.com",
+    "tenant": "ing",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Ardian",
+  "settore": "Private equity",
+  "domini": [
+   "ardian.com"
+  ]
+ },
+ {
+  "nome": "LABS Corporate Finance",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "labscf.com",
+   "labs-cf.com"
+  ]
+ },
+ {
+  "nome": "Castello SGR",
+  "settore": "Real estate",
+  "domini": [
+   "castellosgr.com"
+  ]
+ },
+ {
+  "nome": "Cleon Capital Advisors",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "cleoncapital.com"
+  ]
+ },
+ {
+  "nome": "Copernicus",
+  "settore": "Asset management",
+  "domini": [
+   "copernicus-am.com",
+   "copernicussgr.it"
+  ]
+ },
+ {
+  "nome": "Ethica Group",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "ethicagroup.it"
+  ]
+ },
+ {
+  "nome": "PGS Advisory",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "pgsadvisory.it",
+   "pgsadvisory.com"
+  ]
+ },
+ {
+  "nome": "Hines",
+  "settore": "Real estate",
+  "domini": [
+   "hines.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "hines.wd1.myworkdayjobs.com",
+    "tenant": "hines",
+    "sito": "hinescareers"
+   },
+   {
+    "tipo": "workday",
+    "host": "hines.wd1.myworkdayjobs.com",
+    "tenant": "hines",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "LIO Capital",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "liocapital.com"
+  ]
+ },
+ {
+  "nome": "LIO Factory",
+  "settore": "Venture capital",
+  "domini": [
+   "liofactory.it",
+   "liofactory.com"
+  ]
+ },
+ {
+  "nome": "Coima",
+  "settore": "Real estate",
+  "domini": [
+   "coima.com"
+  ]
+ },
+ {
+  "nome": "Phoenix Capital",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "phoenixcapital.it"
+  ]
+ },
+ {
+  "nome": "Jefferies",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "jefferies.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "jefferies.wd5.myworkdayjobs.com",
+    "tenant": "jefferies",
+    "sito": "JefferiesCareers"
+   },
+   {
+    "tipo": "workday",
+    "host": "jefferies.wd5.myworkdayjobs.com",
+    "tenant": "jefferies",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Vesper Infrastructure Partners",
+  "settore": "Private equity",
+  "domini": [
+   "vesperinfrastructure.com"
+  ]
+ },
+ {
+  "nome": "DBAG",
+  "settore": "Private equity",
+  "domini": [
+   "dbag.com",
+   "dbag.de"
+  ]
+ },
+ {
+  "nome": "Impact Partners",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "impactpartners.it"
+  ]
+ },
+ {
+  "nome": "Kartesia",
+  "settore": "Private equity",
+  "domini": [
+   "kartesia.com"
+  ]
+ },
+ {
+  "nome": "GC Advisory",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "gcadvisory.it"
+  ]
+ },
+ {
+  "nome": "Vela Equity",
+  "settore": "Private equity",
+  "domini": [
+   "velaequity.com"
+  ]
+ },
+ {
+  "nome": "Azimut",
+  "settore": "Asset management",
+  "domini": [
+   "azimut-group.com",
+   "azimut.it"
+  ]
+ },
+ {
+  "nome": "Studio Alessandrini Gentili",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "studioalessandrinigentili.it",
+   "alessandrinigentili.it"
+  ]
+ },
+ {
+  "nome": "Arcadia Financial Advisors",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "arcadiafa.com",
+   "arcadiafinancialadvisors.com"
+  ]
+ },
+ {
+  "nome": "Quantyx",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "quantyx.it",
+   "quantyx.com"
+  ]
+ },
+ {
+  "nome": "Pictet",
+  "settore": "Asset management",
+  "domini": [
+   "pictet.com",
+   "group.pictet"
+  ]
+ },
+ {
+  "nome": "BP Corporate Finance",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "bpcorporatefinance.it",
+   "bpcf.it"
+  ]
+ },
+ {
+  "nome": "Forsant Capital Value",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "forsant.it",
+   "forsantcapitalvalue.com"
+  ]
+ },
+ {
+  "nome": "Resolute Asset Management",
+  "settore": "Asset management",
+  "domini": [
+   "resoluteam.com",
+   "resoluteassetmanagement.com"
+  ]
+ },
+ {
+  "nome": "Kroll",
+  "settore": "Consulenza",
+  "domini": [
+   "kroll.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "kroll.wd1.myworkdayjobs.com",
+    "tenant": "kroll",
+    "sito": "Kroll_Careers"
+   },
+   {
+    "tipo": "workday",
+    "host": "kroll.wd1.myworkdayjobs.com",
+    "tenant": "kroll",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Crédit Agricole",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "ca-cib.com",
+   "credit-agricole.com",
+   "credit-agricole.it"
+  ]
+ },
+ {
+  "nome": "Banca Akros",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "bancaakros.it"
+  ]
+ },
+ {
+  "nome": "Vento",
+  "settore": "Venture capital",
+  "domini": [
+   "vento.vc",
+   "ventovc.com"
+  ]
+ },
+ {
+  "nome": "FTI Consulting",
+  "settore": "Consulenza",
+  "domini": [
+   "fticonsulting.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "fticonsulting.wd5.myworkdayjobs.com",
+    "tenant": "fticonsulting",
+    "sito": "FTI_Careers"
+   },
+   {
+    "tipo": "workday",
+    "host": "fticonsulting.wd5.myworkdayjobs.com",
+    "tenant": "fticonsulting",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "UniCredit",
+  "settore": "Banca",
+  "domini": [
+   "unicreditgroup.eu",
+   "unicredit.it"
+  ]
+ },
+ {
+  "nome": "Epyon Consulting",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "epyon.it",
+   "epyonconsulting.com"
+  ]
+ },
+ {
+  "nome": "BU Partners",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "bupartners.it",
+   "bupartners.com"
+  ]
+ },
+ {
+  "nome": "Prelios",
+  "settore": "Real estate",
+  "domini": [
+   "prelios.com"
+  ]
+ },
+ {
+  "nome": "Forum Family Office",
+  "settore": "Asset management",
+  "domini": [
+   "forumfamilyoffice.com",
+   "forumfo.com"
+  ]
+ },
+ {
+  "nome": "Triton Partners",
+  "settore": "Private equity",
+  "domini": [
+   "triton-partners.com"
+  ]
+ },
+ {
+  "nome": "Perpethua",
+  "settore": "Asset management",
+  "domini": [
+   "perpethua.com"
+  ]
+ },
+ {
+  "nome": "Galileo Capital",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "galileocapital.it"
+  ]
+ },
+ {
+  "nome": "CFI Italy",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "cfi-italy.com",
+   "cfiitaly.it"
+  ]
+ },
+ {
+  "nome": "Livingstone Partners",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "livingstonepartners.com"
+  ]
+ },
+ {
+  "nome": "Lazard",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "lazard.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "lazard.wd5.myworkdayjobs.com",
+    "tenant": "lazard",
+    "sito": "Lazard"
+   },
+   {
+    "tipo": "workday",
+    "host": "lazard.wd5.myworkdayjobs.com",
+    "tenant": "lazard",
+    "sito": "LazardCareers"
+   },
+   {
+    "tipo": "workday",
+    "host": "lazard.wd5.myworkdayjobs.com",
+    "tenant": "lazard",
+    "sito": "External"
+   },
+   {
+    "tipo": "workday",
+    "host": "lazard.wd5.myworkdayjobs.com",
+    "tenant": "lazard",
+    "sito": "lazard-careers"
+   }
+  ]
+ },
+ {
+  "nome": "La Compagnia",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "lacompagnia.it"
+  ]
+ },
+ {
+  "nome": "Clairfield",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "clairfield.com"
+  ]
+ },
+ {
+  "nome": "Klecha & Co.",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "klecha-co.com",
+   "klechaco.com"
+  ]
+ },
+ {
+  "nome": "CDI Global",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "cdiglobal.com"
+  ]
+ },
+ {
+  "nome": "Banca Investis",
+  "settore": "Banca",
+  "domini": [
+   "bancainvestis.com",
+   "bancainvestis.it"
+  ]
+ },
+ {
+  "nome": "Redo SGR",
+  "settore": "Real estate",
+  "domini": [
+   "redosgr.it"
+  ]
+ },
+ {
+  "nome": "Mutares",
+  "settore": "Private equity",
+  "domini": [
+   "mutares.com",
+   "mutares.de"
+  ]
+ },
+ {
+  "nome": "Alisea Corporate Finance",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "aliseacf.com",
+   "alisea.it"
+  ]
+ },
+ {
+  "nome": "Aurelius",
+  "settore": "Private equity",
+  "domini": [
+   "aurelius-group.com"
+  ]
+ },
+ {
+  "nome": "Illimity",
+  "settore": "Banca",
+  "domini": [
+   "illimity.com"
+  ]
+ },
+ {
+  "nome": "Vitale & Co",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "vitaleco.com",
+   "vitale-co.com"
+  ]
+ },
+ {
+  "nome": "Pariter Partners",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "pariterpartners.com"
+  ]
+ },
+ {
+  "nome": "Evercore",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "evercore.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "evercore.wd1.myworkdayjobs.com",
+    "tenant": "evercore",
+    "sito": "Evercore"
+   },
+   {
+    "tipo": "workday",
+    "host": "evercore.wd1.myworkdayjobs.com",
+    "tenant": "evercore",
+    "sito": "External"
+   },
+   {
+    "tipo": "workday",
+    "host": "evercore.wd1.myworkdayjobs.com",
+    "tenant": "evercore",
+    "sito": "EvercoreCareers_Campus"
+   }
+  ]
+ },
+ {
+  "nome": "Quomodo",
+  "settore": "Asset management",
+  "domini": [
+   "quomodo.it"
+  ]
+ },
+ {
+  "nome": "360 Capital",
+  "settore": "Venture capital",
+  "domini": [
+   "360capital.vc",
+   "360capital.eu"
+  ]
+ },
+ {
+  "nome": "Zaoui & Co",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "zaouiandco.com"
+  ]
+ },
+ {
+  "nome": "Over Ventures",
+  "settore": "Venture capital",
+  "domini": [
+   "overventures.com"
+  ]
+ },
+ {
+  "nome": "Lucciola & Partners",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "lucciolapartners.com",
+   "lucciola.it"
+  ]
+ },
+ {
+  "nome": "BCM Global",
+  "settore": "Asset management",
+  "domini": [
+   "bcmglobal.com"
+  ]
+ },
+ {
+  "nome": "Commerzbank",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "commerzbank.com",
+   "commerzbank.de"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "commerzbank.wd3.myworkdayjobs.com",
+    "tenant": "commerzbank",
+    "sito": "External"
+   },
+   {
+    "tipo": "workday",
+    "host": "commerzbank.wd3.myworkdayjobs.com",
+    "tenant": "commerzbank",
+    "sito": "Commerzbank"
+   }
+  ]
+ },
+ {
+  "nome": "Nomura",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "nomura.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "nomura.wd3.myworkdayjobs.com",
+    "tenant": "nomura",
+    "sito": "Nomura_Campus"
+   },
+   {
+    "tipo": "workday",
+    "host": "nomura.wd3.myworkdayjobs.com",
+    "tenant": "nomura",
+    "sito": "Experienced"
+   },
+   {
+    "tipo": "workday",
+    "host": "nomura.wd3.myworkdayjobs.com",
+    "tenant": "nomura",
+    "sito": "Nomura_Experienced"
+   },
+   {
+    "tipo": "workday",
+    "host": "nomura.wd3.myworkdayjobs.com",
+    "tenant": "nomura",
+    "sito": "External"
+   },
+   {
+    "tipo": "workday",
+    "host": "nomura.wd3.myworkdayjobs.com",
+    "tenant": "nomura",
+    "sito": "nomura"
+   }
+  ]
+ },
+ {
+  "nome": "Fondo Italiano d'Investimento",
+  "settore": "Private equity",
+  "domini": [
+   "fondoitaliano.it"
+  ]
+ },
+ {
+  "nome": "PIMCO",
+  "settore": "Asset management",
+  "domini": [
+   "pimco.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "pimco.wd1.myworkdayjobs.com",
+    "tenant": "pimco",
+    "sito": "pimco-careers"
+   },
+   {
+    "tipo": "workday",
+    "host": "pimco.wd1.myworkdayjobs.com",
+    "tenant": "pimco",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Bravo Invest",
+  "settore": "Private equity",
+  "domini": [
+   "bravoinvest.it"
+  ]
+ },
+ {
+  "nome": "Mamazen Startup Studio",
+  "settore": "Venture capital",
+  "domini": [
+   "mamazen.com",
+   "mamazen.it"
+  ]
+ },
+ {
+  "nome": "Capza",
+  "settore": "Private equity",
+  "domini": [
+   "capza.co"
+  ]
+ },
+ {
+  "nome": "Société Générale",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "societegenerale.com",
+   "careers.societegenerale.com"
+  ]
+ },
+ {
+  "nome": "Europa Investimenti",
+  "settore": "Asset management",
+  "domini": [
+   "europainvestimenti.com"
+  ]
+ },
+ {
+  "nome": "Banca Mediolanum",
+  "settore": "Banca",
+  "domini": [
+   "bancamediolanum.it"
+  ]
+ },
+ {
+  "nome": "Scientifica",
+  "settore": "Venture capital",
+  "domini": [
+   "scientifica.vc",
+   "scientificaventure.com"
+  ]
+ },
+ {
+  "nome": "MFZ & Partners",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "mfzpartners.com",
+   "mfz.it"
+  ]
+ },
+ {
+  "nome": "Quaestio Capital",
+  "settore": "Asset management",
+  "domini": [
+   "quaestiocapital.com"
+  ]
+ },
+ {
+  "nome": "Goldman Sachs",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "goldmansachs.com",
+   "higher.gs.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "oracle",
+    "host": "hdpc.fa.us2.oraclecloud.com",
+    "sito": "LateralHiring"
+   },
+   {
+    "tipo": "oracle",
+    "host": "hdpc.fa.us2.oraclecloud.com",
+    "sito": "CampusHiring"
+   },
+   {
+    "tipo": "oracle",
+    "host": "hdpc.fa.us2.oraclecloud.com",
+    "sito": "CX_1"
+   }
+  ]
+ },
+ {
+  "nome": "Oaklins",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "oaklins.com"
+  ]
+ },
+ {
+  "nome": "Lincoln International",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "lincolninternational.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "greenhouse",
+    "slug": "lincolninternational"
+   }
+  ]
+ },
+ {
+  "nome": "doValue",
+  "settore": "Banca",
+  "domini": [
+   "dovalue.it"
+  ]
+ },
+ {
+  "nome": "Heritage Holding",
+  "settore": "Asset management",
+  "domini": [
+   "heritageholding.it",
+   "heritage-holding.com"
+  ]
+ },
+ {
+  "nome": "Allianz",
+  "settore": "Assicurazioni",
+  "domini": [
+   "allianz.com",
+   "allianz.it"
+  ]
+ },
+ {
+  "nome": "BBVA",
+  "settore": "Banca",
+  "domini": [
+   "bbva.com"
+  ]
+ },
+ {
+  "nome": "Sagitta",
+  "settore": "Asset management",
+  "domini": [
+   "sagittasgr.it",
+   "sagitta.it"
+  ]
+ },
+ {
+  "nome": "Amco",
+  "settore": "Asset management",
+  "domini": [
+   "amco.it"
+  ]
+ },
+ {
+  "nome": "Santander",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "santander.com",
+   "santandercib.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "santander.wd3.myworkdayjobs.com",
+    "tenant": "santander",
+    "sito": "SantanderCareers"
+   },
+   {
+    "tipo": "workday",
+    "host": "santander.wd3.myworkdayjobs.com",
+    "tenant": "santander",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Growth Capital",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "growthcapital.it"
+  ]
+ },
+ {
+  "nome": "Savills",
+  "settore": "Real estate",
+  "domini": [
+   "savills.com",
+   "savills.co.uk",
+   "savills.it"
+  ]
+ },
+ {
+  "nome": "Alantra",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "alantra.com"
+  ]
+ },
+ {
+  "nome": "Capstone",
+  "settore": "Trading e hedge fund",
+  "domini": [
+   "capstoneco.com",
+   "capstoneinvestmentadvisors.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "greenhouse",
+    "slug": "capstoneinvestmentadvisors"
+   }
+  ]
+ },
+ {
+  "nome": "Optiver",
+  "settore": "Trading e hedge fund",
+  "domini": [
+   "optiver.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "greenhouse",
+    "slug": "optiverus"
+   },
+   {
+    "tipo": "greenhouse",
+    "slug": "optiver"
+   }
+  ]
+ },
+ {
+  "nome": "Castleton Commodities",
+  "settore": "Trading e hedge fund",
+  "domini": [
+   "cci.com"
+  ]
+ },
+ {
+  "nome": "Temasek",
+  "settore": "Asset management",
+  "domini": [
+   "temasek.com.sg"
+  ]
+ },
+ {
+  "nome": "Maven Securities",
+  "settore": "Trading e hedge fund",
+  "domini": [
+   "mavensecurities.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "greenhouse",
+    "slug": "mavensecurities"
+   }
+  ]
+ },
+ {
+  "nome": "Bain Capital",
+  "settore": "Private equity",
+  "domini": [
+   "baincapital.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "baincapital.wd1.myworkdayjobs.com",
+    "tenant": "baincapital",
+    "sito": "External"
+   },
+   {
+    "tipo": "workday",
+    "host": "baincapital.wd1.myworkdayjobs.com",
+    "tenant": "baincapital",
+    "sito": "BainCapitalCareers"
+   }
+  ]
+ },
+ {
+  "nome": "HSBC",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "hsbc.com"
+  ]
+ },
+ {
+  "nome": "Scotiabank",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "scotiabank.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "scotiabank.wd3.myworkdayjobs.com",
+    "tenant": "scotiabank",
+    "sito": "External"
+   },
+   {
+    "tipo": "workday",
+    "host": "scotiabank.wd3.myworkdayjobs.com",
+    "tenant": "scotiabank",
+    "sito": "ScotiabankCareers"
+   }
+  ]
+ },
+ {
+  "nome": "PJT Partners",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "pjtpartners.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "greenhouse",
+    "slug": "pjtpartners"
+   }
+  ]
+ },
+ {
+  "nome": "RBC Capital Markets",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "rbccm.com",
+   "rbc.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "rbc.wd3.myworkdayjobs.com",
+    "tenant": "rbc",
+    "sito": "RBCGLOBAL1"
+   }
+  ]
+ },
+ {
+  "nome": "Perella Weinberg Partners",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "pwpartners.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "greenhouse",
+    "slug": "perellaweinbergpartners"
+   }
+  ]
+ },
+ {
+  "nome": "T. Rowe Price",
+  "settore": "Asset management",
+  "domini": [
+   "troweprice.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "troweprice.wd5.myworkdayjobs.com",
+    "tenant": "troweprice",
+    "sito": "TRowePrice"
+   },
+   {
+    "tipo": "workday",
+    "host": "troweprice.wd5.myworkdayjobs.com",
+    "tenant": "troweprice",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Moelis & Company",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "moelis.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "greenhouse",
+    "slug": "moelis"
+   }
+  ]
+ },
+ {
+  "nome": "DC Advisory",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "dcadvisory.com"
+  ]
+ },
+ {
+  "nome": "MUFG",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "mufg.jp",
+   "mufgemea.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "mufgub.wd3.myworkdayjobs.com",
+    "tenant": "mufgub",
+    "sito": "MUFG-Careers"
+   },
+   {
+    "tipo": "workday",
+    "host": "mufgub.wd3.myworkdayjobs.com",
+    "tenant": "mufgub",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Centerview Partners",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "centerviewpartners.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "greenhouse",
+    "slug": "centerviewpartners"
+   }
+  ]
+ },
+ {
+  "nome": "Torch Partners",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "torchpartners.com"
+  ]
+ },
+ {
+  "nome": "Fidelity International",
+  "settore": "Asset management",
+  "domini": [
+   "fidelityinternational.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "fil.wd3.myworkdayjobs.com",
+    "tenant": "fil",
+    "sito": "FidelityCareers"
+   },
+   {
+    "tipo": "workday",
+    "host": "fil.wd3.myworkdayjobs.com",
+    "tenant": "fil",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Mizuho",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "mizuhogroup.com",
+   "mizuhoemea.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "mizuho.wd1.myworkdayjobs.com",
+    "tenant": "mizuho",
+    "sito": "mizuhoamericas"
+   },
+   {
+    "tipo": "workday",
+    "host": "mizuho.wd1.myworkdayjobs.com",
+    "tenant": "mizuho",
+    "sito": "External"
+   },
+   {
+    "tipo": "workday",
+    "host": "mizuho.wd1.myworkdayjobs.com",
+    "tenant": "mizuho",
+    "sito": "MizuhoEMEA"
+   }
+  ]
+ },
+ {
+  "nome": "Standard Chartered",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "sc.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "scb.wd3.myworkdayjobs.com",
+    "tenant": "scb",
+    "sito": "External"
+   },
+   {
+    "tipo": "workday",
+    "host": "scb.wd3.myworkdayjobs.com",
+    "tenant": "scb",
+    "sito": "SCB_Careers"
+   }
+  ]
+ },
+ {
+  "nome": "Greenhill",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "greenhill.com"
+  ]
+ },
+ {
+  "nome": "Schroders",
+  "settore": "Asset management",
+  "domini": [
+   "schroders.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "schroders.wd3.myworkdayjobs.com",
+    "tenant": "schroders",
+    "sito": "Schroders_Careers"
+   },
+   {
+    "tipo": "workday",
+    "host": "schroders.wd3.myworkdayjobs.com",
+    "tenant": "schroders",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Raymond James",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "raymondjames.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "raymondjames.wd1.myworkdayjobs.com",
+    "tenant": "raymondjames",
+    "sito": "RaymondJamesCareers"
+   },
+   {
+    "tipo": "workday",
+    "host": "raymondjames.wd1.myworkdayjobs.com",
+    "tenant": "raymondjames",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Wellington Management",
+  "settore": "Asset management",
+  "domini": [
+   "wellington.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "wellington.wd5.myworkdayjobs.com",
+    "tenant": "wellington",
+    "sito": "External"
+   },
+   {
+    "tipo": "workday",
+    "host": "wellington.wd5.myworkdayjobs.com",
+    "tenant": "wellington",
+    "sito": "Wellington"
+   }
+  ]
+ },
+ {
+  "nome": "Investec",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "investec.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "investec.wd3.myworkdayjobs.com",
+    "tenant": "investec",
+    "sito": "Investec_Careers"
+   },
+   {
+    "tipo": "workday",
+    "host": "investec.wd3.myworkdayjobs.com",
+    "tenant": "investec",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Winton Capital",
+  "settore": "Trading e hedge fund",
+  "domini": [
+   "winton.com"
+  ]
+ },
+ {
+  "nome": "Aviva Investors",
+  "settore": "Asset management",
+  "domini": [
+   "avivainvestors.com",
+   "aviva.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "aviva.wd1.myworkdayjobs.com",
+    "tenant": "aviva",
+    "sito": "External"
+   },
+   {
+    "tipo": "workday",
+    "host": "aviva.wd1.myworkdayjobs.com",
+    "tenant": "aviva",
+    "sito": "Aviva"
+   }
+  ]
+ },
+ {
+  "nome": "Capital Group",
+  "settore": "Asset management",
+  "domini": [
+   "capitalgroup.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "capgroup.wd1.myworkdayjobs.com",
+    "tenant": "capgroup",
+    "sito": "capitalgroupcareers"
+   },
+   {
+    "tipo": "workday",
+    "host": "capgroup.wd1.myworkdayjobs.com",
+    "tenant": "capgroup",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "abrdn",
+  "settore": "Asset management",
+  "domini": [
+   "abrdn.com",
+   "aberdeengroup.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "abrdn.wd3.myworkdayjobs.com",
+    "tenant": "abrdn",
+    "sito": "abrdn"
+   },
+   {
+    "tipo": "workday",
+    "host": "abrdn.wd3.myworkdayjobs.com",
+    "tenant": "abrdn",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Bank of England",
+  "settore": "Istituzioni",
+  "domini": [
+   "bankofengland.co.uk"
+  ]
+ },
+ {
+  "nome": "Knight Frank",
+  "settore": "Real estate",
+  "domini": [
+   "knightfrank.com",
+   "knightfrank.co.uk"
+  ]
+ },
+ {
+  "nome": "Peel Hunt",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "peelhunt.com"
+  ]
+ },
+ {
+  "nome": "BNY Mellon",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "bny.com",
+   "bnymellon.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "bnymellon.wd1.myworkdayjobs.com",
+    "tenant": "bnymellon",
+    "sito": "BNY_Careers"
+   },
+   {
+    "tipo": "workday",
+    "host": "bnymellon.wd1.myworkdayjobs.com",
+    "tenant": "bnymellon",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "NatWest Markets",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "natwestgroup.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "rbs.wd3.myworkdayjobs.com",
+    "tenant": "rbs",
+    "sito": "natwestgroup"
+   },
+   {
+    "tipo": "workday",
+    "host": "rbs.wd3.myworkdayjobs.com",
+    "tenant": "rbs",
+    "sito": "RBS"
+   }
+  ]
+ },
+ {
+  "nome": "Legal & General",
+  "settore": "Asset management",
+  "domini": [
+   "legalandgeneral.com",
+   "legalandgeneralgroup.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "landg.wd3.myworkdayjobs.com",
+    "tenant": "landg",
+    "sito": "LandG"
+   },
+   {
+    "tipo": "workday",
+    "host": "landg.wd3.myworkdayjobs.com",
+    "tenant": "landg",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Millennium Management",
+  "settore": "Trading e hedge fund",
+  "domini": [
+   "mlp.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "greenhouse",
+    "slug": "millennium"
+   }
+  ]
+ },
+ {
+  "nome": "Barings",
+  "settore": "Asset management",
+  "domini": [
+   "barings.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "barings.wd1.myworkdayjobs.com",
+    "tenant": "barings",
+    "sito": "barings"
+   },
+   {
+    "tipo": "workday",
+    "host": "barings.wd1.myworkdayjobs.com",
+    "tenant": "barings",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Redington",
+  "settore": "Asset management",
+  "domini": [
+   "redington.co.uk"
+  ]
+ },
+ {
+  "nome": "ACR Capital",
+  "settore": "Asset management",
+  "domini": [
+   "acrcapital.co.uk",
+   "acrcapital.com"
+  ]
+ },
+ {
+  "nome": "AIG",
+  "settore": "Assicurazioni",
+  "domini": [
+   "aig.com"
+  ]
+ },
+ {
+  "nome": "AllianceBernstein",
+  "settore": "Asset management",
+  "domini": [
+   "alliancebernstein.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "alliancebernstein.wd1.myworkdayjobs.com",
+    "tenant": "alliancebernstein",
+    "sito": "alliancebernsteincareers"
+   },
+   {
+    "tipo": "workday",
+    "host": "alliancebernstein.wd1.myworkdayjobs.com",
+    "tenant": "alliancebernstein",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Allsop",
+  "settore": "Real estate",
+  "domini": [
+   "allsop.co.uk"
+  ]
+ },
+ {
+  "nome": "Atlana Wealth",
+  "settore": "Asset management",
+  "domini": [
+   "atlanawealth.com"
+  ]
+ },
+ {
+  "nome": "Amundi",
+  "settore": "Asset management",
+  "domini": [
+   "amundi.com"
+  ]
+ },
+ {
+  "nome": "Aridan",
+  "settore": "Asset management",
+  "domini": [
+   "aridan.com"
+  ]
+ },
+ {
+  "nome": "Avison Young",
+  "settore": "Real estate",
+  "domini": [
+   "avisonyoung.com",
+   "avisonyoung.co.uk"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "avisonyoung.wd1.myworkdayjobs.com",
+    "tenant": "avisonyoung",
+    "sito": "AvisonYoungCareers"
+   },
+   {
+    "tipo": "workday",
+    "host": "avisonyoung.wd1.myworkdayjobs.com",
+    "tenant": "avisonyoung",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Rokos Capital Management",
+  "settore": "Trading e hedge fund",
+  "domini": [
+   "rokoscapital.com"
+  ]
+ },
+ {
+  "nome": "Balyasny Asset Management",
+  "settore": "Trading e hedge fund",
+  "domini": [
+   "bamfunds.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "greenhouse",
+    "slug": "balyasnyassetmanagementlp"
+   },
+   {
+    "tipo": "greenhouse",
+    "slug": "bam"
+   }
+  ]
+ },
+ {
+  "nome": "Berenberg",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "berenberg.de",
+   "berenberg.com"
+  ]
+ },
+ {
+  "nome": "BMO",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "bmo.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "bmo.wd3.myworkdayjobs.com",
+    "tenant": "bmo",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "BP Trading",
+  "settore": "Trading e hedge fund",
+  "domini": [
+   "bp.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "bpinternational.wd3.myworkdayjobs.com",
+    "tenant": "bpinternational",
+    "sito": "bpCareers"
+   }
+  ]
+ },
+ {
+  "nome": "British Land",
+  "settore": "Real estate",
+  "domini": [
+   "britishland.com"
+  ]
+ },
+ {
+  "nome": "Brookfield Asset Management",
+  "settore": "Asset management",
+  "domini": [
+   "brookfield.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "brookfield.wd5.myworkdayjobs.com",
+    "tenant": "brookfield",
+    "sito": "brookfield"
+   },
+   {
+    "tipo": "workday",
+    "host": "brookfield.wd5.myworkdayjobs.com",
+    "tenant": "brookfield",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Campbell Lutyens",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "campbell-lutyens.com"
+  ]
+ },
+ {
+  "nome": "Cambridge Associates",
+  "settore": "Asset management",
+  "domini": [
+   "cambridgeassociates.com"
+  ]
+ },
+ {
+  "nome": "Canary Wharf Group",
+  "settore": "Real estate",
+  "domini": [
+   "group.canarywharf.com",
+   "canarywharf.com"
+  ]
+ },
+ {
+  "nome": "Cantab Asset Management",
+  "settore": "Asset management",
+  "domini": [
+   "cantabam.com"
+  ]
+ },
+ {
+  "nome": "Cantor Fitzgerald",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "cantor.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "cantor.wd1.myworkdayjobs.com",
+    "tenant": "cantor",
+    "sito": "External"
+   },
+   {
+    "tipo": "workday",
+    "host": "cantor.wd1.myworkdayjobs.com",
+    "tenant": "cantor",
+    "sito": "Cantor"
+   }
+  ]
+ },
+ {
+  "nome": "Capital & Counties",
+  "settore": "Real estate",
+  "domini": [
+   "capitalandcounties.com",
+   "capco.co.uk"
+  ]
+ },
+ {
+  "nome": "Capital One",
+  "settore": "Banca",
+  "domini": [
+   "capitalone.co.uk",
+   "capitalone.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "capitalone.wd12.myworkdayjobs.com",
+    "tenant": "capitalone",
+    "sito": "Capital_One"
+   }
+  ]
+ },
+ {
+  "nome": "Carter Jonas",
+  "settore": "Real estate",
+  "domini": [
+   "carterjonas.co.uk"
+  ]
+ },
+ {
+  "nome": "CBRE",
+  "settore": "Real estate",
+  "domini": [
+   "cbre.com",
+   "cbre.co.uk"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "cbre.wd3.myworkdayjobs.com",
+    "tenant": "cbre",
+    "sito": "External"
+   },
+   {
+    "tipo": "workday",
+    "host": "cbre.wd3.myworkdayjobs.com",
+    "tenant": "cbre",
+    "sito": "CBRE"
+   }
+  ]
+ },
+ {
+  "nome": "Clearwater International",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "clearwaterinternational.com"
+  ]
+ },
+ {
+  "nome": "Cs2",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "cs2.co.uk",
+   "cs-2.co.uk"
+  ]
+ },
+ {
+  "nome": "Cushman & Wakefield",
+  "settore": "Real estate",
+  "domini": [
+   "cushmanwakefield.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "cw.wd1.myworkdayjobs.com",
+    "tenant": "cw",
+    "sito": "External"
+   },
+   {
+    "tipo": "workday",
+    "host": "cw.wd1.myworkdayjobs.com",
+    "tenant": "cw",
+    "sito": "CW_Careers"
+   }
+  ]
+ },
+ {
+  "nome": "DeVono Cresa",
+  "settore": "Real estate",
+  "domini": [
+   "devono.com",
+   "devonocresa.com"
+  ]
+ },
+ {
+  "nome": "EDF Trading",
+  "settore": "Trading e hedge fund",
+  "domini": [
+   "edftrading.com"
+  ]
+ },
+ {
+  "nome": "Europa Capital",
+  "settore": "Real estate",
+  "domini": [
+   "europacapital.com"
+  ]
+ },
+ {
+  "nome": "Fenchurch Advisory",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "fenchurchadvisory.com"
+  ]
+ },
+ {
+  "nome": "Gerald Eve",
+  "settore": "Real estate",
+  "domini": [
+   "geraldeve.com"
+  ]
+ },
+ {
+  "nome": "GIC",
+  "settore": "Asset management",
+  "domini": [
+   "gic.com.sg"
+  ]
+ },
+ {
+  "nome": "Glencore",
+  "settore": "Trading e hedge fund",
+  "domini": [
+   "glencore.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "glencore.wd3.myworkdayjobs.com",
+    "tenant": "glencore",
+    "sito": "Glencore"
+   },
+   {
+    "tipo": "workday",
+    "host": "glencore.wd3.myworkdayjobs.com",
+    "tenant": "glencore",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "GP Bullhound",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "gpbullhound.com"
+  ]
+ },
+ {
+  "nome": "Grosvenor Group",
+  "settore": "Real estate",
+  "domini": [
+   "grosvenor.com"
+  ]
+ },
+ {
+  "nome": "GSA Capital",
+  "settore": "Trading e hedge fund",
+  "domini": [
+   "gsacapital.com"
+  ]
+ },
+ {
+  "nome": "Homes England",
+  "settore": "Istituzioni",
+  "domini": [
+   "gov.uk"
+  ]
+ },
+ {
+  "nome": "Ivanhoe Cambridge",
+  "settore": "Real estate",
+  "domini": [
+   "ivanhoecambridge.com"
+  ]
+ },
+ {
+  "nome": "Janus Henderson",
+  "settore": "Asset management",
+  "domini": [
+   "janushenderson.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "janushenderson.wd1.myworkdayjobs.com",
+    "tenant": "janushenderson",
+    "sito": "JanusHenderson"
+   },
+   {
+    "tipo": "workday",
+    "host": "janushenderson.wd1.myworkdayjobs.com",
+    "tenant": "janushenderson",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "JLL",
+  "settore": "Real estate",
+  "domini": [
+   "jll.com",
+   "jll.co.uk"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "jll.wd1.myworkdayjobs.com",
+    "tenant": "jll",
+    "sito": "jllcareers"
+   },
+   {
+    "tipo": "workday",
+    "host": "jll.wd1.myworkdayjobs.com",
+    "tenant": "jll",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Jupiter Asset Management",
+  "settore": "Asset management",
+  "domini": [
+   "jupiteram.com"
+  ]
+ },
+ {
+  "nome": "Landsec",
+  "settore": "Real estate",
+  "domini": [
+   "landsec.com"
+  ]
+ },
+ {
+  "nome": "Lichfields",
+  "settore": "Real estate",
+  "domini": [
+   "lichfields.uk"
+  ]
+ },
+ {
+  "nome": "Lloyds Banking Group",
+  "settore": "Banca",
+  "domini": [
+   "lloydsbankinggroup.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "lbg.wd3.myworkdayjobs.com",
+    "tenant": "lbg",
+    "sito": "LBG_Careers"
+   },
+   {
+    "tipo": "workday",
+    "host": "lbg.wd3.myworkdayjobs.com",
+    "tenant": "lbg",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "M Capital",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "mcapital.co.uk",
+   "m-capital.com"
+  ]
+ },
+ {
+  "nome": "M&G",
+  "settore": "Asset management",
+  "domini": [
+   "mandg.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "mandg.wd3.myworkdayjobs.com",
+    "tenant": "mandg",
+    "sito": "MandG_Careers"
+   },
+   {
+    "tipo": "workday",
+    "host": "mandg.wd3.myworkdayjobs.com",
+    "tenant": "mandg",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Mako Trading",
+  "settore": "Trading e hedge fund",
+  "domini": [
+   "mako.com"
+  ]
+ },
+ {
+  "nome": "Man Group",
+  "settore": "Trading e hedge fund",
+  "domini": [
+   "man.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "greenhouse",
+    "slug": "mangroup"
+   }
+  ]
+ },
+ {
+  "nome": "Marshall Wace",
+  "settore": "Trading e hedge fund",
+  "domini": [
+   "mwam.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "greenhouse",
+    "slug": "marshallwace"
+   }
+  ]
+ },
+ {
+  "nome": "Montagu Evans",
+  "settore": "Real estate",
+  "domini": [
+   "montagu-evans.co.uk"
+  ]
+ },
+ {
+  "nome": "Nordea Asset Management",
+  "settore": "Asset management",
+  "domini": [
+   "nordeaassetmanagement.com",
+   "nordea.com"
+  ]
+ },
+ {
+  "nome": "Numis",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "numis.com"
+  ]
+ },
+ {
+  "nome": "Orbis Investment Management",
+  "settore": "Asset management",
+  "domini": [
+   "orbis.com"
+  ]
+ },
+ {
+  "nome": "Oxford Properties",
+  "settore": "Real estate",
+  "domini": [
+   "oxfordproperties.com"
+  ]
+ },
+ {
+  "nome": "Patrizia",
+  "settore": "Real estate",
+  "domini": [
+   "patrizia.ag"
+  ]
+ },
+ {
+  "nome": "PGIM",
+  "settore": "Asset management",
+  "domini": [
+   "pgim.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "pru.wd5.myworkdayjobs.com",
+    "tenant": "pru",
+    "sito": "Careers"
+   },
+   {
+    "tipo": "workday",
+    "host": "pru.wd5.myworkdayjobs.com",
+    "tenant": "pru",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Piper Sandler",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "pipersandler.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "pipersandler.wd1.myworkdayjobs.com",
+    "tenant": "pipersandler",
+    "sito": "PiperSandler"
+   },
+   {
+    "tipo": "workday",
+    "host": "pipersandler.wd1.myworkdayjobs.com",
+    "tenant": "pipersandler",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Propeterra",
+  "settore": "Real estate",
+  "domini": [
+   "propeterra.com"
+  ]
+ },
+ {
+  "nome": "PSP Investments",
+  "settore": "Asset management",
+  "domini": [
+   "investpsp.com"
+  ]
+ },
+ {
+  "nome": "Ruffer",
+  "settore": "Asset management",
+  "domini": [
+   "ruffer.co.uk"
+  ]
+ },
+ {
+  "nome": "SEGRO",
+  "settore": "Real estate",
+  "domini": [
+   "segro.com"
+  ]
+ },
+ {
+  "nome": "Shell",
+  "settore": "Corporate",
+  "domini": [
+   "shell.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "shell.wd3.myworkdayjobs.com",
+    "tenant": "shell",
+    "sito": "ShellCareers"
+   }
+  ]
+ },
+ {
+  "nome": "SIG (Susquehanna)",
+  "settore": "Trading e hedge fund",
+  "domini": [
+   "sig.com",
+   "careers.sig.com"
+  ]
+ },
+ {
+  "nome": "Singer Capital Markets",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "singercm.com"
+  ]
+ },
+ {
+  "nome": "St. James's Place",
+  "settore": "Asset management",
+  "domini": [
+   "sjp.co.uk"
+  ]
+ },
+ {
+  "nome": "Stifel",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "stifel.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "stifel.wd1.myworkdayjobs.com",
+    "tenant": "stifel",
+    "sito": "Stifel_Careers"
+   },
+   {
+    "tipo": "workday",
+    "host": "stifel.wd1.myworkdayjobs.com",
+    "tenant": "stifel",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Turner & Townsend",
+  "settore": "Consulenza",
+  "domini": [
+   "turnerandtownsend.com"
+  ]
+ },
+ {
+  "nome": "Vanguard",
+  "settore": "Asset management",
+  "domini": [
+   "vanguard.com",
+   "vanguard.co.uk"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "vanguard.wd5.myworkdayjobs.com",
+    "tenant": "vanguard",
+    "sito": "vanguard_external"
+   },
+   {
+    "tipo": "workday",
+    "host": "vanguard.wd5.myworkdayjobs.com",
+    "tenant": "vanguard",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Dare",
+  "settore": "Consulenza",
+  "domini": [
+   "dare.global"
+  ]
+ },
+ {
+  "nome": "Walter Scott",
+  "settore": "Asset management",
+  "domini": [
+   "walterscott.com"
+  ]
+ },
+ {
+  "nome": "William Blair",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "williamblair.com"
+  ]
+ },
+ {
+  "nome": "TD Securities",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "tdsecurities.com",
+   "td.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "td.wd3.myworkdayjobs.com",
+    "tenant": "td",
+    "sito": "TD_Bank_Careers"
+   }
+  ]
+ },
+ {
+  "nome": "Banco BPM",
+  "settore": "Banca",
+  "domini": [
+   "bancobpm.it",
+   "gruppo.bancobpm.it"
+  ]
+ },
+ {
+  "nome": "Auctus Capital Partners",
+  "settore": "Private equity",
+  "domini": [
+   "auctuscapital.it",
+   "auctuscp.com"
+  ]
+ },
+ {
+  "nome": "Walliance",
+  "settore": "Real estate",
+  "domini": [
+   "walliance.eu"
+  ]
+ },
+ {
+  "nome": "SMBC",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "smbcgroup.com",
+   "smbc.co.jp"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "smbcgroup.wd1.myworkdayjobs.com",
+    "tenant": "smbcgroup",
+    "sito": "External"
+   },
+   {
+    "tipo": "workday",
+    "host": "smbcgroup.wd1.myworkdayjobs.com",
+    "tenant": "smbcgroup",
+    "sito": "SMBC_Careers"
+   }
+  ]
+ },
+ {
+  "nome": "Milaris Partners",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "milarispartners.com",
+   "milaris.com"
+  ]
+ },
+ {
+  "nome": "GreyMatter",
+  "settore": "Venture capital",
+  "domini": [
+   "greymatter.vc",
+   "greymatter.it"
+  ]
+ },
+ {
+  "nome": "DeA Capital SGR",
+  "settore": "Real estate",
+  "domini": [
+   "deacapitalre.com",
+   "deacapital.com"
+  ]
+ },
+ {
+  "nome": "G-Research",
+  "settore": "Trading e hedge fund",
+  "domini": [
+   "gresearch.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "greenhouse",
+    "slug": "gresearch"
+   }
+  ]
+ },
+ {
+  "nome": "Bregal Unternehmerkapital",
+  "settore": "Private equity",
+  "domini": [
+   "bregal.de",
+   "bu-partners.com"
+  ]
+ },
+ {
+  "nome": "Deloitte UK",
+  "settore": "Big Four",
+  "domini": [],
+  "careers": [
+   "https://www.deloitte.com/uk/en/careers.html",
+   "https://www.deloitte.com/uk/en/careers/students.html"
+  ]
+ },
+ {
+  "nome": "Deloitte France",
+  "settore": "Big Four",
+  "domini": [],
+  "careers": [
+   "https://www.deloitte.com/fr/fr/careers.html"
+  ]
+ },
+ {
+  "nome": "EY Italia",
+  "settore": "Big Four",
+  "domini": [],
+  "careers": [
+   "https://www.ey.com/it_it/careers",
+   "https://careers.ey.com/ey/search/?createNewAlert=false&q=&locationsearch=Italy"
+  ]
+ },
+ {
+  "nome": "EY UK",
+  "settore": "Big Four",
+  "domini": [],
+  "careers": [
+   "https://www.ey.com/en_uk/careers"
+  ]
+ },
+ {
+  "nome": "EY France",
+  "settore": "Big Four",
+  "domini": [],
+  "careers": [
+   "https://www.ey.com/fr_fr/careers"
+  ]
+ },
+ {
+  "nome": "KPMG Italia",
+  "settore": "Big Four",
+  "domini": [],
+  "careers": [
+   "https://kpmg.com/it/it/home/careers.html",
+   "https://kpmg.com/it/it/careers.html"
+  ]
+ },
+ {
+  "nome": "KPMG UK",
+  "settore": "Big Four",
+  "domini": [],
+  "careers": [
+   "https://kpmg.com/uk/en/home/careers.html",
+   "https://kpmg.com/uk/en/careers.html"
+  ]
+ },
+ {
+  "nome": "KPMG France",
+  "settore": "Big Four",
+  "domini": [],
+  "careers": [
+   "https://kpmg.com/fr/fr/home/carrieres.html",
+   "https://kpmg.com/fr/fr/carrieres.html"
+  ]
+ },
+ {
+  "nome": "PwC UK",
+  "settore": "Big Four",
+  "domini": [],
+  "careers": [
+   "https://www.pwc.co.uk/careers.html"
+  ]
+ },
+ {
+  "nome": "PwC Italia",
+  "settore": "Big Four",
+  "domini": [],
+  "careers": [
+   "https://www.pwc.com/it/it/careers.html"
+  ]
+ },
+ {
+  "nome": "Sculptor Capital",
+  "settore": "Trading e hedge fund",
+  "domini": [
+   "sculptor.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "greenhouse",
+    "slug": "sculptor"
+   }
+  ]
+ }
+]

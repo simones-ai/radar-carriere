@@ -14,7 +14,7 @@ from classifica import PAESI, SENIOR, classifica, luogo_escluso, paese_di
 CARTELLA = os.path.dirname(os.path.abspath(__file__))
 
 IMPOSTAZIONI_BASE = {
-    "paesi": ["IT", "GB"],
+    "paesi": ["IT", "LON", "PAR"],   # tutta l'Italia, solo Londra, solo Parigi
     "intervallo_minuti": 60,
     "adzuna": {"app_id": "", "app_key": ""},
     "porta": 8777,

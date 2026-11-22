@@ -170,8 +170,42 @@ PAESI = {
     "IN": ("India", ["India", "Mumbai", "Bangalore", "Bengaluru", "Pune", "Hyderabad", "Chennai", "Gurugram",
                      "Gurgaon", "Noida", "Kolkata", "New Delhi"]),
     "SG": ("Singapore", ["Singapore"]),
+    "AT": ("Austria", ["Austria", "Österreich", "Vienna", "Wien"]),
+    "RO": ("Romania", ["Romania", "Bucharest", "Bucuresti", "București", "Cluj"]),
+    "CZ": ("Rep. Ceca", ["Czech Republic", "Czechia", "Prague", "Praha"]),
+    "HU": ("Ungheria", ["Hungary", "Budapest"]),
+    "SE": ("Svezia", ["Sweden", "Stockholm"]), "DK": ("Danimarca", ["Denmark", "Copenhagen", "København"]),
+    "NO": ("Norvegia", ["Norway", "Oslo"]), "FI": ("Finlandia", ["Finland", "Helsinki"]),
+    "CA": ("Canada", ["Canada", "Toronto", "Montreal", "Montréal", "Vancouver", "Calgary"]),
+    "AU": ("Australia", ["Australia", "Sydney", "Melbourne", "Brisbane", "Perth"]),
+    "JP": ("Giappone", ["Japan", "Tokyo"]), "CN": ("Cina", ["China", "Shanghai", "Beijing", "Shenzhen"]),
+    "BR": ("Brasile", ["Brazil", "Brasil", "São Paulo", "Sao Paulo", "Rio de Janeiro"]),
+    "MX": ("Messico", ["Mexico", "México", "Mexico City"]),
+    "ZA": ("Sudafrica", ["South Africa", "Johannesburg", "Cape Town"]),
+    "SA": ("Arabia Saudita", ["Saudi Arabia", "Riyadh"]), "QA": ("Qatar", ["Qatar", "Doha"]),
+    "IL": ("Israele", ["Israel", "Tel Aviv"]), "TR": ("Turchia", ["Turkey", "Türkiye", "Istanbul"]),
+    "KR": ("Corea del Sud", ["South Korea", "Korea", "Seoul"]), "TW": ("Taiwan", ["Taiwan", "Taipei"]),
+    "PH": ("Filippine", ["Philippines", "Manila", "Taguig"]), "MY": ("Malesia", ["Malaysia", "Kuala Lumpur"]),
+    "CO": ("Colombia", ["Colombia", "Bogotá", "Bogota"]), "AR": ("Argentina", ["Argentina", "Buenos Aires"]),
+    "CL": ("Cile", ["Chile", "Santiago"]),
     "HK": ("Hong Kong", ["Hong Kong"]),
 }
+
+# Zone più strette di un paese: si cercano gli annunci del paese e poi si tengono solo quelli della città.
+ZONE = {
+    "LON": ("Londra", "GB", ["London", "Londra", "City of London", "Canary Wharf", "Greater London"]),
+    "PAR": ("Parigi", "FR", ["Paris", "Parigi", "La Défense", "La Defense", "Puteaux", "Courbevoie",
+                             "Neuilly-sur-Seine", "Levallois-Perret", "Boulogne-Billancourt", "Montrouge",
+                             "Saint-Denis", "Issy-les-Moulineaux", "Île-de-France", "Ile-de-France"]),
+}
+for _codice, (_nome, _padre, _parole) in ZONE.items():
+    PAESI[_codice] = (_nome, _parole)
+
+
+def paesi_ampi(paesi):
+    """Per scaricare gli annunci: le zone diventano il loro paese (Londra → Regno Unito)."""
+    return list(dict.fromkeys(ZONE[p][1] if p in ZONE else p for p in paesi or []))
+
 
 _CACHE = {}
 
@@ -186,7 +220,8 @@ def regex_luoghi(paesi):
 
 def paese_di(luogo, paesi=None):
     """Codice ISO del primo paese (fra quelli scelti) citato nel testo del luogo, altrimenti None."""
-    for codice in (paesi or PAESI):
+    ordine = list(paesi or []) + [c for c in PAESI if c not in ZONE and c not in (paesi or [])]
+    for codice in ordine:
         rx = regex_luoghi([codice])
         if rx and rx.search(luogo or ""):
             return codice

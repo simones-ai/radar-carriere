@@ -19,7 +19,7 @@ import urllib.parse
 import urllib.request
 from html.parser import HTMLParser
 
-from classifica import PAESI, classifica, luogo_ok, pulisci_html
+from classifica import PAESI, classifica, luogo_ok, paesi_ampi, pulisci_html
 
 AGENTE = "RadarCarriere/1.0 (uso personale; una scansione all'ora)"
 MAX_PER_FONTE = 2000
@@ -462,6 +462,7 @@ LETTORI = {"workday": workday, "greenhouse": greenhouse, "lever": lever, "smartr
 
 
 def leggi(fonte, paesi, chiavi=None):
+    paesi = paesi_ampi(paesi)  # qui si scarica per paese; il filtro per città (Londra, Parigi) lo fa il motore
     if fonte["tipo"] == "adzuna":
         return adzuna(fonte, paesi, chiavi or {})
     if fonte["tipo"] not in LETTORI:

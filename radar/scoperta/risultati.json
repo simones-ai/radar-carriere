@@ -1,0 +1,17 @@
+[
+ {
+  "nome": "Man Group",
+  "settore": "Trading e hedge fund",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "greenhouse",
+     "slug": "mangroup"
+    },
+    "esito": 29
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": []
+ }
+]
