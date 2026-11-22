@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS offerte (
     categorie TEXT DEFAULT '[]', rilevanza INTEGER DEFAULT 0,
     descrizione TEXT DEFAULT '',
     nuova INTEGER DEFAULT 0, letta INTEGER DEFAULT 0,
-    stato TEXT DEFAULT '', note TEXT DEFAULT ''
+    stato TEXT DEFAULT '', note TEXT DEFAULT '', notificata INTEGER DEFAULT 0
 );
 CREATE INDEX IF NOT EXISTS idx_ril ON offerte(rilevanza);
 CREATE TABLE IF NOT EXISTS fonti_stato (
@@ -39,6 +39,10 @@ class Archivio:
         self.lock = threading.RLock()
         with self.lock:
             self.db.executescript(SCHEMA)
+            colonne = {r[1] for r in self.db.execute("PRAGMA table_info(offerte)")}
+            if "notificata" not in colonne:  # archivi creati prima delle email
+                self.db.execute("ALTER TABLE offerte ADD COLUMN notificata INTEGER DEFAULT 0")
+                self.db.commit()
 
     def esistenti(self, prefisso_ids):
         """Gli id già presenti in archivio fra quelli indicati."""
@@ -122,6 +126,24 @@ class Archivio:
     def segna_tutte_lette(self):
         with self.lock, self.db:
             self.db.execute("UPDATE offerte SET letta=1, nuova=0 WHERE letta=0 OR nuova=1")
+
+    def da_notificare(self, rilevanza_min):
+        """Posizioni nuove (non della prima scansione di una fonte) non ancora segnalate via email."""
+        with self.lock:
+            righe = self.db.execute(
+                "SELECT id, azienda, settore, titolo, luogo, url, pubblicata, categorie, rilevanza FROM offerte "
+                "WHERE nuova=1 AND notificata=0 AND attiva=1 AND rilevanza>=? ORDER BY rilevanza DESC, prima_vista",
+                (rilevanza_min,)).fetchall()
+        out = []
+        for r in righe:
+            d = dict(r)
+            d["categorie"] = json.loads(d["categorie"] or "[]")
+            out.append(d)
+        return out
+
+    def segna_notificate(self, ids):
+        with self.lock, self.db:
+            self.db.executemany("UPDATE offerte SET notificata=1 WHERE id=?", [(i,) for i in ids])
 
     def stato_fonte(self, azienda, ok, messaggio, annunci=0, rilevanti=0, durata=0.0):
         with self.lock, self.db:

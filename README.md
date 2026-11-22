@@ -1,8 +1,11 @@
 # Radar Carriere: stage, summer internship, graduate program e posizioni junior
 
-Un sito in stile terminale che **si aggiorna da solo ogni ora** con le posizioni aperte di banche,
-Big Four, società di consulenza, asset manager e trading firm, filtrate per chi sta finendo la magistrale.
-Lo apri da PC o telefono, senza installare niente: **https://simones-ai.github.io/radar-carriere/**
+Ti manda un'**email appena esce una posizione nuova** in banche, Big Four, società di consulenza,
+asset manager e trading firm. Così ti candidi tra i primi. Controlla le aziende **ogni 20 minuti**,
+dalle 7 alle 23, anche quando il PC è spento.
+
+Sul tuo PC c'è anche un **terminale privato** in stile Bloomberg per sfogliare tutte le posizioni aperte,
+leggere gli annunci, salvarli e tenere traccia delle candidature. È visibile solo a te.
 
 **Cosa cerca**
 - **Summer internship** e **off-cycle** (anche spring/autumn internship)
@@ -13,41 +16,58 @@ Lo apri da PC o telefono, senza installare niente: **https://simones-ai.github.i
   Il radar legge anche la descrizione e lo riconosce.
 - Scarta da solo i ruoli senior (Manager, VP, Director, "5+ years of experience"…).
 
-## Come funziona
+## 1. Le email (5 minuti, una volta sola)
 
-Ogni ora, dalle 7 alle 23 circa, GitHub (gratis) esegue il radar: legge i siti carriere, classifica
-gli annunci e ripubblica il sito. Il tuo PC può restare spento.
+Serve una **password per le app** di Gmail: è diversa dalla tua password normale e serve solo a
+questo programma per inviarti le email.
 
-Sul sito:
-- le posizioni comparse dopo la tua prima visita e non ancora aperte sono segnate **● NUOVE**;
-- per ogni posizione puoi **salvarla**, segnarla **"mi sono candidato"**, **scartarla** e scrivere **note**;
-- salvate, candidature e note restano **solo nel tuo browser**. Per passarle dal PC al telefono usa
-  **F3 → Esporta / Importa**.
+1. Attiva la **verifica in due passaggi** sul tuo account Google, se non l'hai già fatto
+   (<https://myaccount.google.com/security>).
+2. Apri <https://myaccount.google.com/apppasswords>, scrivi un nome (es. `Radar Carriere`) e premi **Crea**.
+   Copia la password di 16 lettere che compare.
+3. Su questo repository vai in **Settings → Secrets and variables → Actions → New repository secret**
+   e crea:
+   - `EMAIL_UTENTE`: il tuo indirizzo Gmail;
+   - `EMAIL_PASSWORD`: la password per le app del punto 2.
 
-**Cosa c'è (e cosa non c'è) sul sito pubblico**: solo titolo, azienda, luogo, data, tipo di posizione e
-il link all'annuncio originale. I testi completi degli annunci non vengono ripubblicati, perché sono delle
-aziende e possono contenere nomi e contatti dei recruiter. Il radar li legge solo durante la scansione,
-per capire se una posizione "Junior" è aperta a stagisti. Il sito chiede ai motori di ricerca di non
-indicizzarlo (`noindex`), quindi lo trova solo chi ha il link.
+   Facoltativo: `EMAIL_DESTINATARIO`, se vuoi ricevere le email su un altro indirizzo.
+4. Vai in **Actions → Radar Carriere → Run workflow** per un primo controllo.
+
+Da quel momento ricevi un'email ogni volta che compare una posizione nuova. L'oggetto contiene azienda
+e ruolo. Nell'email trovi tipo (summer, off-cycle, stage, graduate, junior), luogo e un pulsante
+**CANDIDATI** che porta all'annuncio.
+
+- Ricevi solo le posizioni **nuove**: quelle già pubblicate quando il radar ha iniziato a controllare
+  un'azienda non vengono inviate.
+- Le posizioni riservate alle categorie protette (L. 68/99) e quelle "da verificare" (titoli generici
+  come "Analyst") non vengono inviate. Le vedi comunque nel terminale sul PC.
+- I secrets sono cifrati: nessuno, nemmeno chi visita il repository, può leggerli.
+- Il repository è pubblico perché così GitHub non pone limiti ai minuti di controllo. Contiene solo il
+  codice: nessun annuncio, nessun dato tuo. Nei registri dei controlli compare solo il numero di
+  posizioni trovate.
+
+## 2. Il terminale privato sul PC (facoltativo)
+
+1. Installa **Python** (3.10 o successivo) da <https://www.python.org/downloads/>.
+   ⚠️ Nella prima schermata spunta **"Add python.exe to PATH"**.
+2. Scarica questo repository (**Code → Download ZIP**) ed estrailo.
+3. Fai **doppio clic su `radar/avvia.bat`**: si apre una finestra nera (lasciala aperta) e il browser su
+   <http://127.0.0.1:8777>. Su Mac/Linux: `python3 radar/radar.py`.
+
+Il terminale funziona solo sul tuo computer: nessun altro può aprirlo. Ha un suo archivio, separato da
+quello delle email.
 
 | Tasto o comando | Cosa fa |
 |---|---|
-| **F1 / F2 / F3 / F4** | Posizioni, Aziende monitorate, I miei dati, Registro |
+| **F1 / F2 / F3 / F4** | Posizioni, Aziende monitorate, Impostazioni, Registro |
 | scrivi nella barra `RADAR>` | cerca ovunque (es. `deloitte milano audit`) |
 | `/summer` `/offcycle` `/stage` `/graduate` `/junior` | filtra per tipo |
 | `/nuove` `/salvate` `/candidature` `/tutte` | cambia vista |
 | `/it` `/uk` | solo Italia / solo Regno Unito |
+| `/scan` | controlla subito tutte le aziende |
 | `j` `k` (o le frecce) | scorri le posizioni |
 | `Invio` | apri l'annuncio per candidarti |
 | `s` `c` `x` | salva, segna "mi sono candidato", scarta |
-
-## Messa in funzione (una volta sola, 3 minuti)
-
-1. Sul repository vai in **Settings → Pages** e, alla voce **Source**, scegli **GitHub Actions**.
-2. Vai in **Actions**. Se GitHub lo chiede, premi il pulsante verde per abilitare i workflow.
-   Poi apri **Radar Carriere → Run workflow → Run workflow**.
-3. Dopo qualche minuto (il primo giro legge tutti gli annunci già pubblicati) il sito è online
-   all'indirizzo qui sopra. Da lì in poi si aggiorna da solo.
 
 ## Aziende incluse
 
@@ -55,8 +75,8 @@ Deloitte (portale Italia, Grecia e Malta), PwC, Accenture, Oliver Wyman/Marsh Mc
 Morgan Stanley, Citi, Deutsche Bank, Barclays, Bank of America, BlackRock, State Street, S&P Global,
 Mastercard, Point72, Jane Street, IMC, Squarepoint, Jump Trading, Tower Research, DRW e General Atlantic.
 
-**Aggiungere un'azienda**: apri `radar/aziende.json`, premi la matita ✎ e aggiungi prima dell'ultima `]`
-una riga così, con la virgola dopo la voce precedente:
+**Aggiungere un'azienda per le email**: apri `radar/aziende.json`, premi la matita ✎ e aggiungi
+prima dell'ultima `]` una riga così, con la virgola dopo la voce precedente:
 
 ```json
 {"nome": "Mediobanca", "settore": "Banca d'investimento", "url": "https://indirizzo-della-pagina-carriere"}
@@ -65,18 +85,13 @@ una riga così, con la virgola dopo la voce precedente:
 Come `url` incolla l'indirizzo della pagina con l'elenco delle posizioni aperte. Il radar riconosce
 da solo Workday (`…myworkdayjobs.com`), Greenhouse, Lever, SmartRecruiters, Ashby, Oracle e Avature.
 Per le pagine "fatte in casa", tipiche delle boutique, legge i link che sembrano annunci di stage,
-graduate o junior.
-Dopo il *Commit changes* il sito si aggiorna in pochi minuti. In **F2** vedi se l'azienda è letta
-correttamente (pallino verde) o perché no (pallino rosso).
+graduate o junior. Nel terminale sul PC puoi aggiungere un'azienda anche dalla scheda **F2**, che
+prova subito se riesce a leggerla.
 
 **EY, KPMG, Goldman Sachs, McKinsey, BCG, Bain, Mediobanca, Intesa, UniCredit, Generali…** non hanno
 un sito leggibile direttamente. Per coprirle c'è **Adzuna**, un aggregatore di annunci con chiave gratuita:
-1. registrati su <https://developer.adzuna.com/signup>;
-2. nel repository vai in **Settings → Secrets and variables → Actions → New repository secret** e crea
-   `ADZUNA_APP_ID` e `ADZUNA_APP_KEY`.
-
-Dal giro successivo la fonte si attiva da sola. Tiene solo le aziende dell'elenco `solo_aziende` in
-`radar/aziende.json`, che puoi modificare.
+registrati su <https://developer.adzuna.com/signup>, poi crea i secrets `ADZUNA_APP_ID` e `ADZUNA_APP_KEY`.
+Dal controllo successivo la fonte si attiva da sola.
 
 ## Paesi
 
@@ -86,29 +101,24 @@ Codici disponibili: IT, GB, IE, FR, DE, CH, LU, NL, BE, ES, PT, GR, MT, PL, AE, 
 
 ## Buone maniere e limiti
 
-- Il radar si presenta ai siti con un nome riconoscibile e fa al massimo una scansione all'ora. Se un
-  sito risponde "troppe richieste" (HTTP 429), quella fonte salta il giro e riprova al successivo:
-  gli annunci non si perdono. Lo stato di ogni fonte è in **F2**.
-- I server di GitHub sono condivisi, quindi alcuni siti Workday potrebbero rispondere spesso "troppe richieste".
-- Se il repository resta senza attività per 60 giorni, GitHub sospende i workflow programmati:
-  basta riattivarlo dalla scheda Actions.
+- Il radar si presenta ai siti con un nome riconoscibile. Se un sito risponde "troppe richieste"
+  (HTTP 429), quella fonte salta il giro e riprova al successivo: gli annunci non si perdono.
+- GitHub non garantisce l'orario esatto dei controlli programmati: a volte partono con qualche minuto
+  di ritardo.
+- Se il repository resta senza attività per 60 giorni, GitHub sospende i controlli programmati:
+  ti avvisa via email e basta riattivarli dalla scheda Actions.
 - Il riconoscimento del tipo di posizione si basa su parole chiave in italiano, inglese, francese,
   tedesco e spagnolo. È affidabile ma non perfetto: prima di candidarti, leggi sempre l'annuncio.
 
-## Usarlo anche sul PC (facoltativo)
-
-Lo stesso programma funziona anche in locale, con aggiunta di aziende e impostazioni direttamente
-dall'interfaccia: installa Python (spuntando "Add python.exe to PATH") e fai doppio clic su
-`radar/avvia.bat`. Su Mac/Linux: `python3 radar/radar.py`. Non servono librerie esterne.
-
 | File | Contenuto |
 |---|---|
-| `radar/radar.py` | avvio (`python radar.py`, `scansiona`, `sito CARTELLA`, `prova URL`) |
+| `radar/radar.py` | avvio (`python radar.py` terminale, `scansiona` un controllo, `prova URL`) |
 | `radar/fonti.py` | lettori dei siti carriere (Workday, Greenhouse, Oracle, Avature, …) |
 | `radar/classifica.py` | riconoscimento di stage/summer/graduate/junior e dei paesi |
-| `radar/motore.py`, `radar/archivio.py` | scansione e archivio (SQLite) |
-| `radar/web/index.html` | il terminale (lo stesso per il sito e per il PC) |
+| `radar/motore.py`, `radar/archivio.py` | controllo e archivio (SQLite) |
+| `radar/notifiche.py` | le email |
+| `radar/web/index.html` | il terminale |
 | `radar/aziende.json` | elenco delle aziende monitorate |
-| `.github/workflows/sito.yml` | aggiornamento orario e pubblicazione su GitHub Pages |
+| `.github/workflows/radar.yml` | controllo ogni 20 minuti |
 
 Test: `python -m pytest radar`

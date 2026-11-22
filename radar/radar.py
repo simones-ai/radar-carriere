@@ -26,7 +26,12 @@ def main(argv):
     comando = argv[0] if argv else "avvia"
 
     if comando == "scansiona":
+        em = radar.impostazioni()["email"]
+        if os.environ.get("GITHUB_ACTIONS") and not (em["utente"] and em["password"]):
+            print("⚠ Email non configurata: aggiungi i secrets EMAIL_UTENTE ed EMAIL_PASSWORD (vedi README).")
         nuove = radar.scansiona() or []
+        if os.environ.get("GITHUB_ACTIONS"):  # il registro di GitHub è pubblico: lì basta il conteggio
+            nuove = []
         for o in nuove:
             print(f"  NUOVA  {o['azienda']} — {o['titolo']}  [{', '.join(o['categorie'])}]  {o['luogo']}\n         {o['url']}")
         return

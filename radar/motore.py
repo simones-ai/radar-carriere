@@ -1,4 +1,4 @@
-"""Il motore: legge le fonti, classifica gli annunci e li salva nell'archivio."""
+"""Il motore: legge le fonti, classifica gli annunci, li salva e ti avvisa via email delle novità."""
 
 import json
 import os
@@ -7,6 +7,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import fonti
+import notifiche
 from archivio import Archivio, adesso
 from classifica import PAESI, SENIOR, classifica, luogo_escluso, paese_di
 
@@ -17,11 +18,17 @@ IMPOSTAZIONI_BASE = {
     "intervallo_minuti": 60,
     "adzuna": {"app_id": "", "app_key": ""},
     "porta": 8777,
+    # Email per le nuove posizioni (nel cloud arrivano dai secrets EMAIL_UTENTE / EMAIL_PASSWORD / EMAIL_DESTINATARIO)
+    "email": {"smtp": "smtp.gmail.com", "porta": 465, "utente": "", "password": "", "destinatario": ""},
+    "email_rilevanza_min": 2,     # 2 = anche i "Junior" aperti a stagisti; 3 = solo parola chiave nel titolo
+    "email_protette": False,      # True = includi le posizioni riservate alle categorie protette (L. 68/99)
 }
 
 
 # Nel cloud (GitHub Actions) le impostazioni arrivano dalle variabili d'ambiente / "secrets".
-VARIABILI = {"ADZUNA_APP_ID": ("adzuna", "app_id"), "ADZUNA_APP_KEY": ("adzuna", "app_key")}
+VARIABILI = {"ADZUNA_APP_ID": ("adzuna", "app_id"), "ADZUNA_APP_KEY": ("adzuna", "app_key"),
+             "EMAIL_UTENTE": ("email", "utente"), "EMAIL_PASSWORD": ("email", "password"),
+             "EMAIL_DESTINATARIO": ("email", "destinatario"), "EMAIL_SMTP": ("email", "smtp")}
 
 
 def _da_ambiente(imp):
@@ -127,6 +134,7 @@ class Radar:
                         self.log(f"  ✗ {a['nome']}: {e}")
             self.ultima_scansione = adesso()
             self.log(f"Fine scansione: {len(nuove)} nuove posizioni rilevanti")
+            self._avvisa(imp)
             return nuove
         finally:
             self.in_corso = False
@@ -216,6 +224,22 @@ class Radar:
             r = self.archivio.db.execute("SELECT COUNT(*) FROM offerte WHERE fonte=? AND rilevanza>=1 AND attiva=1",
                                          (nome,)).fetchone()
         return r[0]
+
+    def _avvisa(self, imp):
+        """Manda un'email con le posizioni nuove non ancora segnalate (se l'email è configurata)."""
+        em = imp.get("email") or {}
+        if not (em.get("utente") and em.get("password")):
+            return
+        offerte = [o for o in self.archivio.da_notificare(imp.get("email_rilevanza_min", 2))
+                   if imp.get("email_protette") or not notifiche.PROTETTE.search(o["titolo"])]
+        if not offerte:
+            return
+        try:
+            notifiche.invia_email(em, offerte)
+            self.archivio.segna_notificate([o["id"] for o in offerte])
+            self.log(f"  ✉ Email inviata: {len(offerte)} nuove posizioni")
+        except Exception as e:  # riprova al giro successivo
+            self.log(f"  ✗ Email non inviata ({e}): riprovo al prossimo giro")
 
     # ---------------------------------------------------------- ciclo automatico
     def avvia_ciclo(self):

@@ -138,3 +138,77 @@ def test_crea_sito(tmp_path, monkeypatch):
     pagina = (tmp_path / "sito" / "index.html").read_text()
     assert "window.RADAR_STATICO = true" in pagina and 'content="noindex' in pagina
     assert json.loads((tmp_path / "sito" / "stato.json").read_text())["fonti"][0]["stato"]["ok"] == 1
+
+
+class FintoSMTP:
+    inviati = []
+    rompi = False
+
+    def __init__(self, host, porta, timeout=None):
+        self.host = host
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *a):
+        return False
+
+    def login(self, utente, password):
+        if FintoSMTP.rompi:
+            raise OSError("server non raggiungibile")
+
+    def send_message(self, msg):
+        FintoSMTP.inviati.append(msg)
+
+
+def test_email_solo_per_le_novita(tmp_path, monkeypatch):
+    import smtplib
+    FintoSMTP.inviati = []
+    monkeypatch.setattr(smtplib, "SMTP_SSL", FintoSMTP)
+    monkeypatch.setenv("EMAIL_UTENTE", "io@example.com")
+    monkeypatch.setenv("EMAIL_PASSWORD", "password-app")
+    with open(tmp_path / "aziende.json", "w") as f:
+        json.dump([{"nome": "Banca Test", "settore": "Banca", "tipo": "finta", "attiva": True}], f)
+    elenco = [fonti._annuncio("t:1", "Summer Analyst 2027", "Milano", "https://x/1")]
+    monkeypatch.setattr(fonti, "leggi", lambda fonte, paesi, chiavi=None: list(elenco))
+    r = Radar(str(tmp_path))
+
+    r.scansiona()  # prima scansione: niente email per gli annunci già esistenti
+    assert FintoSMTP.inviati == []
+
+    elenco += [fonti._annuncio("t:2", "Off-cycle Intern - M&A", "London", "https://x/2"),
+               fonti._annuncio("t:3", "Junior - Categorie Protette - Audit", "Milano", "https://x/3"),
+               fonti._annuncio("t:4", "Analyst", "Milano", "https://x/4")]  # "da verificare": niente email
+    FintoSMTP.rompi = True
+    r.scansiona()  # server email irraggiungibile: si riprova al giro dopo
+    assert FintoSMTP.inviati == []
+    FintoSMTP.rompi = False
+    r.scansiona()
+    assert len(FintoSMTP.inviati) == 1
+    msg = FintoSMTP.inviati[0]
+    assert msg["Subject"] == "🎯 Banca Test: Off-cycle Intern - M&A" and msg["To"] == "io@example.com"
+    corpo = msg.get_payload()[1].get_payload(decode=True).decode()
+    assert "https://x/2" in corpo and "Off-cycle" in corpo and "Protette" not in corpo
+    r.scansiona()  # già segnalata: nessun doppione
+    assert len(FintoSMTP.inviati) == 1
+
+
+def test_archivio_vecchio_senza_colonna_notificata(tmp_path):
+    import sqlite3
+    from archivio import Archivio
+    db = sqlite3.connect(tmp_path / "radar.db")
+    db.execute("CREATE TABLE offerte (id TEXT PRIMARY KEY, azienda TEXT, settore TEXT, fonte TEXT, titolo TEXT, "
+               "luogo TEXT, paese TEXT, url TEXT, pubblicata TEXT, prima_vista TEXT, ultima_vista TEXT, "
+               "attiva INTEGER DEFAULT 1, categorie TEXT DEFAULT '[]', rilevanza INTEGER DEFAULT 0, "
+               "descrizione TEXT DEFAULT '', nuova INTEGER DEFAULT 0, letta INTEGER DEFAULT 0, "
+               "stato TEXT DEFAULT '', note TEXT DEFAULT '')")
+    db.commit()
+    db.close()
+    assert Archivio(str(tmp_path / "radar.db")).da_notificare(2) == []
+
+
+def test_oggetto_email_con_piu_posizioni():
+    import notifiche
+    offerte = [{"azienda": a, "titolo": "Graduate", "categorie": ["graduate"], "luogo": "", "url": ""}
+               for a in ["JPMorgan", "Deloitte", "JPMorgan", "Citi", "PwC"]]
+    assert notifiche.oggetto(offerte) == "🎯 5 nuove posizioni: JPMorgan, Deloitte, Citi e altre 1"
