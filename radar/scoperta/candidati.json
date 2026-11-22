@@ -1,94 +1,39 @@
 {
  "fonti": [
   {
-   "nome": "GP Bullhound",
-   "tipo": "recruitee",
-   "slug": "gpbullhound"
+   "nome": "Pictet",
+   "tipo": "successfactors",
+   "host": "career012.successfactors.eu",
+   "azienda": "banquepict"
   },
   {
-   "nome": "Clearwater International",
-   "tipo": "personio",
-   "slug": "clearwater",
-   "dominio": "jobs.personio.de"
+   "nome": "British Land",
+   "tipo": "successfactors",
+   "host": "career012.successfactors.eu",
+   "azienda": "C0007870899P"
   },
   {
-   "nome": "Lichfields",
-   "tipo": "pinpoint",
-   "slug": "lichfields"
+   "nome": "doValue",
+   "tipo": "successfactors",
+   "host": "career5.successfactors.eu",
+   "azienda": "altamiraasP"
   },
   {
-   "nome": "Millennium Management",
-   "tipo": "eightfold",
-   "host": "mlp.eightfold.ai",
-   "dominio": "mlp.com"
-  },
-  {
-   "nome": "Millennium Management (app)",
-   "tipo": "eightfold",
-   "host": "app.eightfold.ai",
-   "dominio": "mlp.com"
+   "nome": "EY",
+   "tipo": "sitemap",
+   "url": "https://careers.ey.com/sitemap.xml",
+   "schema": "/job/"
   },
   {
    "nome": "HSBC",
-   "tipo": "eightfold",
-   "host": "apply.careers.hsbc.com",
-   "dominio": "hsbc.com"
+   "tipo": "sitemap",
+   "url": "https://apply.careers.hsbc.com/sitemap.xml",
+   "schema": "/job/"
   },
   {
-   "nome": "HSBC (mycareer)",
-   "tipo": "eightfold",
-   "host": "mycareer.hsbc.com",
-   "dominio": "hsbc.com"
-  },
-  {
-   "nome": "Stifel",
-   "tipo": "icims",
-   "host": "careers-stifel.icims.com"
-  },
-  {
-   "nome": "Avison Young",
-   "tipo": "icims",
-   "host": "careers-avisonyounguk.icims.com"
-  },
-  {
-   "nome": "Montagu Evans",
-   "tipo": "icims",
-   "host": "careers-montaguevans.icims.com"
-  },
-  {
-   "nome": "SIG (Susquehanna)",
-   "tipo": "icims",
-   "host": "sig.icims.com"
-  },
-  {
-   "nome": "Lichfields (icims)",
-   "tipo": "icims",
-   "host": "jobs-lichfields.icims.com"
-  },
-  {
-   "nome": "Mutares",
-   "tipo": "rss",
-   "url": "https://career.mutares.com/jobs.rss"
-  },
-  {
-   "nome": "Dare",
-   "tipo": "rss",
-   "url": "https://careers.dare.global/jobs.rss"
-  },
-  {
-   "nome": "UniCredit",
+   "nome": "Macquarie",
    "tipo": "avature",
-   "url": "https://careers.unicredit.eu/en_GB/jobsuche/SearchJobs"
-  },
-  {
-   "nome": "Mediobanca",
-   "tipo": "pagina",
-   "url": "https://mediobanca.intervieweb.it/jobs/"
-  },
-  {
-   "nome": "Banco BPM / Banca Akros",
-   "tipo": "pagina",
-   "url": "https://gruppobancobpm.intervieweb.it/jobs/"
+   "url": "https://recruitment.macquarie.com/en_US/careers/SearchJobs"
   },
   {
    "nome": "Intesa Sanpaolo",
@@ -103,48 +48,26 @@
   {
    "nome": "BNP Paribas",
    "tipo": "pagina",
+   "url": "https://group.bnpparibas/en/careers/all-job-offers/internship"
+  },
+  {
+   "nome": "BNP Paribas (tutte)",
+   "tipo": "pagina",
    "url": "https://group.bnpparibas/en/careers/all-job-offers"
+  },
+  {
+   "nome": "Stifel",
+   "tipo": "icims",
+   "host": "careers-stifel.icims.com"
   }
  ],
- "workday": [
-  "ubs.wd3.myworkdayjobs.com",
-  "nomura.wd3.myworkdayjobs.com",
-  "jefferies.wd5.myworkdayjobs.com",
-  "hines.wd1.myworkdayjobs.com",
-  "kroll.wd1.myworkdayjobs.com",
-  "commerzbank.wd3.myworkdayjobs.com",
-  "fticonsulting.wd5.myworkdayjobs.com",
-  "scotiabank.wd3.myworkdayjobs.com",
-  "scb.wd3.myworkdayjobs.com",
-  "investec.wd3.myworkdayjobs.com",
-  "janushenderson.wd1.myworkdayjobs.com",
-  "mandg.wd3.myworkdayjobs.com",
-  "smbcgroup.wd1.myworkdayjobs.com",
-  "cantor.wd1.myworkdayjobs.com",
-  "generali.wd3.myworkdayjobs.com",
-  "evercore.wd1.myworkdayjobs.com",
-  "cbre.wd3.myworkdayjobs.com",
-  "hsbc.wd3.myworkdayjobs.com",
-  "unicredit.wd3.myworkdayjobs.com",
-  "lazard.wd5.myworkdayjobs.com"
- ],
+ "workday": [],
  "grezzi": [
-  "https://mediobanca.intervieweb.it/jobs/",
-  "https://gruppobancobpm.intervieweb.it/jobs/",
   "https://career012.successfactors.eu/career?company=banquepict&career_ns=job_listing_summary&resultType=XML",
-  "https://career5.successfactors.eu/career?company=altamiraasP&career_ns=job_listing_summary&resultType=XML",
-  "https://dbag.careers.hibob.com/jobs",
-  "https://join.com/companies/clairfieldcom",
-  "https://career.mutares.com/jobs.rss",
-  "https://apply.careers.hsbc.com/api/apply/v2/jobs?domain=hsbc.com&start=0&num=2",
-  "https://careers.ey.com/ey/search/?q=&locationsearch=Milan",
-  "https://careers.ey.com/sitemap.xml",
-  "https://group.intesasanpaolo.com/it/careers/posizioni-aperte",
+  "https://apply.careers.hsbc.com/sitemap.xml",
+  "https://casa-cacib-recrute.talent-soft.com/handlers/offerRss.ashx?LCID=2057",
+  "https://jobs.ca-cib.com/",
   "https://www.kpmgcareers.co.uk/search/vacancies/",
-  "https://group.bnpparibas/en/careers/all-job-offers",
-  "https://careers.unicredit.eu/en_GB/jobsuche/SearchJobs",
-  "https://careers.kroll.com/en",
-  "https://jobs.macquarie.com/",
-  "https://www.generali.com/work-with-us/job-opportunities"
+  "https://group.bnpparibas/en/careers/all-job-offers"
  ]
 }

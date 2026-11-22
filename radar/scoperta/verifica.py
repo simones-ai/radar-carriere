@@ -21,7 +21,7 @@ def prova(c):
     f = {k: v for k, v in c.items() if k != "nome"}
     try:
         annunci = fonti.leggi(f, PAESI)
-        esempio = [f"{a['titolo'][:50]} | {a['luogo'][:30]}" for a in annunci[:3]]
+        esempio = [f"{a['titolo'][:60]} | {a['luogo'][:40]} | {a['url'][:90]}" for a in annunci[:6]]
         return {"nome": c["nome"], "fonte": f, "esito": len(annunci), "esempi": esempio}
     except Exception as e:
         return {"nome": c["nome"], "fonte": f, "esito": f"errore: {str(e)[:120]}"}
@@ -51,7 +51,8 @@ def siti_workday(host):
 def grezzo(url):
     try:
         t = fonti.scarica(url, tentativi=1, timeout=20, testo=True)
-        return {"url": url, "inizio": re.sub(r"\s+", " ", t[:900])}
+        link = sorted(set(re.findall(r'href="([^"#]{12,160})"', t)))[:60]
+        return {"url": url, "inizio": re.sub(r"\s+", " ", t[:3000]), "link": link}
     except Exception as e:
         return {"url": url, "errore": str(e)[:150]}
 

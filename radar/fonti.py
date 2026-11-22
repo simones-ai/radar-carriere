@@ -437,6 +437,10 @@ class _Link(HTMLParser):
             self._href = None
 
 
+_SEMBRA_ANNUNCIO = re.compile(r"\d{3,}|/jobs?/|/job-|/offer|/offerta|/position|/posizion|/vacanc|/annunc|"
+                              r"/opening|/role/|/careers/[a-z0-9-]{12,}|/stage-|/internship")
+
+
 def pagina(fonte, paesi):
     """Qualsiasi pagina 'lavora con noi': prende i link il cui testo sembra un annuncio adatto a te."""
     testo = scarica(fonte["url"], testo=True)
@@ -450,7 +454,8 @@ def pagina(fonte, paesi):
         if rilevanza < 1:
             continue
         url = urllib.parse.urljoin(fonte["url"], href)
-        if url in visti:
+        percorso = urllib.parse.urlparse(url).path.lower()
+        if url in visti or not _SEMBRA_ANNUNCIO.search(percorso) or url.rstrip("/") == fonte["url"].rstrip("/"):
             continue
         visti.add(url)
         out.append(_annuncio(f"pg:{url}", titolo, fonte.get("luogo", ""), url))
@@ -548,7 +553,7 @@ def icims(fonte, paesi):
                 continue
             visti.add(id_)
             nuovi += 1
-            titolo = pulisci_html(titolo)
+            titolo = re.sub(r"^\s*(?:Job\s+)?Title\s*", "", pulisci_html(titolo), flags=re.I).strip()
             luogo = ""
             m = re.search(r"(?:Location|Locations)[^<]*</span>\s*<span[^>]*>([^<]+)", coda, re.I) or \
                 re.search(r">\s*([A-Z]{2}-[^<]{2,60})<", coda)
@@ -581,10 +586,51 @@ def rss(fonte, paesi):
     return out
 
 
+# ------------------------------------------------------------------ SuccessFactors (feed XML)
+def successfactors(fonte, paesi):
+    """Es. https://career012.successfactors.eu/career?company=banquepict"""
+    import xml.etree.ElementTree as ET
+    host, azienda = fonte["host"], fonte["azienda"]
+    xml_ = scarica(f"https://{host}/career?company={azienda}&career_ns=job_listing_summary&resultType=XML", testo=True)
+    out = []
+    for job in ET.fromstring(xml_.encode()).iter("Job"):
+        campi = {el.tag.lower(): (el.text or "").strip() for el in job}
+        titolo = campi.get("jobtitle", "")
+        luogo = " ".join(v for k, v in campi.items() if any(x in k for x in ("location", "city", "country", "state")))
+        if luogo and not luogo_ok(luogo, paesi):
+            continue
+        req = campi.get("job-req-id") or campi.get("jobreqid") or campi.get("req-id") or titolo
+        url = next((v for k, v in campi.items() if "url" in k and v.startswith("http")),
+                   f"https://{host}/career?company={azienda}&career_ns=job_listing&career_job_req_id={req}")
+        out.append(_annuncio(f"sf:{azienda}:{req}", titolo, luogo, url,
+                             data_iso(campi.get("posted-date") or campi.get("posteddate") or ""),
+                             pulisci_html(campi.get("job-description", ""))))
+    return out
+
+
+# ------------------------------------------------------------------ sitemap (siti carriere con elenco degli annunci)
+def sitemap(fonte, paesi):
+    """Legge la sitemap di un sito carriere (es. https://careers.ey.com/sitemap.xml): un indirizzo per annuncio.
+    Titolo e città si ricavano dall'indirizzo (es. /ey/job/Milano-Audit-Junior-Associate/1234/)."""
+    schema = re.compile(fonte.get("schema", r"/job/"))
+    xml_ = scarica(fonte["url"], testo=True)
+    out = []
+    for loc in re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", xml_):
+        if not schema.search(loc):
+            continue
+        parti = [p for p in urllib.parse.urlparse(loc).path.split("/") if p]
+        slug = next((p for p in reversed(parti) if not p.isdigit() and len(p) > 8), "")
+        testo = urllib.parse.unquote(slug).replace("-", " ")
+        if not luogo_ok(testo, paesi):
+            continue
+        out.append(_annuncio(f"sm:{loc}", testo, testo, loc))
+    return out
+
+
 LETTORI = {"workday": workday, "greenhouse": greenhouse, "lever": lever, "smartrecruiters": smartrecruiters,
            "ashby": ashby, "oracle": oracle, "avature": avature, "pagina": pagina,
            "recruitee": recruitee, "personio": personio, "pinpoint": pinpoint, "eightfold": eightfold,
-           "icims": icims, "rss": rss}
+           "icims": icims, "rss": rss, "successfactors": successfactors, "sitemap": sitemap}
 
 
 def leggi(fonte, paesi, chiavi=None):
@@ -635,6 +681,10 @@ def da_url(url):
         return {"tipo": "eightfold", "host": host if host != "app.eightfold.ai" else host, "dominio": dom}
     if host.endswith("icims.com") and host not in ("www.icims.com", "icims.com"):
         return {"tipo": "icims", "host": host}
+    if "successfactors." in host and parse_qs_primo(u.query, "company"):
+        return {"tipo": "successfactors", "host": host, "azienda": parse_qs_primo(u.query, "company")}
+    if u.path.endswith("sitemap.xml"):
+        return {"tipo": "sitemap", "url": url}
     if u.path.endswith((".rss", "/rss")) or "/services/rss/" in u.path:
         return {"tipo": "rss", "url": url}
     if host.endswith("avature.net"):
