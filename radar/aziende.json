@@ -941,5 +941,77 @@
     "nome": "Sculptor Capital",
     "settore": "Trading e hedge fund",
     "attiva": true
+  },
+  {
+    "nome": "Millennium Management",
+    "settore": "Trading e hedge fund",
+    "tipo": "eightfold",
+    "host": "mlp.eightfold.ai",
+    "dominio": "mlp.com",
+    "attiva": true
+  },
+  {
+    "nome": "Stifel",
+    "settore": "Banca d'investimento",
+    "tipo": "icims",
+    "host": "careers-stifel.icims.com",
+    "attiva": true
+  },
+  {
+    "nome": "Avison Young",
+    "settore": "Real estate",
+    "tipo": "icims",
+    "host": "careers-avisonyounguk.icims.com",
+    "attiva": true
+  },
+  {
+    "nome": "Montagu Evans",
+    "settore": "Real estate",
+    "tipo": "icims",
+    "host": "careers-montaguevans.icims.com",
+    "attiva": true
+  },
+  {
+    "nome": "Lichfields",
+    "settore": "Real estate",
+    "tipo": "pinpoint",
+    "slug": "lichfields",
+    "attiva": true
+  },
+  {
+    "nome": "UniCredit",
+    "settore": "Banca",
+    "tipo": "avature",
+    "url": "https://careers.unicredit.eu/en_GB/jobsuche/SearchJobs",
+    "attiva": true
+  },
+  {
+    "nome": "GP Bullhound",
+    "settore": "Advisory e boutique",
+    "tipo": "recruitee",
+    "slug": "gpbullhound",
+    "attiva": true
+  },
+  {
+    "nome": "Clearwater International",
+    "settore": "Advisory e boutique",
+    "tipo": "personio",
+    "slug": "clearwater",
+    "dominio": "jobs.personio.de",
+    "attiva": true
+  },
+  {
+    "nome": "Mutares",
+    "settore": "Private equity",
+    "tipo": "rss",
+    "url": "https://career.mutares.com/jobs.rss",
+    "attiva": true
+  },
+  {
+    "nome": "Dare",
+    "settore": "Consulenza",
+    "tipo": "rss",
+    "url": "https://careers.dare.global/jobs.rss",
+    "attiva": true
   }
 ]
