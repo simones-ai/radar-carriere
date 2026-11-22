@@ -1013,5 +1013,52 @@
     "tipo": "rss",
     "url": "https://careers.dare.global/jobs.rss",
     "attiva": true
+  },
+  {
+    "nome": "EY",
+    "settore": "Big Four",
+    "tipo": "sitemap",
+    "url": "https://careers.ey.com/sitemap.xml",
+    "schema": "/job/",
+    "attiva": true
+  },
+  {
+    "nome": "HSBC",
+    "settore": "Banca d'investimento",
+    "tipo": "sitemap",
+    "url": "https://apply.careers.hsbc.com/sitemap.xml",
+    "schema": "/job/",
+    "attiva": true
+  },
+  {
+    "nome": "Pictet",
+    "settore": "Asset management",
+    "tipo": "successfactors",
+    "host": "career012.successfactors.eu",
+    "azienda": "banquepict",
+    "attiva": true
+  },
+  {
+    "nome": "British Land",
+    "settore": "Real estate",
+    "tipo": "successfactors",
+    "host": "career012.successfactors.eu",
+    "azienda": "C0007870899P",
+    "attiva": true
+  },
+  {
+    "nome": "KPMG UK",
+    "settore": "Big Four",
+    "tipo": "successfactors",
+    "host": "performancemanager5.successfactors.eu",
+    "azienda": "KPMGHUKPROD",
+    "attiva": true
+  },
+  {
+    "nome": "Crédit Agricole CIB",
+    "settore": "Banca d'investimento",
+    "tipo": "rss",
+    "url": "https://casa-cacib-recrute.talent-soft.com/handlers/offerRss.ashx?LCID=2057",
+    "attiva": true
   }
 ]

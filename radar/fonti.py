@@ -620,7 +620,7 @@ def sitemap(fonte, paesi):
             continue
         parti = [p for p in urllib.parse.urlparse(loc).path.split("/") if p]
         slug = next((p for p in reversed(parti) if not p.isdigit() and len(p) > 8), "")
-        testo = urllib.parse.unquote(slug).replace("-", " ")
+        testo = html.unescape(urllib.parse.unquote(slug)).replace("-", " ")
         if not luogo_ok(testo, paesi):
             continue
         out.append(_annuncio(f"sm:{loc}", testo, testo, loc))

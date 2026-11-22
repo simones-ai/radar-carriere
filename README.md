@@ -71,9 +71,9 @@ quello delle email.
 
 ## Aziende incluse
 
-Deloitte (portale Italia, Grecia e Malta), PwC, Accenture, Oliver Wyman/Marsh McLennan, JPMorgan,
-Morgan Stanley, Citi, Deutsche Bank, Barclays, Bank of America, BlackRock, State Street, S&P Global,
-Mastercard, Point72, Jane Street, IMC, Squarepoint, Jump Trading, Tower Research, DRW e General Atlantic.
+**104 aziende** controllate automaticamente: abrdn, Accenture, AIG, AllianceBernstein, Ardian, Aurelius, Avison Young, Aviva Investors, Bain Capital, Bank of America, Barclays, Barings, BBVA, BlackRock, BMO, BNY Mellon, BP Trading, British Land, Brookfield Asset Management, Cambridge Associates, Canary Wharf Group, Capital Group, Capital One, Capstone, Capza, Citi, Clearwater International, Colliers, Crédit Agricole CIB, Cushman & Wakefield, Dare, Deloitte, Deutsche Bank, DRW, EY, Franklin Templeton, General Atlantic, Glencore, Goldman Sachs, GP Bullhound, Grosvenor Group, GSA Capital, Houlihan Lokey, HSBC, IMC Trading, ING, Jane Street, JLL, JPMorgan Chase, Jump Trading, Jupiter Asset Management, Knight Frank, KPMG UK, Landsec, Lazard, Legal & General, Lichfields, Lincoln International, Lloyds Banking Group, Mako Trading, Man Group, Marshall Wace, Mastercard, Maven Securities, Millennium Management, Mizuho, Moelis & Company, Montagu Evans, Morgan Stanley, MUFG, Mutares, NatWest Markets, Oliver Wyman / Marsh McLennan, Optiver, PGIM, Pictet, PIMCO, Piper Sandler, PJT Partners, Point72, PSP Investments, PwC, Raymond James, RBC Capital Markets, Rothschild & Co, S&P Global, Santander, Schroders, Sculptor Capital, Shell, Squarepoint Capital, State Street, Stifel, T. Rowe Price, TD Securities, Tikehau Capital, Tower Research Capital, Triton Partners, Turner & Townsend, UniCredit, Vanguard, Wellington Management, William Blair, Winton Capital.
+
+Altre aziende dell'elenco (molte boutique italiane, Mediobanca, Banco BPM, Intesa Sanpaolo, UBS, Nomura, Jefferies, Evercore, Commerzbank…) pubblicano solo su LinkedIn o su pagine che si caricano con JavaScript e non si possono leggere in automatico: il file `radar/scoperta/elenco.json` le contiene tutte, e lo strumento **Actions → Scoperta aziende** permette di ricontrollarle in futuro.
 
 **Aggiungere un'azienda per le email**: apri `radar/aziende.json`, premi la matita ✎ e aggiungi
 prima dell'ultima `]` una riga così, con la virgola dopo la voce precedente:
@@ -95,9 +95,10 @@ Dal controllo successivo la fonte si attiva da sola.
 
 ## Paesi
 
-Di default cerca in **Italia** e **Regno Unito**. Per cambiarli: **Settings → Secrets and variables →
-Actions → Variables → New repository variable**, con nome `RADAR_PAESI` e valore, per esempio, `IT,GB,IE,FR,DE,CH`.
-Codici disponibili: IT, GB, IE, FR, DE, CH, LU, NL, BE, ES, PT, GR, MT, PL, AE, US, SG, HK, IN.
+Di default cerca in **tutta Italia**, a **Londra** e a **Parigi**: il resto del mondo è escluso (anche
+Manchester, Lione, ecc.). Per cambiarli: **Settings → Secrets and variables → Actions → Variables → New
+repository variable**, con nome `RADAR_PAESI` e valore, per esempio, `IT,LON,PAR,IE`.
+Codici: `LON` (solo Londra), `PAR` (solo Parigi), oppure paesi interi: IT, GB, IE, FR, DE, CH, LU, NL, BE, ES…
 
 ## Buone maniere e limiti
 

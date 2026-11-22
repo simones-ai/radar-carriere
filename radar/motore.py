@@ -9,7 +9,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import fonti
 import notifiche
 from archivio import Archivio, adesso
-from classifica import PAESI, SENIOR, classifica, luogo_escluso, paese_di
+from classifica import PAESI, SENIOR, classifica, luogo_escluso, luogo_ok, paese_di
 
 CARTELLA = os.path.dirname(os.path.abspath(__file__))
 
@@ -121,7 +121,7 @@ class Radar:
             self.avanzamento = {"fatte": 0, "totale": len(elenco), "corrente": ""}
             self.log(f"Scansione di {len(elenco)} fonti — paesi: {', '.join(imp['paesi']) or 'tutti'}")
             nuove = []
-            with ThreadPoolExecutor(max_workers=4) as pool:
+            with ThreadPoolExecutor(max_workers=8) as pool:
                 lavori = {pool.submit(self._scansiona_fonte, a, imp): a for a in elenco}
                 for fut in as_completed(lavori):
                     a = lavori[fut]
@@ -203,6 +203,11 @@ class Radar:
             cats, ril = classifica(a["titolo"], a["descrizione"], a["extra"])
             if ril and luogo_escluso(luogo, paesi):
                 ril, cats = 0, []
+            elif ril and not luogo and a["descrizione"]:
+                # Alcuni feed non indicano la città: la si cerca all'inizio della descrizione
+                testa = a["descrizione"][:1500]
+                if not luogo_ok(testa, paesi) and paese_di(testa):
+                    ril, cats = 0, []
             o = dict(a, azienda=a.get("azienda") or fonte["nome"], settore=fonte.get("settore", ""),
                      fonte=fonte["nome"], categorie=cats, rilevanza=ril, paese=paese_di(luogo, paesi),
                      nuova=not prima_volta)
