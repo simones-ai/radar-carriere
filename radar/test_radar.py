@@ -212,3 +212,24 @@ def test_oggetto_email_con_piu_posizioni():
     offerte = [{"azienda": a, "titolo": "Graduate", "categorie": ["graduate"], "luogo": "", "url": ""}
                for a in ["JPMorgan", "Deloitte", "JPMorgan", "Citi", "PwC"]]
     assert notifiche.oggetto(offerte) == "🎯 5 nuove posizioni: JPMorgan, Deloitte, Citi e altre 1"
+
+
+def test_senza_email_niente_invio_di_massa_dopo(tmp_path, monkeypatch):
+    import smtplib
+    FintoSMTP.inviati, FintoSMTP.rompi = [], False
+    monkeypatch.setattr(smtplib, "SMTP_SSL", FintoSMTP)
+    with open(tmp_path / "aziende.json", "w") as f:
+        json.dump([{"nome": "Banca Test", "tipo": "finta", "attiva": True}], f)
+    elenco = [fonti._annuncio("t:1", "Summer Analyst 2027", "Milano", "https://x/1")]
+    monkeypatch.setattr(fonti, "leggi", lambda fonte, paesi, chiavi=None: list(elenco))
+    r = Radar(str(tmp_path))
+    r.scansiona()
+    elenco.append(fonti._annuncio("t:2", "Graduate Program", "Milano", "https://x/2"))
+    r.scansiona()  # email non ancora configurata: t:2 resta solo nel terminale
+    monkeypatch.setenv("EMAIL_UTENTE", "io@example.com")
+    monkeypatch.setenv("EMAIL_PASSWORD", "x")
+    r.scansiona()
+    assert FintoSMTP.inviati == []  # niente invio di massa delle posizioni arretrate
+    elenco.append(fonti._annuncio("t:3", "Off-cycle Intern", "Milano", "https://x/3"))
+    r.scansiona()
+    assert len(FintoSMTP.inviati) == 1 and "Off-cycle" in FintoSMTP.inviati[0]["Subject"]

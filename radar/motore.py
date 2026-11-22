@@ -234,6 +234,10 @@ class Radar:
         """Manda un'email con le posizioni nuove non ancora segnalate (se l'email è configurata)."""
         em = imp.get("email") or {}
         if not (em.get("utente") and em.get("password")):
+            # Senza email configurata le novità restano nel terminale: non si accumulano per un invio di massa futuro
+            arretrate = self.archivio.da_notificare(0)
+            if arretrate:
+                self.archivio.segna_notificate([o["id"] for o in arretrate])
             return
         offerte = [o for o in self.archivio.da_notificare(imp.get("email_rilevanza_min", 2))
                    if imp.get("email_protette") or not notifiche.PROTETTE.search(o["titolo"])]

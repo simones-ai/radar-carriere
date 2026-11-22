@@ -589,12 +589,15 @@ def rss(fonte, paesi):
 # ------------------------------------------------------------------ SuccessFactors (feed XML)
 def successfactors(fonte, paesi):
     """Es. https://career012.successfactors.eu/career?company=banquepict"""
-    import xml.etree.ElementTree as ET
     host, azienda = fonte["host"], fonte["azienda"]
     xml_ = scarica(f"https://{host}/career?company={azienda}&career_ns=job_listing_summary&resultType=XML", testo=True)
     out = []
-    for job in ET.fromstring(xml_.encode()).iter("Job"):
-        campi = {el.tag.lower(): (el.text or "").strip() for el in job}
+    # Lettura tollerante (alcuni feed contengono caratteri non validi per un parser XML rigoroso)
+    for blocco in re.findall(r"<Job>(.*?)</Job>", xml_, re.S):
+        campi = {}
+        for tag, valore in re.findall(r"<([A-Za-z][\w\-]*)>(.*?)</\1>", blocco, re.S):
+            valore = re.sub(r"^\s*<!\[CDATA\[(.*)\]\]>\s*$", r"\1", valore, flags=re.S)
+            campi[tag.lower()] = html.unescape(valore).strip()
         titolo = campi.get("jobtitle", "")
         luogo = " ".join(v for k, v in campi.items() if any(x in k for x in ("location", "city", "country", "state")))
         if luogo and not luogo_ok(luogo, paesi):
