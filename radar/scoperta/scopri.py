@@ -96,7 +96,22 @@ def sonda_slug(nome):
     return trovate
 
 
+def unisci(base, href):
+    try:
+        return urllib.parse.urljoin(base, href.strip())
+    except ValueError:  # link malformati (es. "http://[site_url]")
+        return ""
+
+
 def esplora(az):
+    try:
+        return _esplora(az)
+    except Exception as e:  # un'azienda problematica non deve fermare le altre
+        return {"nome": az["nome"], "settore": az["settore"], "fonti": [], "ats_non_gestiti": [],
+                "pagine_carriere": [], "errore": str(e)[:200]}
+
+
+def _esplora(az):
     link_ats, pagine_carriere, visitate = set(), [], set()
     da_visitare = list(az.get("careers", []))
     for dom in az["domini"]:
@@ -113,8 +128,13 @@ def esplora(az):
             pagine_carriere.append(url)
         link_ats.update(m.rstrip("\\.,;") for m in ATS.findall(html))
         for href, testo in LINK.findall(html):
-            assoluto = urllib.parse.urljoin(url, href.strip())
-            host = urllib.parse.urlparse(assoluto).netloc
+            assoluto = unisci(url, href)
+            if not assoluto:
+                continue
+            try:
+                host = urllib.parse.urlparse(assoluto).netloc
+            except ValueError:
+                continue
             if ATS.match(assoluto):
                 link_ats.add(assoluto)
             elif (PAROLE_CARRIERE.search(href) or PAROLE_CARRIERE.search(re.sub("<[^>]+>", "", testo))) and \
@@ -129,8 +149,8 @@ def esplora(az):
             pagine_carriere.append(url)
             link_ats.update(m.rstrip("\\.,;") for m in ATS.findall(html))
             for href, _ in LINK.findall(html):
-                assoluto = urllib.parse.urljoin(url, href.strip())
-                if ATS.match(assoluto):
+                assoluto = unisci(url, href)
+                if assoluto and ATS.match(assoluto):
                     link_ats.add(assoluto)
 
     candidate, non_gestiti = [], set()
@@ -160,13 +180,17 @@ def main():
     filtro = sys.argv[1].lower() if len(sys.argv) > 1 else ""
     elenco = [a for a in elenco if filtro in a["nome"].lower()]
     risultati = []
+    uscita = os.path.join(QUI, "risultati.json")
     with ThreadPoolExecutor(max_workers=12) as pool:
         for r in pool.map(esplora, elenco):
             risultati.append(r)
             print("RISULTATO " + json.dumps(r, ensure_ascii=False), flush=True)
+            if len(risultati) % 20 == 0:  # salvataggio parziale
+                with open(uscita, "w", encoding="utf-8") as f:
+                    json.dump(risultati, f, ensure_ascii=False, indent=1)
     ok = sum(1 for r in risultati if any(isinstance(f["esito"], int) for f in r["fonti"]))
     print(f"RIEPILOGO {ok}/{len(risultati)} aziende con almeno una fonte leggibile")
-    with open(os.path.join(QUI, "risultati.json"), "w", encoding="utf-8") as f:
+    with open(uscita, "w", encoding="utf-8") as f:
         json.dump(risultati, f, ensure_ascii=False, indent=1)
 
 
