@@ -176,7 +176,7 @@ def _esplora(az):
 
 
 def main():
-    elenco = json.load(open(os.path.join(QUI, "elenco.json"), encoding="utf-8"))
+    elenco = json.load(open(os.path.join(QUI, os.environ.get("ELENCO", "elenco.json")), encoding="utf-8"))
     filtro = sys.argv[1].lower() if len(sys.argv) > 1 else ""
     elenco = [a for a in elenco if filtro in a["nome"].lower()]
     risultati = []

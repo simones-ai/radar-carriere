@@ -9,6 +9,10 @@ on:
         description: "Solo le aziende il cui nome contiene questo testo (vuoto = tutte)"
         required: false
         default: ""
+      elenco:
+        description: "File dell'elenco aziende in radar/scoperta (per scopri)"
+        required: false
+        default: "elenco.json"
       script:
         description: "scopri = ricerca completa, verifica = prova candidati.json"
         required: false
@@ -29,7 +33,7 @@ jobs:
       - name: Cerca le pagine carriere
         run: |
           if [ "${{ inputs.script }}" = "verifica" ]; then python radar/scoperta/verifica.py || true
-          else python radar/scoperta/scopri.py "${{ inputs.filtro }}" | grep -v '^RISULTATO' || true; fi
+          else ELENCO="${{ inputs.elenco }}" python radar/scoperta/scopri.py "${{ inputs.filtro }}" | grep -v '^RISULTATO' || true; fi
       - name: Salva i risultati nel branch "scoperta"
         run: |
           test -f radar/scoperta/risultati.json && cp radar/scoperta/risultati.json /tmp/risultati.json

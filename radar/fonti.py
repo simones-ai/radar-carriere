@@ -335,7 +335,7 @@ def _dettaglio_oracle(host, sito, id_, breve):
 
 
 # ------------------------------------------------------------------ Avature (es. Deloitte Italia)
-_RX_AVATURE = re.compile(r'<a[^>]+href="([^"]*/JobDetail/[^"]+)"[^>]*>(.*?)</a>(.{0,900})', re.S | re.I)
+_RX_AVATURE = re.compile(r'<a[^>]+href="([^"]*/(?:JobDetail|FolderDetail)/[^"]+)"[^>]*>(.*?)</a>(.{0,900})', re.S | re.I)
 
 
 def avature(fonte, paesi):
@@ -693,6 +693,9 @@ def da_url(url):
     if host.endswith("avature.net"):
         i = parti.index("careers") if "careers" in parti else len(parti)
         return {"tipo": "avature", "url": f"https://{host}/{'/'.join(parti[:i + 1])}/SearchJobs"}
+    for segno in ("SearchJobs", "JobDetail", "FolderDetail"):  # Avature con dominio proprio (es. Bain, BCG, UniCredit)
+        if segno in parti:
+            return {"tipo": "avature", "url": f"https://{host}/{'/'.join(parti[:parti.index(segno)])}/SearchJobs"}
     return {"tipo": "pagina", "url": url}
 
 

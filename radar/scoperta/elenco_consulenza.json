@@ -1,0 +1,524 @@
+[
+ {
+  "nome": "McKinsey & Company",
+  "settore": "Consulenza",
+  "domini": [
+   "mckinsey.com",
+   "jobs.mckinsey.com"
+  ],
+  "careers": [
+   "https://www.mckinsey.com/careers/search-jobs",
+   "https://jobs.mckinsey.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "sitemap",
+    "url": "https://jobs.mckinsey.com/sitemap.xml",
+    "schema": "/job"
+   },
+   {
+    "tipo": "sitemap",
+    "url": "https://www.mckinsey.com/careers/sitemap.xml",
+    "schema": "/search-jobs/jobs/"
+   }
+  ]
+ },
+ {
+  "nome": "Boston Consulting Group",
+  "settore": "Consulenza",
+  "domini": [
+   "bcg.com",
+   "careers.bcg.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "avature",
+    "url": "https://talent.bcg.com/apply/SearchJobs"
+   },
+   {
+    "tipo": "sitemap",
+    "url": "https://careers.bcg.com/sitemap.xml",
+    "schema": "/job/"
+   }
+  ]
+ },
+ {
+  "nome": "Bain & Company",
+  "settore": "Consulenza",
+  "domini": [
+   "bain.com"
+  ],
+  "careers": [
+   "https://www.bain.com/careers/find-a-role/"
+  ],
+  "fonti": [
+   {
+    "tipo": "avature",
+    "url": "https://careers.bain.com/jobs/SearchJobs"
+   }
+  ]
+ },
+ {
+  "nome": "Roland Berger",
+  "settore": "Consulenza",
+  "domini": [
+   "rolandberger.com"
+  ],
+  "careers": [
+   "https://www.rolandberger.com/en/Join/All-Jobs/"
+  ],
+  "fonti": [
+   {
+    "tipo": "smartrecruiters",
+    "slug": "RolandBerger"
+   },
+   {
+    "tipo": "smartrecruiters",
+    "slug": "RolandBergerGmbH"
+   }
+  ]
+ },
+ {
+  "nome": "Kearney",
+  "settore": "Consulenza",
+  "domini": [
+   "kearney.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "kearney.wd5.myworkdayjobs.com",
+    "tenant": "kearney",
+    "sito": "Kearney"
+   },
+   {
+    "tipo": "workday",
+    "host": "kearney.wd5.myworkdayjobs.com",
+    "tenant": "kearney",
+    "sito": "External"
+   },
+   {
+    "tipo": "workday",
+    "host": "kearney.wd5.myworkdayjobs.com",
+    "tenant": "kearney",
+    "sito": "KearneyCareers"
+   },
+   {
+    "tipo": "greenhouse",
+    "slug": "kearney"
+   }
+  ]
+ },
+ {
+  "nome": "Arthur D. Little",
+  "settore": "Consulenza",
+  "domini": [
+   "adlittle.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "smartrecruiters",
+    "slug": "ArthurDLittle"
+   }
+  ]
+ },
+ {
+  "nome": "L.E.K. Consulting",
+  "settore": "Consulenza",
+  "domini": [
+   "lek.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "lek.wd1.myworkdayjobs.com",
+    "tenant": "lek",
+    "sito": "LEK"
+   },
+   {
+    "tipo": "workday",
+    "host": "lek.wd1.myworkdayjobs.com",
+    "tenant": "lek",
+    "sito": "External"
+   },
+   {
+    "tipo": "workday",
+    "host": "lek.wd1.myworkdayjobs.com",
+    "tenant": "lek",
+    "sito": "LEK_Careers"
+   },
+   {
+    "tipo": "greenhouse",
+    "slug": "lekconsulting"
+   }
+  ]
+ },
+ {
+  "nome": "Simon-Kucher",
+  "settore": "Consulenza",
+  "domini": [
+   "simon-kucher.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "greenhouse",
+    "slug": "simonkucher"
+   },
+   {
+    "tipo": "smartrecruiters",
+    "slug": "SimonKucher"
+   },
+   {
+    "tipo": "smartrecruiters",
+    "slug": "SimonKucherPartners"
+   }
+  ]
+ },
+ {
+  "nome": "OC&C Strategy Consultants",
+  "settore": "Consulenza",
+  "domini": [
+   "occstrategy.com"
+  ]
+ },
+ {
+  "nome": "Porsche Consulting",
+  "settore": "Consulenza",
+  "domini": [
+   "porsche-consulting.com"
+  ]
+ },
+ {
+  "nome": "Capgemini Invent",
+  "settore": "Consulenza",
+  "domini": [
+   "capgemini.com"
+  ],
+  "careers": [
+   "https://www.capgemini.com/it-it/careers/",
+   "https://www.capgemini.com/gb-en/careers/"
+  ]
+ },
+ {
+  "nome": "Alvarez & Marsal",
+  "settore": "Consulenza",
+  "domini": [
+   "alvarezandmarsal.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "alvarezandmarsal.wd1.myworkdayjobs.com",
+    "tenant": "alvarezandmarsal",
+    "sito": "AlvarezandMarsal"
+   },
+   {
+    "tipo": "workday",
+    "host": "alvarezandmarsal.wd1.myworkdayjobs.com",
+    "tenant": "alvarezandmarsal",
+    "sito": "External"
+   },
+   {
+    "tipo": "greenhouse",
+    "slug": "alvarezmarsal"
+   }
+  ]
+ },
+ {
+  "nome": "AlixPartners",
+  "settore": "Consulenza",
+  "domini": [
+   "alixpartners.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "alixpartners.wd1.myworkdayjobs.com",
+    "tenant": "alixpartners",
+    "sito": "AlixPartners"
+   },
+   {
+    "tipo": "workday",
+    "host": "alixpartners.wd1.myworkdayjobs.com",
+    "tenant": "alixpartners",
+    "sito": "External"
+   },
+   {
+    "tipo": "greenhouse",
+    "slug": "alixpartners"
+   }
+  ]
+ },
+ {
+  "nome": "Protiviti",
+  "settore": "Consulenza",
+  "domini": [
+   "protiviti.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "roberthalf.wd1.myworkdayjobs.com",
+    "tenant": "roberthalf",
+    "sito": "Protiviti"
+   },
+   {
+    "tipo": "workday",
+    "host": "roberthalf.wd1.myworkdayjobs.com",
+    "tenant": "roberthalf",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "PA Consulting",
+  "settore": "Consulenza",
+  "domini": [
+   "paconsulting.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "smartrecruiters",
+    "slug": "PAConsulting"
+   },
+   {
+    "tipo": "greenhouse",
+    "slug": "paconsulting"
+   }
+  ]
+ },
+ {
+  "nome": "Bip",
+  "settore": "Consulenza",
+  "domini": [
+   "bipconsulting.com",
+   "bip-group.com"
+  ]
+ },
+ {
+  "nome": "Teha (The European House - Ambrosetti)",
+  "settore": "Consulenza",
+  "domini": [
+   "ambrosetti.eu",
+   "teha.it"
+  ]
+ },
+ {
+  "nome": "Value Partners",
+  "settore": "Consulenza",
+  "domini": [
+   "valuepartners.com"
+  ]
+ },
+ {
+  "nome": "Strategy&",
+  "settore": "Consulenza",
+  "domini": [
+   "strategyand.pwc.com"
+  ]
+ },
+ {
+  "nome": "Monitor Deloitte / Deloitte UK",
+  "settore": "Big Four",
+  "domini": [
+   "deloitte.com"
+  ],
+  "careers": [
+   "https://www.deloitte.com/uk/en/careers/search-jobs.html",
+   "https://apply.deloitte.co.uk"
+  ],
+  "fonti": [
+   {
+    "tipo": "avature",
+    "url": "https://apply.deloitte.co.uk/jobs/SearchJobs"
+   },
+   {
+    "tipo": "avature",
+    "url": "https://deloitteuk.avature.net/careers/SearchJobs"
+   }
+  ]
+ },
+ {
+  "nome": "Deloitte France",
+  "settore": "Big Four",
+  "domini": [],
+  "careers": [
+   "https://www.deloitte.com/fr/fr/careers/search-jobs.html",
+   "https://deloitterecrute.talent-soft.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "rss",
+    "url": "https://deloitterecrute.talent-soft.com/handlers/offerRss.ashx?LCID=1036"
+   }
+  ]
+ },
+ {
+  "nome": "KPMG Italia",
+  "settore": "Big Four",
+  "domini": [],
+  "careers": [
+   "https://kpmg.com/it/it/careers.html"
+  ],
+  "fonti": [
+   {
+    "tipo": "successfactors",
+    "host": "performancemanager5.successfactors.eu",
+    "azienda": "KPMGITPROD"
+   },
+   {
+    "tipo": "successfactors",
+    "host": "performancemanager5.successfactors.eu",
+    "azienda": "KPMGIT"
+   },
+   {
+    "tipo": "successfactors",
+    "host": "career5.successfactors.eu",
+    "azienda": "KPMGITPROD"
+   }
+  ]
+ },
+ {
+  "nome": "KPMG France",
+  "settore": "Big Four",
+  "domini": [],
+  "careers": [
+   "https://kpmg.com/fr/fr/carrieres.html",
+   "https://recrutement.kpmg.fr"
+  ],
+  "fonti": [
+   {
+    "tipo": "successfactors",
+    "host": "performancemanager5.successfactors.eu",
+    "azienda": "KPMGFRPROD"
+   }
+  ]
+ },
+ {
+  "nome": "PwC (campus)",
+  "settore": "Big Four",
+  "domini": [],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "pwc.wd3.myworkdayjobs.com",
+    "tenant": "pwc",
+    "sito": "Global_Campus_Careers"
+   },
+   {
+    "tipo": "workday",
+    "host": "pwc.wd3.myworkdayjobs.com",
+    "tenant": "pwc",
+    "sito": "Global_Entry_Level_Careers"
+   }
+  ]
+ },
+ {
+  "nome": "BDO",
+  "settore": "Revisione e consulenza",
+  "domini": [
+   "bdo.it",
+   "bdo.co.uk",
+   "bdo.fr"
+  ]
+ },
+ {
+  "nome": "Grant Thornton",
+  "settore": "Revisione e consulenza",
+  "domini": [
+   "grantthornton.co.uk",
+   "bernoni.it",
+   "ria-grantthornton.it",
+   "grantthornton.fr"
+  ]
+ },
+ {
+  "nome": "Forvis Mazars",
+  "settore": "Revisione e consulenza",
+  "domini": [
+   "forvismazars.com",
+   "mazars.it",
+   "mazars.co.uk"
+  ]
+ },
+ {
+  "nome": "Crowe",
+  "settore": "Revisione e consulenza",
+  "domini": [
+   "crowe.com"
+  ]
+ },
+ {
+  "nome": "Baker Tilly",
+  "settore": "Revisione e consulenza",
+  "domini": [
+   "bakertilly.it",
+   "bakertilly.co.uk"
+  ]
+ },
+ {
+  "nome": "Kroll",
+  "settore": "Consulenza",
+  "domini": [
+   "kroll.com"
+  ],
+  "careers": [
+   "https://careers.kroll.com/en"
+  ]
+ },
+ {
+  "nome": "FTI Consulting",
+  "settore": "Consulenza",
+  "domini": [
+   "fticonsulting.com"
+  ]
+ },
+ {
+  "nome": "Huron",
+  "settore": "Consulenza",
+  "domini": [
+   "huronconsultinggroup.com"
+  ]
+ },
+ {
+  "nome": "Analysis Group",
+  "settore": "Consulenza",
+  "domini": [
+   "analysisgroup.com"
+  ]
+ },
+ {
+  "nome": "Compass Lexecon",
+  "settore": "Consulenza",
+  "domini": [
+   "compasslexecon.com"
+  ]
+ },
+ {
+  "nome": "NERA Economic Consulting",
+  "settore": "Consulenza",
+  "domini": [
+   "nera.com"
+  ]
+ },
+ {
+  "nome": "Oxera",
+  "settore": "Consulenza",
+  "domini": [
+   "oxera.com"
+  ]
+ },
+ {
+  "nome": "IBM Consulting",
+  "settore": "Consulenza",
+  "domini": [
+   "ibm.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "EY-Parthenon",
+  "settore": "Big Four",
+  "domini": []
+ }
+]
