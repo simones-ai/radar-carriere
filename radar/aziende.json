@@ -1188,5 +1188,22 @@
     "tipo": "rss",
     "url": "https://oxera.teamtailor.com/jobs.rss",
     "attiva": true
+  },
+  {
+    "nome": "Banca d'Italia (concorsi aperti)",
+    "settore": "Istituzioni e banche pubbliche",
+    "tipo": "pagina",
+    "url": "https://www.bancaditalia.it/chi-siamo/lavorare-bi/informazioni-concorsi/bandi/index.html",
+    "categoria": "graduate",
+    "paese": "IT",
+    "attiva": true
+  },
+  {
+    "nome": "Invitalia",
+    "settore": "Istituzioni e banche pubbliche",
+    "tipo": "pagina",
+    "url": "https://www.invitalia.it/lavora-con-noi/le-posizioni-aperte",
+    "paese": "IT",
+    "attiva": true
   }
 ]
