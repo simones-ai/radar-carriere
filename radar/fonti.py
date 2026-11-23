@@ -440,7 +440,7 @@ class _Link(HTMLParser):
 _SEMBRA_ANNUNCIO = re.compile(r"\d{3,}|/jobs?/|/job-|/offer|/offerta|/position|/posizion|/vacanc|/annunc|"
                               r"/opening|/role/|/careers/[a-z0-9-]{12,}|/stage-|/internship|/opportunit|"
                               r"/concors[io]-|/bando|/bandi/|/tirocini?-|/selezion[ei]-|/avviso")
-_NAVIGAZIONE = re.compile(r"/(index\.html)?$|emanati|conclus|chius|faq|privacy|cookie|spontane|iter-di", re.I)
+_NAVIGAZIONE = re.compile(r"emanati|conclus|chius|faq|privacy|cookie|spontane|iter-di", re.I)
 
 
 def pagina(fonte, paesi):
