@@ -51,7 +51,7 @@ def siti_workday(host):
 def grezzo(url):
     try:
         t = fonti.scarica(url, tentativi=1, timeout=20, testo=True)
-        link = sorted(set(re.findall(r'href="([^"#]{12,160})"', t)))[:60]
+        link = sorted(set(re.findall(r'href="([^"#]{12,200})"', t)))[:200]
         return {"url": url, "inizio": re.sub(r"\s+", " ", t[:3000]), "link": link}
     except Exception as e:
         return {"url": url, "errore": str(e)[:150]}

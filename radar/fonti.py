@@ -438,7 +438,9 @@ class _Link(HTMLParser):
 
 
 _SEMBRA_ANNUNCIO = re.compile(r"\d{3,}|/jobs?/|/job-|/offer|/offerta|/position|/posizion|/vacanc|/annunc|"
-                              r"/opening|/role/|/careers/[a-z0-9-]{12,}|/stage-|/internship")
+                              r"/opening|/role/|/careers/[a-z0-9-]{12,}|/stage-|/internship|/opportunit|"
+                              r"/concors[io]-|/bando|/bandi/|/tirocini?-|/selezion[ei]-|/avviso")
+_NAVIGAZIONE = re.compile(r"/(index\.html)?$|emanati|conclus|chius|faq|privacy|cookie|spontane|iter-di", re.I)
 
 
 def pagina(fonte, paesi):
@@ -455,7 +457,9 @@ def pagina(fonte, paesi):
             continue
         url = urllib.parse.urljoin(fonte["url"], href)
         percorso = urllib.parse.urlparse(url).path.lower()
-        if url in visti or not _SEMBRA_ANNUNCIO.search(percorso) or url.rstrip("/") == fonte["url"].rstrip("/"):
+        completo = percorso + "?" + urllib.parse.urlparse(url).query
+        if url in visti or not _SEMBRA_ANNUNCIO.search(completo) or url.rstrip("/") == fonte["url"].rstrip("/") \
+                or (fonte.get("categoria") and _NAVIGAZIONE.search(percorso)):
             continue
         visti.add(url)
         out.append(_annuncio(f"pg:{url}", titolo, fonte.get("luogo", ""), url))

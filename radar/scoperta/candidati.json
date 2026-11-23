@@ -1,12 +1,6 @@
 {
  "fonti": [
   {
-   "nome": "Banca d'Italia (concorsi aperti)",
-   "tipo": "pagina",
-   "url": "https://www.bancaditalia.it/chi-siamo/lavorare-bi/informazioni-concorsi/aperti/index.html",
-   "categoria": "graduate"
-  },
-  {
    "nome": "Banca d'Italia (concorsi)",
    "tipo": "pagina",
    "url": "https://www.bancaditalia.it/chi-siamo/lavorare-bi/informazioni-concorsi/index.html",
