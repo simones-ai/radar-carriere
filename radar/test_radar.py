@@ -233,3 +233,15 @@ def test_senza_email_niente_invio_di_massa_dopo(tmp_path, monkeypatch):
     elenco.append(fonti._annuncio("t:3", "Off-cycle Intern", "Milano", "https://x/3"))
     r.scansiona()
     assert len(FintoSMTP.inviati) == 1 and "Off-cycle" in FintoSMTP.inviati[0]["Subject"]
+
+
+def test_fonte_con_categoria_fissa(tmp_path, monkeypatch):
+    with open(tmp_path / "aziende.json", "w") as f:
+        json.dump([{"nome": "Banca d'Italia", "tipo": "finta", "categoria": "graduate", "attiva": True}], f)
+    elenco = [fonti._annuncio("bi:1", "Concorso pubblico per 30 Esperti in discipline economiche", "Roma", "https://x/1"),
+              fonti._annuncio("bi:2", "Head of Supervision", "Roma", "https://x/2")]
+    monkeypatch.setattr(fonti, "leggi", lambda fonte, paesi, chiavi=None: list(elenco))
+    r = Radar(str(tmp_path))
+    r.scansiona()
+    assert r.archivio.offerta("bi:1")["categorie"] == ["graduate"]
+    assert r.archivio.offerta("bi:2")["rilevanza"] == 0

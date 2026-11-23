@@ -201,6 +201,9 @@ class Radar:
                 luogo = f"{luogo} ({PAESI[fonte['paese']][0]})".strip()
                 a["luogo"] = luogo
             cats, ril = classifica(a["titolo"], a["descrizione"], a["extra"])
+            if fonte.get("categoria") and ril < 2 and not SENIOR.search(a["titolo"] or ""):
+                # Fonti in cui ogni annuncio è per definizione adatto (es. concorsi Banca d'Italia, pagina tirocini)
+                cats, ril = [fonte["categoria"]], 2
             if ril and luogo_escluso(luogo, paesi):
                 ril, cats = 0, []
             elif ril and not luogo and a["descrizione"]:

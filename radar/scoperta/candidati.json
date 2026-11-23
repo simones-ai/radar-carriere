@@ -1,61 +1,40 @@
 {
  "fonti": [
   {
-   "nome": "Cassa Depositi e Prestiti",
+   "nome": "Banca d'Italia (concorsi aperti)",
    "tipo": "pagina",
-   "url": "https://www.cdp.it/sitointernet/it/opportunita_di_lavoro.page"
-  },
-  {
-   "nome": "Cassa Depositi e Prestiti (en)",
-   "tipo": "pagina",
-   "url": "https://www.cdp.it/sitointernet/en/opportunit_di_lavoro.page"
+   "url": "https://www.bancaditalia.it/chi-siamo/lavorare-bi/informazioni-concorsi/aperti/index.html",
+   "categoria": "graduate"
   },
   {
    "nome": "Banca d'Italia (concorsi)",
    "tipo": "pagina",
-   "url": "https://www.bancaditalia.it/chi-siamo/lavorare-banca/concorsi/index.html"
+   "url": "https://www.bancaditalia.it/chi-siamo/lavorare-bi/informazioni-concorsi/index.html",
+   "categoria": "graduate"
   },
   {
    "nome": "Banca d'Italia (tirocini)",
    "tipo": "pagina",
-   "url": "https://www.bancaditalia.it/chi-siamo/lavorare-banca/tirocini/index.html"
-  },
-  {
-   "nome": "SACE",
-   "tipo": "pagina",
-   "url": "https://www.sace.it/en/about-us/our-people/work-with-us"
+   "url": "https://www.bancaditalia.it/chi-siamo/lavorare-bi/tirocini/index.html",
+   "categoria": "stage"
   },
   {
    "nome": "Invitalia",
    "tipo": "pagina",
-   "url": "https://www.invitalia.it/lavora-con-noi"
+   "url": "https://www.invitalia.it/lavora-con-noi/le-posizioni-aperte"
   },
   {
    "nome": "Fideuram",
    "tipo": "pagina",
-   "url": "https://www.fideuram.it/lavora-con-noi"
-  },
-  {
-   "nome": "Poste Italiane",
-   "tipo": "pagina",
-   "url": "https://carriere.posteitaliane.it"
-  },
-  {
-   "nome": "Poste Italiane (sito)",
-   "tipo": "pagina",
-   "url": "https://www.posteitaliane.it/it/lavora-con-noi.html"
+   "url": "https://www.fideuram.it/lavoraconnoi/"
   }
  ],
  "workday": [],
  "grezzi": [
-  "https://www.cdp.it/sitointernet/it/opportunita_di_lavoro.page",
-  "https://www.cdp.it/sitointernet/en/opportunit_di_lavoro.page",
-  "https://www.bancaditalia.it/chi-siamo/lavorare-banca/concorsi/index.html",
-  "https://www.bancaditalia.it/chi-siamo/lavorare-banca/tirocini/index.html",
-  "https://www.sace.it/en/about-us/our-people/work-with-us",
-  "https://www.invitalia.it/lavora-con-noi",
-  "https://www.fideuram.it/lavora-con-noi",
-  "https://carriere.posteitaliane.it",
-  "https://www.posteitaliane.it/it/lavora-con-noi.html"
+  "https://www.bancaditalia.it/chi-siamo/lavorare-bi/informazioni-concorsi/aperti/index.html",
+  "https://www.bancaditalia.it/chi-siamo/lavorare-bi/informazioni-concorsi/index.html",
+  "https://www.bancaditalia.it/chi-siamo/lavorare-bi/tirocini/index.html",
+  "https://www.invitalia.it/lavora-con-noi/le-posizioni-aperte",
+  "https://www.fideuram.it/lavoraconnoi/"
  ]
 }

@@ -451,7 +451,7 @@ def pagina(fonte, paesi):
         if not (6 <= len(titolo) <= 160) or href.startswith(("mailto:", "javascript:", "#")):
             continue
         cats, rilevanza = classifica(titolo)
-        if rilevanza < 1:
+        if rilevanza < 1 and not fonte.get("categoria"):
             continue
         url = urllib.parse.urljoin(fonte["url"], href)
         percorso = urllib.parse.urlparse(url).path.lower()
