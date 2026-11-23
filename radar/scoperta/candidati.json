@@ -1,73 +1,61 @@
 {
  "fonti": [
   {
-   "nome": "Pictet",
-   "tipo": "successfactors",
-   "host": "career012.successfactors.eu",
-   "azienda": "banquepict"
-  },
-  {
-   "nome": "British Land",
-   "tipo": "successfactors",
-   "host": "career012.successfactors.eu",
-   "azienda": "C0007870899P"
-  },
-  {
-   "nome": "doValue",
-   "tipo": "successfactors",
-   "host": "career5.successfactors.eu",
-   "azienda": "altamiraasP"
-  },
-  {
-   "nome": "EY",
-   "tipo": "sitemap",
-   "url": "https://careers.ey.com/sitemap.xml",
-   "schema": "/job/"
-  },
-  {
-   "nome": "HSBC",
-   "tipo": "sitemap",
-   "url": "https://apply.careers.hsbc.com/sitemap.xml",
-   "schema": "/job/"
-  },
-  {
-   "nome": "Macquarie",
-   "tipo": "avature",
-   "url": "https://recruitment.macquarie.com/en_US/careers/SearchJobs"
-  },
-  {
-   "nome": "Intesa Sanpaolo",
+   "nome": "Cassa Depositi e Prestiti",
    "tipo": "pagina",
-   "url": "https://group.intesasanpaolo.com/it/careers/posizioni-aperte"
+   "url": "https://www.cdp.it/sitointernet/it/opportunita_di_lavoro.page"
   },
   {
-   "nome": "KPMG UK",
+   "nome": "Cassa Depositi e Prestiti (en)",
    "tipo": "pagina",
-   "url": "https://www.kpmgcareers.co.uk/search/vacancies/"
+   "url": "https://www.cdp.it/sitointernet/en/opportunit_di_lavoro.page"
   },
   {
-   "nome": "BNP Paribas",
+   "nome": "Banca d'Italia (concorsi)",
    "tipo": "pagina",
-   "url": "https://group.bnpparibas/en/careers/all-job-offers/internship"
+   "url": "https://www.bancaditalia.it/chi-siamo/lavorare-banca/concorsi/index.html"
   },
   {
-   "nome": "BNP Paribas (tutte)",
+   "nome": "Banca d'Italia (tirocini)",
    "tipo": "pagina",
-   "url": "https://group.bnpparibas/en/careers/all-job-offers"
+   "url": "https://www.bancaditalia.it/chi-siamo/lavorare-banca/tirocini/index.html"
   },
   {
-   "nome": "Stifel",
-   "tipo": "icims",
-   "host": "careers-stifel.icims.com"
+   "nome": "SACE",
+   "tipo": "pagina",
+   "url": "https://www.sace.it/en/about-us/our-people/work-with-us"
+  },
+  {
+   "nome": "Invitalia",
+   "tipo": "pagina",
+   "url": "https://www.invitalia.it/lavora-con-noi"
+  },
+  {
+   "nome": "Fideuram",
+   "tipo": "pagina",
+   "url": "https://www.fideuram.it/lavora-con-noi"
+  },
+  {
+   "nome": "Poste Italiane",
+   "tipo": "pagina",
+   "url": "https://carriere.posteitaliane.it"
+  },
+  {
+   "nome": "Poste Italiane (sito)",
+   "tipo": "pagina",
+   "url": "https://www.posteitaliane.it/it/lavora-con-noi.html"
   }
  ],
  "workday": [],
  "grezzi": [
-  "https://career012.successfactors.eu/career?company=banquepict&career_ns=job_listing_summary&resultType=XML",
-  "https://apply.careers.hsbc.com/sitemap.xml",
-  "https://casa-cacib-recrute.talent-soft.com/handlers/offerRss.ashx?LCID=2057",
-  "https://jobs.ca-cib.com/",
-  "https://www.kpmgcareers.co.uk/search/vacancies/",
-  "https://group.bnpparibas/en/careers/all-job-offers"
+  "https://www.cdp.it/sitointernet/it/opportunita_di_lavoro.page",
+  "https://www.cdp.it/sitointernet/en/opportunit_di_lavoro.page",
+  "https://www.bancaditalia.it/chi-siamo/lavorare-banca/concorsi/index.html",
+  "https://www.bancaditalia.it/chi-siamo/lavorare-banca/tirocini/index.html",
+  "https://www.sace.it/en/about-us/our-people/work-with-us",
+  "https://www.invitalia.it/lavora-con-noi",
+  "https://www.fideuram.it/lavora-con-noi",
+  "https://carriere.posteitaliane.it",
+  "https://www.posteitaliane.it/it/lavora-con-noi.html"
  ]
 }
