@@ -1,0 +1,71 @@
+[
+ {
+  "nome": "Cassa Depositi e Prestiti",
+  "settore": "Istituzioni e banche pubbliche",
+  "domini": [
+   "cdp.it"
+  ],
+  "careers": [
+   "https://www.cdp.it/sitointernet/it/lavora_con_noi.page",
+   "https://www.cdp.it/careers",
+   "https://www.cdp.it/sitointernet/page/it/lavora_con_noi?contentId=CSA43543"
+  ]
+ },
+ {
+  "nome": "Banca d'Italia",
+  "settore": "Istituzioni e banche pubbliche",
+  "domini": [
+   "bancaditalia.it"
+  ],
+  "careers": [
+   "https://www.bancaditalia.it/chi-siamo/lavorare-banca/index.html",
+   "https://www.bancaditalia.it/chi-siamo/lavorare-banca/concorsi/index.html",
+   "https://www.bancaditalia.it/chi-siamo/lavorare-banca/tirocini/index.html"
+  ]
+ },
+ {
+  "nome": "SACE",
+  "settore": "Istituzioni e banche pubbliche",
+  "domini": [
+   "sace.it"
+  ],
+  "careers": [
+   "https://www.sace.it/chi-siamo/lavora-con-noi",
+   "https://www.sace.it/lavora-con-noi"
+  ]
+ },
+ {
+  "nome": "Invitalia",
+  "settore": "Istituzioni e banche pubbliche",
+  "domini": [
+   "invitalia.it"
+  ],
+  "careers": [
+   "https://www.invitalia.it/chi-siamo/lavora-con-noi",
+   "https://www.invitalia.it/lavora-con-noi"
+  ]
+ },
+ {
+  "nome": "Fideuram - Intesa Sanpaolo Private Banking",
+  "settore": "Banca",
+  "domini": [
+   "fideuram.it"
+  ],
+  "careers": [
+   "https://www.fideuram.it/lavora-con-noi",
+   "https://www.fideuram.it/chi-siamo/lavora-con-noi"
+  ]
+ },
+ {
+  "nome": "Poste Italiane",
+  "settore": "Corporate",
+  "domini": [
+   "posteitaliane.it"
+  ],
+  "careers": [
+   "https://www.posteitaliane.it/it/lavora-con-noi.html",
+   "https://www.posteitaliane.it/it/posizioni-aperte.html",
+   "https://careers.posteitaliane.it"
+  ]
+ }
+]
