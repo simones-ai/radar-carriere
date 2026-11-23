@@ -1060,5 +1060,133 @@
     "tipo": "rss",
     "url": "https://casa-cacib-recrute.talent-soft.com/handlers/offerRss.ashx?LCID=2057",
     "attiva": true
+  },
+  {
+    "nome": "Boston Consulting Group (BCG)",
+    "settore": "Consulenza",
+    "tipo": "eightfold",
+    "host": "bcg.eightfold.ai",
+    "dominio": "bcg.com",
+    "attiva": true
+  },
+  {
+    "nome": "Bain & Company",
+    "settore": "Consulenza",
+    "tipo": "avature",
+    "url": "https://careers.bain.com/jobs/SearchJobs",
+    "attiva": true
+  },
+  {
+    "nome": "Roland Berger",
+    "settore": "Consulenza",
+    "tipo": "smartrecruiters",
+    "slug": "RolandBerger",
+    "attiva": true
+  },
+  {
+    "nome": "AlixPartners",
+    "settore": "Consulenza",
+    "tipo": "greenhouse",
+    "slug": "alixpartners",
+    "attiva": true
+  },
+  {
+    "nome": "PA Consulting",
+    "settore": "Consulenza",
+    "tipo": "smartrecruiters",
+    "slug": "PaConsulting",
+    "attiva": true
+  },
+  {
+    "nome": "Bip",
+    "settore": "Consulenza",
+    "tipo": "oracle",
+    "host": "fa-etjb-saasfaprod1.fa.ocs.oraclecloud.com",
+    "sito": "CX_1",
+    "attiva": true
+  },
+  {
+    "nome": "PwC (campus e graduate)",
+    "settore": "Big Four",
+    "tipo": "workday",
+    "host": "pwc.wd3.myworkdayjobs.com",
+    "tenant": "pwc",
+    "sito": "Global_Campus_Careers",
+    "attiva": true
+  },
+  {
+    "nome": "Forvis Mazars",
+    "settore": "Revisione e consulenza",
+    "tipo": "workday",
+    "host": "forvismazarsuk.wd107.myworkdayjobs.com",
+    "tenant": "forvismazarsuk",
+    "sito": "FM_1",
+    "attiva": true
+  },
+  {
+    "nome": "Huron",
+    "settore": "Consulenza",
+    "tipo": "workday",
+    "host": "huron.wd1.myworkdayjobs.com",
+    "tenant": "huron",
+    "sito": "huroncareers",
+    "attiva": true
+  },
+  {
+    "nome": "Compass Lexecon",
+    "settore": "Consulenza",
+    "tipo": "workday",
+    "host": "fticonsulting.wd108.myworkdayjobs.com",
+    "tenant": "fticonsulting",
+    "sito": "CompassLexeconCareers",
+    "attiva": true
+  },
+  {
+    "nome": "Alvarez & Marsal",
+    "settore": "Consulenza",
+    "tipo": "workday",
+    "host": "alvarezandmarsal.wd1.myworkdayjobs.com",
+    "tenant": "alvarezandmarsal",
+    "sito": "AlvarezandMarsal",
+    "attiva": true
+  },
+  {
+    "nome": "Protiviti (graduate)",
+    "settore": "Consulenza",
+    "tipo": "workday",
+    "host": "roberthalf.wd1.myworkdayjobs.com",
+    "tenant": "roberthalf",
+    "sito": "ProtivitiGraduate",
+    "attiva": true
+  },
+  {
+    "nome": "Protiviti",
+    "settore": "Consulenza",
+    "tipo": "workday",
+    "host": "roberthalf.wd1.myworkdayjobs.com",
+    "tenant": "roberthalf",
+    "sito": "ProtivitiExperiencedCareers",
+    "attiva": true
+  },
+  {
+    "nome": "Analysis Group (analyst)",
+    "settore": "Consulenza",
+    "tipo": "icims",
+    "host": "analystcareers-analysisgroup.icims.com",
+    "attiva": true
+  },
+  {
+    "nome": "Analysis Group (associate)",
+    "settore": "Consulenza",
+    "tipo": "icims",
+    "host": "associatecareers-analysisgroup.icims.com",
+    "attiva": true
+  },
+  {
+    "nome": "Oxera",
+    "settore": "Consulenza",
+    "tipo": "rss",
+    "url": "https://oxera.teamtailor.com/jobs.rss",
+    "attiva": true
   }
 ]
