@@ -54,6 +54,11 @@ e ruolo. Nell'email trovi tipo (summer, off-cycle, stage, graduate, junior), luo
 3. Fai **doppio clic su `radar/avvia.bat`**: si apre una finestra nera (lasciala aperta) e il browser su
    <http://127.0.0.1:8777>. Su Mac/Linux: `python3 radar/radar.py`.
 
+> **Errore "certificate has expired" in F2?** Su alcuni PC Windows l'archivio dei certificati di sistema
+> contiene certificati vecchi. `avvia.bat` installa da solo, la prima volta, il pacchetto `certifi`
+> (l'elenco aggiornato dei certificati di Mozilla) e il radar lo usa al posto di quello di Windows.
+> Se l'errore restasse: apri il Prompt dei comandi e scrivi `python -m pip install certifi`.
+
 Il terminale funziona solo sul tuo computer: nessun altro può aprirlo. Ha un suo archivio, separato da
 quello delle email.
 

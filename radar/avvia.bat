@@ -10,5 +10,11 @@ if errorlevel 1 (
     pause
     exit /b 1
 )
+rem Certificati di sicurezza aggiornati (evita l'errore "certificate has expired" su alcuni PC Windows)
+python -c "import certifi" >nul 2>&1
+if errorlevel 1 (
+    echo Installo i certificati di sicurezza aggiornati, solo la prima volta...
+    python -m pip install --quiet --disable-pip-version-check certifi
+)
 python radar.py
 pause

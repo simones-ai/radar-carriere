@@ -12,7 +12,9 @@ import datetime as dt
 import gzip
 import html
 import json
+import os
 import re
+import ssl
 import time
 import urllib.error
 import urllib.parse
@@ -29,6 +31,25 @@ class ErroreFonte(Exception):
     pass
 
 
+def _contesto_ssl():
+    """Certificati per le connessioni sicure.
+
+    Su alcuni PC Windows l'archivio dei certificati di sistema contiene certificati vecchi e scaduti
+    (errore "certificate has expired" su siti perfettamente validi, es. Workday). Se è installato
+    il pacchetto certifi si usa l'elenco aggiornato di Mozilla; la verifica resta sempre attiva.
+    """
+    if os.environ.get("SSL_CERT_FILE"):
+        return ssl.create_default_context()
+    try:
+        import certifi
+        return ssl.create_default_context(cafile=certifi.where())
+    except ImportError:
+        return ssl.create_default_context()
+
+
+CONTESTO_SSL = _contesto_ssl()
+
+
 # ------------------------------------------------------------------ rete
 def scarica(url, dati=None, intestazioni=None, tentativi=5, timeout=30, testo=False):
     corpo = None
@@ -42,7 +63,7 @@ def scarica(url, dati=None, intestazioni=None, tentativi=5, timeout=30, testo=Fa
     for n in range(tentativi):
         try:
             req = urllib.request.Request(url, data=corpo, headers=head, method="POST" if corpo else "GET")
-            with urllib.request.urlopen(req, timeout=timeout) as r:
+            with urllib.request.urlopen(req, timeout=timeout, context=CONTESTO_SSL) as r:
                 grezzo = r.read()
                 if r.headers.get("Content-Encoding") == "gzip":
                     grezzo = gzip.decompress(grezzo)
