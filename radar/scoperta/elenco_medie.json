@@ -1,0 +1,790 @@
+[
+ {
+  "nome": "Equita",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "equita.eu"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Intermonte",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "intermonte.it"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Kepler Cheuvreux",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "keplercheuvreux.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Banca Generali",
+  "settore": "Banca",
+  "domini": [
+   "bancagenerali.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Fineco",
+  "settore": "Banca",
+  "domini": [
+   "finecobank.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "BPER Banca",
+  "settore": "Banca",
+  "domini": [
+   "bper.it"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Credem",
+  "settore": "Banca",
+  "domini": [
+   "credem.it"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Banca Sella",
+  "settore": "Banca",
+  "domini": [
+   "sella.it"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Banca Profilo",
+  "settore": "Banca",
+  "domini": [
+   "bancaprofilo.it"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Banca Popolare di Sondrio",
+  "settore": "Banca",
+  "domini": [
+   "popso.it"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Mediocredito Centrale",
+  "settore": "Banca",
+  "domini": [
+   "mcc.it"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Anima",
+  "settore": "Asset management",
+  "domini": [
+   "animasgr.it"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Eurizon",
+  "settore": "Asset management",
+  "domini": [
+   "eurizoncapital.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Kairos",
+  "settore": "Asset management",
+  "domini": [
+   "kairospartners.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Algebris",
+  "settore": "Asset management",
+  "domini": [
+   "algebris.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Arca Fondi",
+  "settore": "Asset management",
+  "domini": [
+   "arcafondi.it"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Banor",
+  "settore": "Asset management",
+  "domini": [
+   "banor.it"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Lombard Odier",
+  "settore": "Asset management",
+  "domini": [
+   "lombardodier.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Julius Baer",
+  "settore": "Asset management",
+  "domini": [
+   "juliusbaer.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "juliusbaer.wd3.myworkdayjobs.com",
+    "tenant": "juliusbaer",
+    "sito": "External"
+   },
+   {
+    "tipo": "workday",
+    "host": "juliusbaer.wd3.myworkdayjobs.com",
+    "tenant": "juliusbaer",
+    "sito": "JuliusBaerCareers"
+   }
+  ]
+ },
+ {
+  "nome": "Edmond de Rothschild",
+  "settore": "Asset management",
+  "domini": [
+   "edmond-de-rothschild.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Mirabaud",
+  "settore": "Asset management",
+  "domini": [
+   "mirabaud.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Oddo BHF",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "oddo-bhf.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Natixis",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "natixis.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Allfunds",
+  "settore": "Finanza e dati",
+  "domini": [
+   "allfunds.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Investindustrial",
+  "settore": "Private equity",
+  "domini": [
+   "investindustrial.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Clessidra",
+  "settore": "Private equity",
+  "domini": [
+   "clessidrasgr.it"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Wise Equity",
+  "settore": "Private equity",
+  "domini": [
+   "wisesgr.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Xenon Private Equity",
+  "settore": "Private equity",
+  "domini": [
+   "xenonpe.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Ambienta",
+  "settore": "Private equity",
+  "domini": [
+   "ambientasgr.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Mandarin Capital",
+  "settore": "Private equity",
+  "domini": [
+   "mandarincp.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Alcedo",
+  "settore": "Private equity",
+  "domini": [
+   "alcedo.it"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Permira",
+  "settore": "Private equity",
+  "domini": [
+   "permira.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Bridgepoint",
+  "settore": "Private equity",
+  "domini": [
+   "bridgepoint.eu"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "ICG",
+  "settore": "Private equity",
+  "domini": [
+   "icgam.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "icg.wd3.myworkdayjobs.com",
+    "tenant": "icg",
+    "sito": "ICG"
+   },
+   {
+    "tipo": "workday",
+    "host": "icg.wd3.myworkdayjobs.com",
+    "tenant": "icg",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Hg",
+  "settore": "Private equity",
+  "domini": [
+   "hgcapital.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "greenhouse",
+    "slug": "hgcapital"
+   }
+  ]
+ },
+ {
+  "nome": "EQT",
+  "settore": "Private equity",
+  "domini": [
+   "eqtgroup.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "CVC Capital Partners",
+  "settore": "Private equity",
+  "domini": [
+   "cvc.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "cvc.wd3.myworkdayjobs.com",
+    "tenant": "cvc",
+    "sito": "CVC"
+   },
+   {
+    "tipo": "workday",
+    "host": "cvc.wd3.myworkdayjobs.com",
+    "tenant": "cvc",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Antin Infrastructure",
+  "settore": "Private equity",
+  "domini": [
+   "antin-ip.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "PAI Partners",
+  "settore": "Private equity",
+  "domini": [
+   "paipartners.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Astorg",
+  "settore": "Private equity",
+  "domini": [
+   "astorg.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "KKR",
+  "settore": "Private equity",
+  "domini": [
+   "kkr.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "kkr.wd1.myworkdayjobs.com",
+    "tenant": "kkr",
+    "sito": "KKR"
+   },
+   {
+    "tipo": "workday",
+    "host": "kkr.wd1.myworkdayjobs.com",
+    "tenant": "kkr",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Carlyle",
+  "settore": "Private equity",
+  "domini": [
+   "carlyle.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "carlyle.wd5.myworkdayjobs.com",
+    "tenant": "carlyle",
+    "sito": "Carlyle"
+   },
+   {
+    "tipo": "workday",
+    "host": "carlyle.wd5.myworkdayjobs.com",
+    "tenant": "carlyle",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Blackstone",
+  "settore": "Private equity",
+  "domini": [
+   "blackstone.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "blackstone.wd1.myworkdayjobs.com",
+    "tenant": "blackstone",
+    "sito": "Blackstone_Careers"
+   },
+   {
+    "tipo": "workday",
+    "host": "blackstone.wd1.myworkdayjobs.com",
+    "tenant": "blackstone",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Apollo",
+  "settore": "Private equity",
+  "domini": [
+   "apollo.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "athene.wd5.myworkdayjobs.com",
+    "tenant": "athene",
+    "sito": "Apollo_Careers"
+   },
+   {
+    "tipo": "workday",
+    "host": "athene.wd5.myworkdayjobs.com",
+    "tenant": "athene",
+    "sito": "Apollo"
+   }
+  ]
+ },
+ {
+  "nome": "Ares Management",
+  "settore": "Private equity",
+  "domini": [
+   "aresmgmt.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "aresmgmt.wd1.myworkdayjobs.com",
+    "tenant": "aresmgmt",
+    "sito": "External"
+   },
+   {
+    "tipo": "workday",
+    "host": "aresmgmt.wd1.myworkdayjobs.com",
+    "tenant": "aresmgmt",
+    "sito": "Ares"
+   }
+  ]
+ },
+ {
+  "nome": "Arma Partners",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "armapartners.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Panmure Liberum",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "panmureliberum.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Cavendish",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "cavendish.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Shore Capital",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "shorecap.co.uk"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Canaccord Genuity",
+  "settore": "Banca d'investimento",
+  "domini": [
+   "canaccordgenuity.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "cgf.wd3.myworkdayjobs.com",
+    "tenant": "cgf",
+    "sito": "External"
+   },
+   {
+    "tipo": "workday",
+    "host": "cgf.wd3.myworkdayjobs.com",
+    "tenant": "cgf",
+    "sito": "Canaccord"
+   }
+  ]
+ },
+ {
+  "nome": "Messier & Associés",
+  "settore": "Advisory e boutique",
+  "domini": [
+   "messierassocies.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Prometeia",
+  "settore": "Consulenza",
+  "domini": [
+   "prometeia.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "CRIF",
+  "settore": "Finanza e dati",
+  "domini": [
+   "crif.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Reply",
+  "settore": "Consulenza",
+  "domini": [
+   "reply.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "NTT DATA Italia",
+  "settore": "Consulenza",
+  "domini": [
+   "nttdata.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Sopra Steria",
+  "settore": "Consulenza",
+  "domini": [
+   "soprasteria.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Minsait",
+  "settore": "Consulenza",
+  "domini": [
+   "minsait.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "LSEG (Borsa Italiana)",
+  "settore": "Finanza e dati",
+  "domini": [
+   "lseg.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "lseg.wd3.myworkdayjobs.com",
+    "tenant": "lseg",
+    "sito": "Careers"
+   },
+   {
+    "tipo": "workday",
+    "host": "lseg.wd3.myworkdayjobs.com",
+    "tenant": "lseg",
+    "sito": "LSEG"
+   },
+   {
+    "tipo": "workday",
+    "host": "lseg.wd3.myworkdayjobs.com",
+    "tenant": "lseg",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Euronext",
+  "settore": "Finanza e dati",
+  "domini": [
+   "euronext.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "MSCI",
+  "settore": "Finanza e dati",
+  "domini": [
+   "msci.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "msci.wd1.myworkdayjobs.com",
+    "tenant": "msci",
+    "sito": "MSCI_Careers"
+   },
+   {
+    "tipo": "workday",
+    "host": "msci.wd1.myworkdayjobs.com",
+    "tenant": "msci",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Morningstar",
+  "settore": "Finanza e dati",
+  "domini": [
+   "morningstar.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "morningstar.wd5.myworkdayjobs.com",
+    "tenant": "morningstar",
+    "sito": "Americas"
+   },
+   {
+    "tipo": "workday",
+    "host": "morningstar.wd5.myworkdayjobs.com",
+    "tenant": "morningstar",
+    "sito": "Morningstar"
+   },
+   {
+    "tipo": "workday",
+    "host": "morningstar.wd5.myworkdayjobs.com",
+    "tenant": "morningstar",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "FactSet",
+  "settore": "Finanza e dati",
+  "domini": [
+   "factset.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "factset.wd1.myworkdayjobs.com",
+    "tenant": "factset",
+    "sito": "FactSetCareers"
+   },
+   {
+    "tipo": "workday",
+    "host": "factset.wd1.myworkdayjobs.com",
+    "tenant": "factset",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Moody's",
+  "settore": "Finanza e dati",
+  "domini": [
+   "moodys.com"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "moodys.wd5.myworkdayjobs.com",
+    "tenant": "moodys",
+    "sito": "External"
+   },
+   {
+    "tipo": "workday",
+    "host": "moodys.wd5.myworkdayjobs.com",
+    "tenant": "moodys",
+    "sito": "Moodys"
+   }
+  ]
+ },
+ {
+  "nome": "Fitch Ratings",
+  "settore": "Finanza e dati",
+  "domini": [
+   "fitch.group"
+  ],
+  "fonti": [
+   {
+    "tipo": "workday",
+    "host": "fitch.wd1.myworkdayjobs.com",
+    "tenant": "fitch",
+    "sito": "FitchCareers"
+   },
+   {
+    "tipo": "workday",
+    "host": "fitch.wd1.myworkdayjobs.com",
+    "tenant": "fitch",
+    "sito": "External"
+   }
+  ]
+ },
+ {
+  "nome": "Nexi",
+  "settore": "Fintech",
+  "domini": [
+   "nexigroup.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Satispay",
+  "settore": "Fintech",
+  "domini": [
+   "satispay.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Scalapay",
+  "settore": "Fintech",
+  "domini": [
+   "scalapay.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Moneyfarm",
+  "settore": "Fintech",
+  "domini": [
+   "moneyfarm.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Qonto",
+  "settore": "Fintech",
+  "domini": [
+   "qonto.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Revolut",
+  "settore": "Fintech",
+  "domini": [
+   "revolut.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Wise",
+  "settore": "Fintech",
+  "domini": [
+   "wise.com"
+  ],
+  "fonti": []
+ },
+ {
+  "nome": "Klarna",
+  "settore": "Fintech",
+  "domini": [
+   "klarna.com"
+  ],
+  "fonti": []
+ }
+]
