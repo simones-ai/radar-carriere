@@ -1,0 +1,1412 @@
+[
+ {
+  "nome": "Equita",
+  "settore": "Banca d'investimento",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://equita.eu/it/investor-relations/internal-dealing.html",
+   "https://equita.eu/it/careers.html"
+  ]
+ },
+ {
+  "nome": "Intermonte",
+  "settore": "Banca d'investimento",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://intermonte.it/static/upload/co0/co001-012-codice-interno-comportamento_def.pdf"
+  ]
+ },
+ {
+  "nome": "Kepler Cheuvreux",
+  "settore": "Banca d'investimento",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "lever",
+     "slug": "kepler"
+    },
+    "esito": 1
+   },
+   {
+    "fonte": {
+     "tipo": "ashby",
+     "slug": "kepler"
+    },
+    "esito": 0
+   }
+  ],
+  "ats_non_gestiti": [
+   "https://keplercheuvreux.teamtailor.com/"
+  ],
+  "pagine_carriere": []
+ },
+ {
+  "nome": "Banca Generali",
+  "settore": "Banca",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": []
+ },
+ {
+  "nome": "Fineco",
+  "settore": "Banca",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://finecobank.com/careers",
+   "https://finecobank.com/careers/",
+   "https://finecobank.com/en/careers",
+   "https://finecobank.com/en/careers/",
+   "https://finecobank.com/en/join-us",
+   "https://finecobank.com/lavora-con-noi"
+  ]
+ },
+ {
+  "nome": "BPER Banca",
+  "settore": "Banca",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "oracle",
+     "host": "fa-ewnv-saasfaprod1.fa.ocs.oraclecloud.com",
+     "sito": "BPER-Lavora-Con-Noi"
+    },
+    "esito": 1
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://bper.it/faq/lavora-con-noi",
+   "https://bper.it/footer/privacy-policy/gestione-cookies/internet-banking"
+  ]
+ },
+ {
+  "nome": "Credem",
+  "settore": "Banca",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://credem.it/careers",
+   "https://credem.it/en/careers",
+   "https://credem.it/join-us",
+   "https://credem.it/en/join-us",
+   "https://credem.it/lavora-con-noi",
+   "https://credem.it/it/lavora-con-noi"
+  ]
+ },
+ {
+  "nome": "Banca Sella",
+  "settore": "Banca",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": []
+ },
+ {
+  "nome": "Banca Profilo",
+  "settore": "Banca",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://bancaprofilo.it/lavora-con-noi",
+   "https://bancaprofilo.it/it/lavora-con-noi",
+   "https://bancaprofilo.it/work-with-us",
+   "https://bancaprofilo.it/en/work-with-us",
+   "https://www.bancaprofilo.it/lavora-con-noi/",
+   "https://bancaprofilo.it/wp-content/uploads/2024/02/PRIVACY-candidati-2024-DEF-002.pdf"
+  ]
+ },
+ {
+  "nome": "Banca Popolare di Sondrio",
+  "settore": "Banca",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://popso.it/careers",
+   "https://popso.it/careers/",
+   "https://popso.it/en/careers",
+   "https://popso.it/en/careers/",
+   "https://popso.it/it/careers",
+   "https://popso.it/careers/jobs"
+  ]
+ },
+ {
+  "nome": "Mediocredito Centrale",
+  "settore": "Banca",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": []
+ },
+ {
+  "nome": "Anima",
+  "settore": "Asset management",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "ashby",
+     "slug": "anima"
+    },
+    "esito": 10
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://animasgr.it/IT/anima-holding/info/Pagine/careers.aspx"
+  ]
+ },
+ {
+  "nome": "Eurizon",
+  "settore": "Asset management",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": []
+ },
+ {
+  "nome": "Kairos",
+  "settore": "Asset management",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "smartrecruiters",
+     "slug": "KairosGroup"
+    },
+    "esito": 2
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": []
+ },
+ {
+  "nome": "Algebris",
+  "settore": "Asset management",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": []
+ },
+ {
+  "nome": "Arca Fondi",
+  "settore": "Asset management",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "ashby",
+     "slug": "arca"
+    },
+    "esito": 0
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": []
+ },
+ {
+  "nome": "Banor",
+  "settore": "Asset management",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://banor.it/careers",
+   "https://banor.it/careers/",
+   "https://banor.it/en/careers",
+   "https://banor.it/en/careers/",
+   "https://banor.it/it/careers",
+   "https://banor.it/careers/jobs"
+  ]
+ },
+ {
+  "nome": "Lombard Odier",
+  "settore": "Asset management",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "lombardodier.wd3.myworkdayjobs.com",
+     "tenant": "lombardodier",
+     "sito": "Lombard_Odier_Careers"
+    },
+    "esito": 0
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://lombardodier.com/careers",
+   "https://lombardodier.com/careers/",
+   "https://lombardodier.com/en/careers",
+   "https://lombardodier.com/en/careers/",
+   "https://lombardodier.com/it/careers",
+   "https://lombardodier.com/careers/jobs"
+  ]
+ },
+ {
+  "nome": "Julius Baer",
+  "settore": "Asset management",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "ashby",
+     "slug": "julius"
+    },
+    "esito": 0
+   },
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "juliusbaer.wd3.myworkdayjobs.com",
+     "tenant": "juliusbaer",
+     "sito": "External"
+    },
+    "esito": 0
+   },
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "juliusbaer.wd3.myworkdayjobs.com",
+     "tenant": "juliusbaer",
+     "sito": "JuliusBaerCareers"
+    },
+    "esito": "errore: HTTP 404 — https://juliusbaer.wd3.myworkdayjobs.com/wday/cxs/juliusbaer/JuliusBa"
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": []
+ },
+ {
+  "nome": "Edmond de Rothschild",
+  "settore": "Asset management",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": []
+ },
+ {
+  "nome": "Mirabaud",
+  "settore": "Asset management",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://mirabaud.com/careers",
+   "https://mirabaud.com/careers/",
+   "https://mirabaud.com/en/careers",
+   "https://mirabaud.com/en/careers/",
+   "https://mirabaud.com/en/",
+   "https://mirabaud.com/en/careers/careers"
+  ]
+ },
+ {
+  "nome": "Oddo BHF",
+  "settore": "Banca d'investimento",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://oddo-bhf.com/careers",
+   "https://oddo-bhf.com/careers/",
+   "https://www.oddo-bhf.com/international-and-corporate-banking/",
+   "https://www.oddo-bhf.com/careers/",
+   "https://www.oddo-bhf.com/discover-our-jobs/",
+   "https://www.oddo-bhf.com/young-talents/"
+  ]
+ },
+ {
+  "nome": "Natixis",
+  "settore": "Banca d'investimento",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": []
+ },
+ {
+  "nome": "Allfunds",
+  "settore": "Finanza e dati",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://allfunds.com/careers",
+   "https://allfunds.com/careers/",
+   "https://allfunds.com/en/careers",
+   "https://allfunds.com/en/careers/",
+   "https://allfunds.com/it/careers",
+   "https://allfunds.com/careers/jobs"
+  ]
+ },
+ {
+  "nome": "Investindustrial",
+  "settore": "Private equity",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": []
+ },
+ {
+  "nome": "Clessidra",
+  "settore": "Private equity",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": []
+ },
+ {
+  "nome": "Wise Equity",
+  "settore": "Private equity",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "greenhouse",
+     "slug": "wise"
+    },
+    "esito": 0
+   },
+   {
+    "fonte": {
+     "tipo": "smartrecruiters",
+     "slug": "wise"
+    },
+    "esito": 177
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": []
+ },
+ {
+  "nome": "Xenon Private Equity",
+  "settore": "Private equity",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "ashby",
+     "slug": "xenon"
+    },
+    "esito": 0
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": []
+ },
+ {
+  "nome": "Ambienta",
+  "settore": "Private equity",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://ambientasgr.com/careers",
+   "https://ambientasgr.com/careers/",
+   "https://ambientasgr.com/en/careers",
+   "https://ambientasgr.com/en/careers/",
+   "https://ambientasgr.com/it/careers",
+   "https://ambientasgr.com/careers/jobs"
+  ]
+ },
+ {
+  "nome": "Mandarin Capital",
+  "settore": "Private equity",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": []
+ },
+ {
+  "nome": "Alcedo",
+  "settore": "Private equity",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": []
+ },
+ {
+  "nome": "Permira",
+  "settore": "Private equity",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "greenhouse",
+     "slug": "permira"
+    },
+    "esito": 0
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://permira.com/investing/credit/strategic-opportunities"
+  ]
+ },
+ {
+  "nome": "Bridgepoint",
+  "settore": "Private equity",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://bridgepoint.eu/careers",
+   "https://bridgepoint.eu/careers/",
+   "https://bridgepoint.eu/en/careers",
+   "https://bridgepoint.eu/en/careers/",
+   "https://bridgepoint.eu/it/careers",
+   "https://bridgepoint.eu/careers/jobs"
+  ]
+ },
+ {
+  "nome": "ICG",
+  "settore": "Private equity",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "icg.wd3.myworkdayjobs.com",
+     "tenant": "icg",
+     "sito": "external_careers"
+    },
+    "esito": 13
+   },
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "icg.wd3.myworkdayjobs.com",
+     "tenant": "icg",
+     "sito": "ICG"
+    },
+    "esito": "errore: HTTP 404 — https://icg.wd3.myworkdayjobs.com/wday/cxs/icg/ICG/jobs"
+   },
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "icg.wd3.myworkdayjobs.com",
+     "tenant": "icg",
+     "sito": "External"
+    },
+    "esito": "errore: HTTP 404 — https://icg.wd3.myworkdayjobs.com/wday/cxs/icg/External/jobs"
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://icgam.com/careers",
+   "https://icgam.com/careers/",
+   "https://icgam.com/en/careers",
+   "https://icgam.com/en/careers/",
+   "https://icgam.com/it/careers",
+   "https://icgam.com/en/about-us/careers"
+  ]
+ },
+ {
+  "nome": "Hg",
+  "settore": "Private equity",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "greenhouse",
+     "slug": "hgcapital"
+    },
+    "esito": "errore: HTTP 404 — https://boards-api.greenhouse.io/v1/boards/hgcapital/jobs?content=tru"
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": []
+ },
+ {
+  "nome": "EQT",
+  "settore": "Private equity",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "greenhouse",
+     "slug": "ai_opt_out_request"
+    },
+    "esito": "errore: HTTP 404 — https://boards-api.greenhouse.io/v1/boards/ai_opt_out_request/jobs?co"
+   },
+   {
+    "fonte": {
+     "tipo": "greenhouse",
+     "slug": "eqtpartners"
+    },
+    "esito": 4
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://eqtgroup.com/about/careers"
+  ]
+ },
+ {
+  "nome": "CVC Capital Partners",
+  "settore": "Private equity",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "cvc.wd3.myworkdayjobs.com",
+     "tenant": "cvc",
+     "sito": "CVC"
+    },
+    "esito": "errore: HTTP 422 — https://cvc.wd3.myworkdayjobs.com/wday/cxs/cvc/CVC/jobs"
+   },
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "cvc.wd3.myworkdayjobs.com",
+     "tenant": "cvc",
+     "sito": "External"
+    },
+    "esito": "errore: HTTP 422 — https://cvc.wd3.myworkdayjobs.com/wday/cxs/cvc/External/jobs"
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://cvc.com/strategies/strategic-opportunities/"
+  ]
+ },
+ {
+  "nome": "Antin Infrastructure",
+  "settore": "Private equity",
+  "fonti": [],
+  "ats_non_gestiti": [
+   "https://antininfrastructurepartners-1655458195.teamtailor.com/"
+  ],
+  "pagine_carriere": [
+   "https://antin-ip.com/careers",
+   "https://antin-ip.com/careers/",
+   "https://www.antin-ip.com/careers"
+  ]
+ },
+ {
+  "nome": "PAI Partners",
+  "settore": "Private equity",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "recruitee",
+     "slug": "paipartners"
+    },
+    "esito": 6
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": []
+ },
+ {
+  "nome": "Astorg",
+  "settore": "Private equity",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": []
+ },
+ {
+  "nome": "KKR",
+  "settore": "Private equity",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "greenhouse",
+     "slug": "stage"
+    },
+    "esito": 3
+   },
+   {
+    "fonte": {
+     "tipo": "greenhouse",
+     "slug": "stage\\"
+    },
+    "esito": 3
+   },
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "kkr.wd1.myworkdayjobs.com",
+     "tenant": "kkr",
+     "sito": "KKR"
+    },
+    "esito": "errore: HTTP 422 — https://kkr.wd1.myworkdayjobs.com/wday/cxs/kkr/KKR/jobs"
+   },
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "kkr.wd1.myworkdayjobs.com",
+     "tenant": "kkr",
+     "sito": "External"
+    },
+    "esito": "errore: HTTP 422 — https://kkr.wd1.myworkdayjobs.com/wday/cxs/kkr/External/jobs"
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://kkr.com/careers",
+   "https://kkr.com/careers/",
+   "https://kkr.com/careers/career-opportunities",
+   "https://kkr.com/careers/student-careers",
+   "https://kkr.com/careers/inclusive-culture",
+   "https://kkr.com/careers/citizenship"
+  ]
+ },
+ {
+  "nome": "Carlyle",
+  "settore": "Private equity",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "carlyle.wd5.myworkdayjobs.com",
+     "tenant": "carlyle",
+     "sito": "Carlyle"
+    },
+    "esito": "errore: HTTP 422 — https://carlyle.wd5.myworkdayjobs.com/wday/cxs/carlyle/Carlyle/jobs"
+   },
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "carlyle.wd5.myworkdayjobs.com",
+     "tenant": "carlyle",
+     "sito": "External"
+    },
+    "esito": "errore: HTTP 422 — https://carlyle.wd5.myworkdayjobs.com/wday/cxs/carlyle/External/jobs"
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": []
+ },
+ {
+  "nome": "Blackstone",
+  "settore": "Private equity",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "blackstone.wd1.myworkdayjobs.com",
+     "tenant": "blackstone",
+     "sito": "Blackstone_Careers"
+    },
+    "esito": 4
+   },
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "blackstone.wd1.myworkdayjobs.com",
+     "tenant": "blackstone",
+     "sito": "External"
+    },
+    "esito": "errore: HTTP 404 — https://blackstone.wd1.myworkdayjobs.com/wday/cxs/blackstone/External"
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": []
+ },
+ {
+  "nome": "Apollo",
+  "settore": "Private equity",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "athene.wd5.myworkdayjobs.com",
+     "tenant": "athene",
+     "sito": "Apollo_Careers"
+    },
+    "esito": 7
+   },
+   {
+    "fonte": {
+     "tipo": "greenhouse",
+     "slug": "apollo"
+    },
+    "esito": 0
+   },
+   {
+    "fonte": {
+     "tipo": "ashby",
+     "slug": "apollo"
+    },
+    "esito": 5
+   },
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "athene.wd5.myworkdayjobs.com",
+     "tenant": "athene",
+     "sito": "Apollo"
+    },
+    "esito": "errore: HTTP 404 — https://athene.wd5.myworkdayjobs.com/wday/cxs/athene/Apollo/jobs"
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://apollo.com/careers",
+   "https://apollo.com/impact/expanding-opportunity",
+   "https://apollo.com/impact/the-apollo-opportunity-foundation",
+   "https://apollo.com/insights-news/insights/2026/11/creating-value-in-a-changing-world",
+   "https://apollo.com/insights-news/insights/2026/11/from-purpose-to-placement-apollo-s-board-service-milestone",
+   "https://apollo.com/insights-news/insights/2026/06/purpose-in-action"
+  ]
+ },
+ {
+  "nome": "Ares Management",
+  "settore": "Private equity",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "aresmgmt.wd1.myworkdayjobs.com",
+     "tenant": "aresmgmt",
+     "sito": "External"
+    },
+    "esito": 17
+   },
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "aresmgmt.wd1.myworkdayjobs.com",
+     "tenant": "aresmgmt",
+     "sito": "Ares"
+    },
+    "esito": "errore: HTTP 404 — https://aresmgmt.wd1.myworkdayjobs.com/wday/cxs/aresmgmt/Ares/jobs"
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": []
+ },
+ {
+  "nome": "Arma Partners",
+  "settore": "Advisory e boutique",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": []
+ },
+ {
+  "nome": "Panmure Liberum",
+  "settore": "Banca d'investimento",
+  "fonti": [],
+  "ats_non_gestiti": [
+   "https://panmure.bamboohr.com/careers",
+   "https://panmure.bamboohr.com/careers/110",
+   "https://panmure.bamboohr.com/careers/38"
+  ],
+  "pagine_carriere": [
+   "https://panmureliberum.com/careers",
+   "https://panmureliberum.com/careers/"
+  ]
+ },
+ {
+  "nome": "Cavendish",
+  "settore": "Banca d'investimento",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://cavendish.com/careers",
+   "https://cavendish.com/careers/",
+   "https://cavendish.com/en/careers",
+   "https://cavendish.com/en/careers/",
+   "https://cavendish.com/it/careers",
+   "https://www.cavendish.com/about-us/international-reach/"
+  ]
+ },
+ {
+  "nome": "Shore Capital",
+  "settore": "Banca d'investimento",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": []
+ },
+ {
+  "nome": "Canaccord Genuity",
+  "settore": "Banca d'investimento",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "cgf.wd10.myworkdayjobs.com",
+     "tenant": "cgf",
+     "sito": "CG"
+    },
+    "esito": 0
+   },
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "cgf.wd3.myworkdayjobs.com",
+     "tenant": "cgf",
+     "sito": "External"
+    },
+    "esito": "errore: HTTP 422 — https://cgf.wd3.myworkdayjobs.com/wday/cxs/cgf/External/jobs"
+   },
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "cgf.wd3.myworkdayjobs.com",
+     "tenant": "cgf",
+     "sito": "Canaccord"
+    },
+    "esito": "errore: HTTP 422 — https://cgf.wd3.myworkdayjobs.com/wday/cxs/cgf/Canaccord/jobs"
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://canaccordgenuity.com/careers",
+   "https://canaccordgenuity.com/careers/",
+   "https://canaccordgenuity.com/en/careers",
+   "https://canaccordgenuity.com/en/careers/",
+   "https://canaccordgenuity.com/global-careers/",
+   "https://canaccordgenuity.com/global-careers/our-values/"
+  ]
+ },
+ {
+  "nome": "Messier & Associés",
+  "settore": "Advisory e boutique",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": []
+ },
+ {
+  "nome": "Prometeia",
+  "settore": "Consulenza",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://prometeia.com/careers",
+   "https://prometeia.com/careers/",
+   "https://prometeia.com/en/careers",
+   "https://prometeia.com/en/careers/",
+   "https://prometeia.com/it/careers",
+   "https://prometeia.com/careers/jobs"
+  ]
+ },
+ {
+  "nome": "CRIF",
+  "settore": "Finanza e dati",
+  "fonti": [],
+  "ats_non_gestiti": [
+   "https://career5.successfactors.eu",
+   "https://career5.successfactors.eu/career?site=&amp;company=C0001203592P&amp;lang=en%5FUS&amp;login_ns=register&amp;career_ns=home&amp;navBarLevel=MY_PROFILE",
+   "https://performancemanager5.successfactors.eu/verp/vmod_v1/ui/extlib/jquery_3.5.1/jquery-migrate.js",
+   "https://performancemanager5.successfactors.eu/verp/vmod_v1/ui/extlib/jquery_3.5.1/jquery.js"
+  ],
+  "pagine_carriere": [
+   "https://careers.crif.com/?pk_vid=75d08cc1865ad83e1779803757b6ec17"
+  ]
+ },
+ {
+  "nome": "Reply",
+  "settore": "Consulenza",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "lever",
+     "slug": "reply"
+    },
+    "esito": 0
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://reply.com/en/iot",
+   "https://www.reply.com/en/about/careers/",
+   "https://reply.com/en/internet-of-things/iveco-accelerates-the-digital-transformation-with-industrial-iot",
+   "https://reply.com/en/artificial-intelligence/audi-revolutionizes-internal-documentation-with-rag-based-ai-chatbot",
+   "https://reply.com/en/privacy-notice-candidate"
+  ]
+ },
+ {
+  "nome": "NTT DATA Italia",
+  "settore": "Consulenza",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "nttglobaldatacenters.wd501.myworkdayjobs.com",
+     "tenant": "nttglobaldatacenters",
+     "sito": "External"
+    },
+    "esito": 31
+   }
+  ],
+  "ats_non_gestiti": [
+   "https://assets.phenompeople.com",
+   "https://assets.phenompeople.com/CareerConnectResources/common/assets/images/gray.png",
+   "https://assets.phenompeople.com/CareerConnectResources/pp/NTT1GLOBAL/canvas/assets/css/test-theme/canvas-site-custom-styles-1795761041705.css",
+   "https://assets.phenompeople.com/CareerConnectResources/pp/NTT1GLOBAL/canvas/icons/test-theme/custom-icons-1790923476157.svg",
+   "https://assets.phenompeople.com/CareerConnectResources/pp/NTT1GLOBAL/canvas/test-theme/common/canvas-global-branding1787211405423.css",
+   "https://assets.phenompeople.com/CareerConnectResources/pp/NTT1GLOBAL/canvas/test-theme/common/fontfaces/fontface-1747303953001.css",
+   "https://cdn-prod-static.phenompeople.com/CareerConnectResources/COMMON/js/applyStudioBundles/uex/V1/apply-utils.umd.js",
+   "https://cdn.phenompeople.com"
+  ],
+  "pagine_carriere": [
+   "https://nttdata.com/careers",
+   "https://nttdata.com/careers/",
+   "https://nttdata.com/en/careers",
+   "https://nttdata.com/en/careers/",
+   "https://nttdata.com/en-us/careers",
+   "https://careers.nttdata.com/"
+  ]
+ },
+ {
+  "nome": "Sopra Steria",
+  "settore": "Consulenza",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "smartrecruiters",
+     "slug": "SopraSteria1"
+    },
+    "esito": 1049
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://soprasteria.com/careers",
+   "https://soprasteria.com/careers/",
+   "https://soprasteria.com/en/careers",
+   "https://soprasteria.com/en/careers/",
+   "https://soprasteria.com/it/careers",
+   "https://soprasteria.com/careers/jobs"
+  ]
+ },
+ {
+  "nome": "Minsait",
+  "settore": "Consulenza",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://minsait.com/careers",
+   "https://minsait.com/careers/",
+   "https://minsait.com/en/careers",
+   "https://minsait.com/en/careers/",
+   "https://minsait.com/it/careers",
+   "https://minsait.com/careers/jobs"
+  ]
+ },
+ {
+  "nome": "LSEG (Borsa Italiana)",
+  "settore": "Finanza e dati",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "lseg.wd3.myworkdayjobs.com",
+     "tenant": "lseg",
+     "sito": "Careers"
+    },
+    "esito": 16
+   },
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "lseg.wd3.myworkdayjobs.com",
+     "tenant": "lseg",
+     "sito": "Graduate_Careers"
+    },
+    "esito": 0
+   },
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "lseg.wd3.myworkdayjobs.com",
+     "tenant": "lseg",
+     "sito": "LSEG"
+    },
+    "esito": "errore: HTTP 404 — https://lseg.wd3.myworkdayjobs.com/wday/cxs/lseg/LSEG/jobs"
+   },
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "lseg.wd3.myworkdayjobs.com",
+     "tenant": "lseg",
+     "sito": "External"
+    },
+    "esito": "errore: HTTP 404 — https://lseg.wd3.myworkdayjobs.com/wday/cxs/lseg/External/jobs"
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://lseg.com/careers",
+   "https://lseg.com/careers/",
+   "https://lseg.com/en/careers",
+   "https://lseg.com/en/careers/",
+   "https://lseg.com/careers/jobs",
+   "https://lseg.com/en/careers/graduate-internship-programmes"
+  ]
+ },
+ {
+  "nome": "Euronext",
+  "settore": "Finanza e dati",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "hrhub.wd3.myworkdayjobs.com",
+     "tenant": "hrhub",
+     "sito": "Euronext_Career_Page"
+    },
+    "esito": 56
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://euronext.com/careers",
+   "https://euronext.com/careers/",
+   "https://euronext.com/en/careers",
+   "https://euronext.com/en/careers/",
+   "https://euronext.com/it/careers",
+   "https://euronext.com/careers/jobs"
+  ]
+ },
+ {
+  "nome": "MSCI",
+  "settore": "Finanza e dati",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "icims",
+     "host": "globalcareers-msci.icims.com"
+    },
+    "esito": 4
+   },
+   {
+    "fonte": {
+     "tipo": "icims",
+     "host": "login.icims.com"
+    },
+    "esito": "errore: HTTP 404 — https://login.icims.com/jobs/search?ss=1&in_iframe=1&pr=0"
+   },
+   {
+    "fonte": {
+     "tipo": "icims",
+     "host": "msci.icims.com"
+    },
+    "esito": "errore: HTTP 302 — https://msci.icims.com/jobs/search?ss=1&in_iframe=1&pr=0"
+   },
+   {
+    "fonte": {
+     "tipo": "icims",
+     "host": "rsacareers-msci.icims.com"
+    },
+    "esito": 0
+   },
+   {
+    "fonte": {
+     "tipo": "icims",
+     "host": "ukcareers-msci.icims.com"
+    },
+    "esito": 4
+   },
+   {
+    "fonte": {
+     "tipo": "icims",
+     "host": "uscareers-msci.icims.com"
+    },
+    "esito": 1
+   },
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "msci.wd1.myworkdayjobs.com",
+     "tenant": "msci",
+     "sito": "MSCI_Careers"
+    },
+    "esito": "errore: HTTP 401 — https://msci.wd1.myworkdayjobs.com/wday/cxs/msci/MSCI_Careers/jobs"
+   },
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "msci.wd1.myworkdayjobs.com",
+     "tenant": "msci",
+     "sito": "External"
+    },
+    "esito": "errore: HTTP 401 — https://msci.wd1.myworkdayjobs.com/wday/cxs/msci/External/jobs"
+   }
+  ],
+  "ats_non_gestiti": [
+   "https://www.icims.com/legal/privacy-notice-website",
+   "https://www.icims.com/legal/privacy-notice-website/"
+  ],
+  "pagine_carriere": [
+   "https://msci.com/careers",
+   "https://msci.com/careers/",
+   "https://msci.com/en/careers",
+   "https://msci.com/en/careers/",
+   "https://msci.com/it/careers",
+   "https://msci.com/careers/jobs"
+  ]
+ },
+ {
+  "nome": "Morningstar",
+  "settore": "Finanza e dati",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "morningstar.wd5.myworkdayjobs.com",
+     "tenant": "morningstar",
+     "sito": "Americas"
+    },
+    "esito": 0
+   },
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "morningstar.wd5.myworkdayjobs.com",
+     "tenant": "morningstar",
+     "sito": "Morningstar"
+    },
+    "esito": 12
+   },
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "morningstar.wd5.myworkdayjobs.com",
+     "tenant": "morningstar",
+     "sito": "External"
+    },
+    "esito": "errore: HTTP 404 — https://morningstar.wd5.myworkdayjobs.com/wday/cxs/morningstar/Extern"
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": []
+ },
+ {
+  "nome": "FactSet",
+  "settore": "Finanza e dati",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "factset.wd1.myworkdayjobs.com",
+     "tenant": "factset",
+     "sito": "FactSetCareers"
+    },
+    "esito": "errore: HTTP 422 — https://factset.wd1.myworkdayjobs.com/wday/cxs/factset/FactSetCareers"
+   },
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "factset.wd1.myworkdayjobs.com",
+     "tenant": "factset",
+     "sito": "External"
+    },
+    "esito": "errore: HTTP 422 — https://factset.wd1.myworkdayjobs.com/wday/cxs/factset/External/jobs"
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://factset.com/careers",
+   "https://factset.com/careers/"
+  ]
+ },
+ {
+  "nome": "Moody's",
+  "settore": "Finanza e dati",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "moodys.wd5.myworkdayjobs.com",
+     "tenant": "moodys",
+     "sito": "External"
+    },
+    "esito": "errore: HTTP 422 — https://moodys.wd5.myworkdayjobs.com/wday/cxs/moodys/External/jobs"
+   },
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "moodys.wd5.myworkdayjobs.com",
+     "tenant": "moodys",
+     "sito": "Moodys"
+    },
+    "esito": "errore: HTTP 422 — https://moodys.wd5.myworkdayjobs.com/wday/cxs/moodys/Moodys/jobs"
+   }
+  ],
+  "ats_non_gestiti": [
+   "https://career8.successfactors.com/career?career_company=MoodysProd&amp;lang=en_US&amp;company=MoodysProd&amp;site=&amp;login"
+  ],
+  "pagine_carriere": [
+   "https://moodys.com/careers",
+   "https://moodys.com/careers/",
+   "https://moodys.com/en/careers",
+   "https://moodys.com/en/careers/",
+   "https://moodys.com/it/careers",
+   "https://moodys.com/careers/jobs"
+  ]
+ },
+ {
+  "nome": "Fitch Ratings",
+  "settore": "Finanza e dati",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "successfactors",
+     "host": "career5.successfactors.eu",
+     "azienda": "C0016306184P"
+    },
+    "esito": 0
+   },
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "fitch.wd1.myworkdayjobs.com",
+     "tenant": "fitch",
+     "sito": "FitchCareers"
+    },
+    "esito": "errore: HTTP 422 — https://fitch.wd1.myworkdayjobs.com/wday/cxs/fitch/FitchCareers/jobs"
+   },
+   {
+    "fonte": {
+     "tipo": "workday",
+     "host": "fitch.wd1.myworkdayjobs.com",
+     "tenant": "fitch",
+     "sito": "External"
+    },
+    "esito": "errore: HTTP 422 — https://fitch.wd1.myworkdayjobs.com/wday/cxs/fitch/External/jobs"
+   }
+  ],
+  "ats_non_gestiti": [
+   "https://career5.successfactors.eu",
+   "https://career5.successfactors.eu/career?site=&amp;company=C0016306184P&amp;lang=en%5FUS&amp;login_ns=register&amp;career_ns=home&amp;navBarLevel=MY_PROFILE",
+   "https://performancemanager5.successfactors.eu/verp/vmod_v1/ui/extlib/jquery_3.5.1/jquery-migrate.js",
+   "https://performancemanager5.successfactors.eu/verp/vmod_v1/ui/extlib/jquery_3.5.1/jquery.js"
+  ],
+  "pagine_carriere": [
+   "https://fitch.group/careers",
+   "https://fitch.group/careers/",
+   "https://careers.fitch.group",
+   "https://careers.fitch.group/go/View-All-Jobs/8883701/",
+   "https://careers.fitch.group/?utm_source=corporatesite",
+   "https://fitch.group/careers/experienced-tech-talent"
+  ]
+ },
+ {
+  "nome": "Nexi",
+  "settore": "Fintech",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "oracle",
+     "host": "fa-ewwx-saasfaprod1.fa.ocs.oraclecloud.com",
+     "sito": "CX_1"
+    },
+    "esito": 4
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://nexigroup.com/it/people/lavora-in-nexi/percorso-professionale/",
+   "https://nexigroup.com/it/people/lavora-in-nexi/posizioni-aperte/",
+   "https://nexigroup.com/it/people/lavora-in-nexi/graduate-program/",
+   "https://nexigroup.com/en/people/careers/job-openings/",
+   "https://nexigroup.com/en/people/careers/graduate-program/"
+  ]
+ },
+ {
+  "nome": "Satispay",
+  "settore": "Fintech",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "ashby",
+     "slug": "satispay"
+    },
+    "esito": 57
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://satispay.com/careers",
+   "https://satispay.com/careers/",
+   "https://satispay.com/en/careers",
+   "https://satispay.com/en/careers/",
+   "https://satispay.com/it/careers",
+   "https://satispay.com/careers/jobs"
+  ]
+ },
+ {
+  "nome": "Scalapay",
+  "settore": "Fintech",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "greenhouse",
+     "slug": "scalapaysrl"
+    },
+    "esito": 9
+   },
+   {
+    "fonte": {
+     "tipo": "lever",
+     "slug": "Scalapay",
+     "eu": false
+    },
+    "esito": "errore: HTTP 404 — https://api.lever.co/v0/postings/Scalapay?mode=json"
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://scalapay.com/careers",
+   "https://scalapay.com/careers/",
+   "https://scalapay.com/careers-privacy"
+  ]
+ },
+ {
+  "nome": "Moneyfarm",
+  "settore": "Fintech",
+  "fonti": [],
+  "ats_non_gestiti": [
+   "https://apply.workable.com/moneyfarm/"
+  ],
+  "pagine_carriere": [
+   "https://moneyfarm.com/careers",
+   "https://moneyfarm.com/careers/",
+   "https://moneyfarm.com/en/careers",
+   "https://moneyfarm.com/en/careers/",
+   "https://moneyfarm.com/it/careers",
+   "https://moneyfarm.com/careers/jobs"
+  ]
+ },
+ {
+  "nome": "Qonto",
+  "settore": "Fintech",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "ashby",
+     "slug": "qonto"
+    },
+    "esito": 44
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://qonto.com/en/careers",
+   "https://qonto.com/en/careers/",
+   "https://qonto.com/it/careers",
+   "https://qonto.com/it/payment-methods/international-transfer",
+   "https://qonto.com/en/jobs_list?html_variation=wr_default&amp;page=2",
+   "https://qonto.com/en/jobs_list?html_variation=wr_default&amp;page=3"
+  ]
+ },
+ {
+  "nome": "Revolut",
+  "settore": "Fintech",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": []
+ },
+ {
+  "nome": "Wise",
+  "settore": "Fintech",
+  "fonti": [
+   {
+    "fonte": {
+     "tipo": "greenhouse",
+     "slug": "wise"
+    },
+    "esito": 0
+   },
+   {
+    "fonte": {
+     "tipo": "smartrecruiters",
+     "slug": "Wise"
+    },
+    "esito": 177
+   }
+  ],
+  "ats_non_gestiti": [],
+  "pagine_carriere": [
+   "https://wise.com/careers",
+   "https://wise.com/jobs",
+   "https://wise.com/us/card/",
+   "https://wise.com/us/stock/"
+  ]
+ },
+ {
+  "nome": "Klarna",
+  "settore": "Fintech",
+  "fonti": [],
+  "ats_non_gestiti": [],
+  "pagine_carriere": []
+ }
+]
