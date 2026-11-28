@@ -1205,5 +1205,242 @@
     "url": "https://www.invitalia.it/lavora-con-noi/le-posizioni-aperte",
     "paese": "IT",
     "attiva": true
+  },
+  {
+    "nome": "BPER Banca",
+    "settore": "Banca",
+    "tipo": "oracle",
+    "host": "fa-ewnv-saasfaprod1.fa.ocs.oraclecloud.com",
+    "sito": "BPER-Lavora-Con-Noi",
+    "attiva": true
+  },
+  {
+    "nome": "Nexi",
+    "settore": "Fintech",
+    "tipo": "oracle",
+    "host": "fa-ewwx-saasfaprod1.fa.ocs.oraclecloud.com",
+    "sito": "CX_1",
+    "attiva": true
+  },
+  {
+    "nome": "Kepler Cheuvreux",
+    "settore": "Banca d'investimento",
+    "tipo": "rss",
+    "url": "https://keplercheuvreux.teamtailor.com/jobs.rss",
+    "attiva": true
+  },
+  {
+    "nome": "Lombard Odier",
+    "settore": "Asset management",
+    "tipo": "workday",
+    "host": "lombardodier.wd3.myworkdayjobs.com",
+    "tenant": "lombardodier",
+    "sito": "Lombard_Odier_Careers",
+    "attiva": true
+  },
+  {
+    "nome": "Julius Baer",
+    "settore": "Asset management",
+    "tipo": "workday",
+    "host": "juliusbaer.wd3.myworkdayjobs.com",
+    "tenant": "juliusbaer",
+    "sito": "External",
+    "attiva": true
+  },
+  {
+    "nome": "Permira",
+    "settore": "Private equity",
+    "tipo": "greenhouse",
+    "slug": "permira",
+    "attiva": true
+  },
+  {
+    "nome": "ICG",
+    "settore": "Private equity",
+    "tipo": "workday",
+    "host": "icg.wd3.myworkdayjobs.com",
+    "tenant": "icg",
+    "sito": "external_careers",
+    "attiva": true
+  },
+  {
+    "nome": "EQT",
+    "settore": "Private equity",
+    "tipo": "greenhouse",
+    "slug": "eqtpartners",
+    "attiva": true
+  },
+  {
+    "nome": "Antin Infrastructure",
+    "settore": "Private equity",
+    "tipo": "rss",
+    "url": "https://antininfrastructurepartners-1655458195.teamtailor.com/jobs.rss",
+    "attiva": true
+  },
+  {
+    "nome": "PAI Partners",
+    "settore": "Private equity",
+    "tipo": "recruitee",
+    "slug": "paipartners",
+    "attiva": true
+  },
+  {
+    "nome": "Blackstone",
+    "settore": "Private equity",
+    "tipo": "workday",
+    "host": "blackstone.wd1.myworkdayjobs.com",
+    "tenant": "blackstone",
+    "sito": "Blackstone_Careers",
+    "attiva": true
+  },
+  {
+    "nome": "Apollo",
+    "settore": "Private equity",
+    "tipo": "workday",
+    "host": "athene.wd5.myworkdayjobs.com",
+    "tenant": "athene",
+    "sito": "Apollo_Careers",
+    "attiva": true
+  },
+  {
+    "nome": "Ares Management",
+    "settore": "Private equity",
+    "tipo": "workday",
+    "host": "aresmgmt.wd1.myworkdayjobs.com",
+    "tenant": "aresmgmt",
+    "sito": "External",
+    "attiva": true
+  },
+  {
+    "nome": "Panmure Liberum",
+    "settore": "Banca d'investimento",
+    "tipo": "bamboohr",
+    "slug": "panmure",
+    "attiva": true
+  },
+  {
+    "nome": "Canaccord Genuity",
+    "settore": "Banca d'investimento",
+    "tipo": "workday",
+    "host": "cgf.wd10.myworkdayjobs.com",
+    "tenant": "cgf",
+    "sito": "CG",
+    "attiva": true
+  },
+  {
+    "nome": "CRIF",
+    "settore": "Finanza e dati",
+    "tipo": "successfactors",
+    "host": "career5.successfactors.eu",
+    "azienda": "C0001203592P",
+    "attiva": true
+  },
+  {
+    "nome": "Sopra Steria",
+    "settore": "Consulenza",
+    "tipo": "smartrecruiters",
+    "slug": "SopraSteria1",
+    "attiva": true
+  },
+  {
+    "nome": "LSEG (Borsa Italiana)",
+    "settore": "Finanza e dati",
+    "tipo": "workday",
+    "host": "lseg.wd3.myworkdayjobs.com",
+    "tenant": "lseg",
+    "sito": "Careers",
+    "attiva": true
+  },
+  {
+    "nome": "LSEG (graduate)",
+    "settore": "Finanza e dati",
+    "tipo": "workday",
+    "host": "lseg.wd3.myworkdayjobs.com",
+    "tenant": "lseg",
+    "sito": "Graduate_Careers",
+    "attiva": true
+  },
+  {
+    "nome": "Euronext",
+    "settore": "Finanza e dati",
+    "tipo": "workday",
+    "host": "hrhub.wd3.myworkdayjobs.com",
+    "tenant": "hrhub",
+    "sito": "Euronext_Career_Page",
+    "attiva": true
+  },
+  {
+    "nome": "MSCI",
+    "settore": "Finanza e dati",
+    "tipo": "icims",
+    "host": "globalcareers-msci.icims.com",
+    "attiva": true
+  },
+  {
+    "nome": "MSCI (UK)",
+    "settore": "Finanza e dati",
+    "tipo": "icims",
+    "host": "ukcareers-msci.icims.com",
+    "attiva": true
+  },
+  {
+    "nome": "Morningstar",
+    "settore": "Finanza e dati",
+    "tipo": "workday",
+    "host": "morningstar.wd5.myworkdayjobs.com",
+    "tenant": "morningstar",
+    "sito": "Morningstar",
+    "attiva": true
+  },
+  {
+    "nome": "Moody's",
+    "settore": "Finanza e dati",
+    "tipo": "successfactors",
+    "host": "career8.successfactors.com",
+    "azienda": "MoodysProd",
+    "attiva": true
+  },
+  {
+    "nome": "Fitch Ratings",
+    "settore": "Finanza e dati",
+    "tipo": "successfactors",
+    "host": "career5.successfactors.eu",
+    "azienda": "C0016306184P",
+    "attiva": true
+  },
+  {
+    "nome": "Satispay",
+    "settore": "Fintech",
+    "tipo": "ashby",
+    "slug": "satispay",
+    "attiva": true
+  },
+  {
+    "nome": "Scalapay",
+    "settore": "Fintech",
+    "tipo": "greenhouse",
+    "slug": "scalapaysrl",
+    "attiva": true
+  },
+  {
+    "nome": "Moneyfarm",
+    "settore": "Fintech",
+    "tipo": "workable",
+    "slug": "moneyfarm",
+    "attiva": true
+  },
+  {
+    "nome": "Qonto",
+    "settore": "Fintech",
+    "tipo": "ashby",
+    "slug": "qonto",
+    "attiva": true
+  },
+  {
+    "nome": "Wise",
+    "settore": "Fintech",
+    "tipo": "smartrecruiters",
+    "slug": "Wise",
+    "attiva": true
   }
 ]

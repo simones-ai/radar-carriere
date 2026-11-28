@@ -655,10 +655,44 @@ def sitemap(fonte, paesi):
     return out
 
 
+# ------------------------------------------------------------------ BambooHR
+def bamboohr(fonte, paesi):
+    """Es. https://panmure.bamboohr.com/careers"""
+    slug = fonte["slug"]
+    out = []
+    for o in scarica(f"https://{slug}.bamboohr.com/careers/list").get("result", []):
+        loc = o.get("location") or {}
+        luogo = ", ".join(x for x in (loc.get("city"), loc.get("state"), loc.get("country")) if x) if isinstance(loc, dict) else str(loc)
+        if luogo and not luogo_ok(luogo, paesi):
+            continue
+        out.append(_annuncio(f"bh:{slug}:{o.get('id')}", o.get("jobOpeningName"), luogo,
+                             f"https://{slug}.bamboohr.com/careers/{o.get('id')}", "", "",
+                             o.get("employmentStatusLabel") or ""))
+    return out
+
+
+# ------------------------------------------------------------------ Workable
+def workable(fonte, paesi):
+    """Es. https://apply.workable.com/moneyfarm/"""
+    slug = fonte["slug"]
+    out = []
+    for o in scarica(f"https://apply.workable.com/api/v1/widget/accounts/{slug}").get("jobs", []):
+        luogo = ", ".join(x for x in (o.get("city"), o.get("state"), o.get("country")) if x)
+        luoghi = " · ".join(", ".join(x for x in (l.get("city"), l.get("country")) if x) for l in o.get("locations") or [])
+        luogo = luoghi or luogo
+        if luogo and not luogo_ok(luogo, paesi):
+            continue
+        out.append(_annuncio(f"wk:{slug}:{o.get('shortcode')}", o.get("title"), luogo,
+                             o.get("url") or f"https://apply.workable.com/{slug}/j/{o.get('shortcode')}/",
+                             data_iso(o.get("published_on") or o.get("created_at")), "",
+                             f"{o.get('employment_type') or ''} {o.get('experience') or ''}"))
+    return out
+
 LETTORI = {"workday": workday, "greenhouse": greenhouse, "lever": lever, "smartrecruiters": smartrecruiters,
            "ashby": ashby, "oracle": oracle, "avature": avature, "pagina": pagina,
            "recruitee": recruitee, "personio": personio, "pinpoint": pinpoint, "eightfold": eightfold,
-           "icims": icims, "rss": rss, "successfactors": successfactors, "sitemap": sitemap}
+           "icims": icims, "rss": rss, "successfactors": successfactors, "sitemap": sitemap,
+           "bamboohr": bamboohr, "workable": workable}
 
 
 def leggi(fonte, paesi, chiavi=None):
@@ -698,6 +732,10 @@ def da_url(url):
         return {"tipo": "ashby", "slug": parti[0]}
     if host.endswith("oraclecloud.com") and "sites" in parti:
         return {"tipo": "oracle", "host": host, "sito": parti[parti.index("sites") + 1]}
+    if host.endswith("bamboohr.com"):
+        return {"tipo": "bamboohr", "slug": host.split(".")[0]}
+    if host == "apply.workable.com" and parti:
+        return {"tipo": "workable", "slug": parti[0]}
     if host.endswith("recruitee.com"):
         return {"tipo": "recruitee", "slug": host.split(".")[0]}
     if ".jobs.personio." in host:
